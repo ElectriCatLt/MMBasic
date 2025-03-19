@@ -1,0 +1,190 @@
+ALL VERSIONS
+[>16] Variables and Expressions,Constants,DIM and LOCAL, STATIC,CONST
+In MMBasic command names, function names, labels, variable names, file names, etc are not case sensitive, so that "Run" and "RUN" are equivalent and "dOO" and "Doo" refer to the same variable.
+
+<CGRE>
+VARIABLES
+</CGRE>
+
+Variables can start with an alphabetic character or underscore and can contain any alphabetic or numeric character, the period (.) and the underscore (_). 
+They may be up to 31 characters long. A variable name or a label must not be the same as a function or one of the following keywords: 
+<CODE>
+THEN, ELSE,GOTO, GOSUB, TO, STEP, FOR, WHILE, UNTIL, LOAD, MOD, NOT, AND, OR, XOR, AS.
+</CODE>
+
+Eg, step = 5 is illegal as STEP is a keyword.
+MMBasic supports three types of variables:
+<CGRE>
+1. Double Precision Floating Point.
+</CGRE>
+
+These can store a number with a decimal point and fraction (eg, 45.386) however they will lose accuracy when more than 14 digits of precision are used. 
+Floating point variables are specified by adding the suffix '!' to a variable's name (eg, i!, nbr!, etc). They are also the default when a variable is created without a suffix (eg, i, nbr, etc).
+<CGRE>
+2. 64-bit Signed Integer.
+</CGRE>
+
+These can store positive or negative numbers with up to 19 decimal digits without losing accuracy but they cannot store fractions (i.e. the part following the decimal point). 
+These are specified by adding the suffix '%' to a variable's name. For example, i%, nbr%, etc.
+<CGRE>
+3. A String.
+</CGRE>
+
+A string will store a sequence of characters (eg, "Tom"). Each character in the string is stored as an eight bit number and can therefore have a decimal value of 0 to 255. 
+String variable names are terminated with a '$' symbol (eg, name$, s$, etc). Strings can be up to 255 characters long. 
+<CGRE>
+Note that it is illegal to use the same variable name with different types. 
+</CGRE>
+
+Eg, using nbr! and nbr% in the same program would cause an error.
+Most programs use floating point variables for arithmetic as these can deal with the numbers used in typical situations and are more intuitive than integers when dealing with division and fractions. 
+So, if you are not bothered with the details, always use floating point. 
+<CGRE>
+CONSTANTS
+</CGRE>
+
+Numeric constants may begin with a numeric digit (0-9) for a decimal constant, &H for a hexadecimal constant, &O for an octal constant or &B for a binary constant. 
+For example &B1000 is the same as the decimal constant 8. Constants that start with &H, &O or &B are always treated as 64-bit unsigned integer constants.
+Decimal constants may be preceded with a minus (-) or plus (+) and may be terminated with 'E' followed by an exponent number to denote exponential notation. 
+For example 1.6E+4 is the same as 16000. When a constant number is used it will be assumed that it is an integer if a decimal point or exponent is not used. 
+For example, 1234 will be interpreted as an integer while 1234.0 will be interpreted as a floating point number. String constants must be surrounded by double quote marks ("). 
+Eg, "Hello World".  
+
+<CGRE>
+OPTION DEFAULT
+</CGRE>
+
+A variable can be used without a suffix (i.e. !, % or $) and in that case MMBasic will use the default type of floating point. For example, the following will create a floating point variable:
+<CODE>
+Nbr = 1234
+</CODE>
+
+However. the default can be changed with the OPTION DEFAULT command. For example, OPTION DEFAULT INTEGER will specify that all variables without a specific type will be integer. 
+So, the following will create an integer variable:
+<CODE>
+OPTION DEFAULT INTEGER
+Nbr = 1234
+</CODE>
+
+The default can be set to FLOAT (which is the default when a program is run), INTEGER, STRING or NONE. In the latter all variables must be specifically typed otherwise an error will occur.
+The OPTION DEFAULT command can be placed anywhere in the program and changed at any time but good practice dictates that if it is used it should be placed at the start of the program and left unchanged.
+<CODE>
+OPTION EXPLICIT
+</CODE>
+
+By default MMBasic will automatically create a variable when it is first referenced. So, Nbr = 1234 will create the variable and set it to the number 1234 at the same time. 
+This is convenient for short and quick programs but it can lead to subtle and difficult to find bugs in large programs. 
+For example, in the third line of this fragment the variable Nbr has been misspelt as Nbrs. 
+As a consequence the variable Nbrs would be created with a value of zero and the value of Total would be wrong.
+<CODE>
+Nbr = 1234
+Incr = 2
+Total = Nbrs + Incr
+</CODE>
+
+The OPTION EXPLICIT command tells MMBasic to not automatically create variables. Instead they must be explicitly defined using the DIM, LOCAL or STATIC commands (see below) before they are used. 
+The use of this command is recommended to support good programming practice. If it is used it should be placed at the start of the program before any variables are used.
+<CGRE>
+DIM and LOCAL
+</CGRE>
+
+The DIM and LOCAL commands can be used to define a variable and set its type and are mandatory when the OPTION EXPLICIT command is used.
+The DIM command will create a global variable that can be seen and used throughout the program including inside subroutines and functions. 
+However, if you require the definition to be visible only within a subroutine or function, you should use the LOCAL command at the start of the subroutine or function. 
+LOCAL has exactly the same syntax as DIM.
+If LOCAL is used to specify a variable with the same name as a global variable then the global variable will be hidden to the subroutine or function and any references to the variable 
+will only refer to the variable defined by the LOCAL command. Any variable created by LOCAL will vanish when the program leaves the subroutine.
+At its simplest level DIM and LOCAL can be used to define one or more variables based on their type suffix or the OPTION DEFAULT in force at the time. 
+For example:
+<CODE>
+DIM nbr%, s$
+</CODE>
+
+But it can also be used to define one or more variables with a specific type when the type suffix is not used:
+<CODE>
+DIM INTEGER nbr, nbr2, nbr3, etc
+</CODE>
+
+In this case nbr, nbr2, nbr3, etc are all created as integers. When you use the variable within a program you do not need to specify the type suffix. 
+For example, MyStr in the following works perfectly as a string variable: 
+<CODE>
+DIM STRING MyStr
+MyStr = "Hello"
+</CODE>
+
+The DIM and LOCAL commands will also accept the Microsoft practice of specifying the variable's type after the variable with the keyword "AS". 
+For example:
+<CODE>
+DIM nbr AS INTEGER, s AS STRING
+</CODE>
+
+In this case the type of each variable is set individually (not as a group as when the type is placed before the list of variables). The variables can also be initialised while being defined. 
+For example:
+<CODE>
+DIM INTEGER a = 5, b = 4, c = 3
+DIM s$ = "World", i% = &H8FF8F
+DIM msg AS STRING = "Hello" + " " + s$
+</CODE>
+
+The value used to initialise the variable can be an expression including user defined functions.
+The DIM or LOCAL commands are also used to define an array and all the rules listed above apply when defining an array. For example, you can use:
+<CODE>
+DIM INTEGER nbr(10), nbr2, nbr3(5,8)
+</CODE>
+
+When initialising an array the values are listed as comma separated values with the whole list surrounded by brackets. For example:
+<CODE>
+DIM INTEGER nbr(5) = (11, 12, 13, 14, 15, 16)
+</CODE>
+
+or
+<CODE>
+DIM days(7) AS STRING = ("","Sun","Mon","Tue","Wed","Thu","Fri","Sat")
+</CODE>
+<CGRE>
+STATIC
+</CGRE>
+Inside a subroutine or function it is sometimes useful to create a variable which is only visible within the subroutine or function (like a LOCAL variable) 
+but retains its value between calls to the subroutine or function.
+You can do this by using the STATIC command. STATIC can only be used inside a subroutine or function and uses the same syntax as LOCAL and DIM. 
+The difference is that its value will be retained between calls to the subroutine or function (i.e. it will not be initialised on the second and subsequent calls).
+For example, if you had the following subroutine and repeatedly called it, the first call would print 5, the second 6, the third 7 and so on.
+<CODE>
+SUB Foo
+STATIC var = 5
+PRINT var
+var = var + 1
+END SUB
+</CODE>
+<CGRE>
+Note that the initialisation of the static variable to 5 (as in the above example) will only take effect on the first call to the subroutine. 
+</CGRE>
+
+On subsequent calls the initialisation will be ignored as the variable had already been created on the first call.
+As with DIM and LOCAL the variables created with STATIC can be float, integers or strings and arrays of these with or without initialisation. 
+The length of the variable name created by STATIC and the length of the subroutine or function name added together cannot exceed 31 characters.
+<CGRE>
+CONST
+</CGRE>
+
+Often it is useful to define an identifier that represents a value without the risk of the value being accidently changed - 
+which can happen if variables were used for this purpose (this practice encourages another class of difficult to find bugs).
+Using the CONST command you can create an identifier that acts like a variable but is set to a value that cannot be changed. For example:
+<CODE>
+CONST InputVoltagePin = 31
+CONST MaxValue = 2.4
+</CODE>
+
+The identifiers can then be used in a program where they make more sense to the casual reader than simple numbers. For example:
+<CODE>
+IF PIN(InputVoltagePin) > MaxValue THEN SoundAlarm 
+</CODE>
+
+A number of constants can be created on the one line:
+<CODE>
+CONST InputVoltagePin = 31, MaxValue = 2.4, MinValue = 1.5
+</CODE>
+
+The value used to initialise the constant is evaluated when the constant is created and can be an expression including user defined functions.
+The type of the constant is derived from the value assigned to it; so for example, MaxValue above will be a floating point constant because 2.4 is a floating point number. 
+The type of a constant can also be explicitly set by using a type suffix (i.e. !, % or $) but it must agree with its assigned value.

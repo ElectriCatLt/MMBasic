@@ -1,0 +1,29 @@
+ALL VERSIONS
+[>17] Special Characters in Strings
+Special, non-printable characters can be inserted in string constants using the backslash (ie, \) as an escape symbol. 
+To enable this facility the command OPTION ESCAPE must be placed at the start of the program. 
+These are the valid escape sequences:
+<CGRE>
+    Hex Value   Description
+</CGRE>
+
+\a      07          Alert (Beep, Bell)
+\b      08          Backspace
+\e      1B          Escape character
+\f      0C          Formfeed Page Break
+\n      0A          Newline (Line Feed)
+\r      0D          Carriage Return
+\q      22          Quote symbol
+\t      09          Horizontal Tab
+\v      0B          Vertical Tab
+\\      5C          Backslash
+\nnn    any         The byte whose value is given 
+                    by nnn interpreted as a decimal number
+\&hh    any         The byte whose value is given by hh... 
+                    interpreted as a hexadecimal number 
+
+For example, the following will print the words Hello and World on separate lines:
+<CODE>
+OPTION ESCAPE
+PRINT "Hello\r\nWorld"
+</CODE>

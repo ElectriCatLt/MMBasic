@@ -1,0 +1,5 @@
+ALL VERSIONS
+[>14] MM.END
+If a subroutine named MM.END exists in the program it will be executed whenever the program ends with an actual or implied END command. 
+It is not executed if the program ends with a Ctrl-C. 
+The optional parameter 'noend' to the END command can be used to block execution of the MM.END subroutine if needed (see the END command for more information).

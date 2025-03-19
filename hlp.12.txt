@@ -1,0 +1,20 @@
+ALL VERSIONS
+[>13] MM.PROMPT
+If a subroutine with this name exists it will be automatically executed by MMBasic instead of displaying the command prompt. 
+This can be used to display a custom prompt, set colours, define variables, etc all of which will be active at the command prompt.
+<CGRE>
+Note that MMBasic will clear all variables and I/O pin settings when a program is run so anything set in this subroutine will only be valid 
+</CGRE>
+
+for commands typed at the command prompt (i.e. in immediate mode).
+As an example the following will display a custom prompt:
+<CODE>
+SUB MM.PROMPT
+PRINT TIME$ "> ";
+END SUB
+</CODE>
+<CGRE>
+Note that while constants can be defined, they will not be visible because a constant defined inside a subroutine is local to a subroutine. 
+However, DIM will create variables that are global that that should be used instead.
+</CGRE>
+
