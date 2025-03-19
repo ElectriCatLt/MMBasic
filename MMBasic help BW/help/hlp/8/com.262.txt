@@ -1,0 +1,20 @@
+PICOMITE VGA AND HDMI ONLY
+[>263] DRAW3D ROTATE q(), n [,n1 [,n2...]}
+This rotates one or more 3D objects about their centres.
+q() is a matrix (quaternion) that defines the required rotation. We use quaternions because they don't suffer from gimbal lock and are computationally fairly efficient 
+but the math is completely hidden by the firmware.
+The n values are the 3D object IDs assigned when the object(s) was(were) created. From the perspective of the MMBasic user a quaternion is simply a 5 element floating point array  and it is loaded using one of two methods
+MATH Q_EULER yaw, pitch, roll, q()
+MATH Q_CREATE theta, x, y, z, q()
+MATH Q_CREATE defines a rotation around the vector x,y,z by theta degrees (defaults to radians but supports OPTION ANGLE). 
+If x is zero and y is zero then the rotation is around the z-axis which is equivalent to rolling the object. 
+If only x is non-zero then the rotation will pitch the object and y non-zero will yaw the object. 
+
+MATH Q_EULER sets q() to perform a rotation as defined by the yaw, pitch and roll angles 
+With the camera facing the object yaw is looking from the top of the object and rotates clockwise, pitch rotates the top away from the camera and roll rotates around the z-axis clockwise.
+The yaw, pitch and roll angles default to radians but respect the setting of OPTION ANGLE All objects specified in the ROTATE command are rotated by the same amount. 
+Nothing happens on the screen but internally the firmware stores the rotated coordinates as well as the original ones.
+It is very important to note that the rotate command acts on the original object as defined in the CREATE command. 
+
+Rotate commands are not cumulative. This ensures that rounding errors cannot affect the accuracy.
+However, there is a command that can override this: DRAW RESET

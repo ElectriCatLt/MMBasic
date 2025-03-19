@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>95] MM.INFO(PIO TX DMA) 
+Indicates whether the PIO TX DMA channel is busy

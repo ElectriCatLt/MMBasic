@@ -1,0 +1,19 @@
+ALL VERSIONS
+[>659] DIR$( fspec, type ) or DIR$( fspec )  or DIR$( )
+Will search an SD card for files and return the names of entries found. or 'fspec' is a file specification using wildcards 
+the same as used by the FILES command. E.g. "*.*" will return all entries, "*.TXT" will return text files.  
+Note that the wildcard *.* does not find files or folders without an extension. 
+
+'type' is the type of entry to return and can be one of: 
+VOL Search for the volume label only 
+DIR Search for directories only 
+FILE Search for files only (the default if 'type' is not specified) The function will return the first entry found. 
+
+To retrieve subsequent entries use the function with no arguments. i.e. DIR$( ). 
+The return of an empty string indicates that there are no more entries to retrieve. This example will print all the files in a directory:
+f$ = DIR$("*.*", FILE) 
+DO WHILE f$ <> "" 
+PRINT f$ 
+f$ = DIR$() 
+LOOP 
+You must change to the required directory before invoking this command. 

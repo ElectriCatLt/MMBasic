@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>756] RND( number ) or RND 
+Returns a pseudo-random number in the range of 0 to 0.999999. 
+The 'number' value is ignored if supplied. 
+The RANDOMIZE command reseeds the random number generator. 
+SGN( number ) Returns the sign of the argument 'number', +1 for positive numbers, 0 for 0, and -1 for negative numbers. 

@@ -1,0 +1,4 @@
+WEBMITE ONLY
+[>612] WEB CONNECT [ssid$, passwd$, [name$] [,ipaddress$, mask$, gateway$]]
+This command, with no optional parameters, will connect to the default network if possible (as previously set with OPTION WIFI) 
+or with the optional parameters will connect to the network specified and also set up the OPTION WIFI for future use.

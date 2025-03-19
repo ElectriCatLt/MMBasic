@@ -1,0 +1,6 @@
+VS1053 specific
+[>517] PLAY STREAM buffer%(),readpointer%, writepointer%  (VS1053 specific)
+Sends data to the VS1053 CODEC from the circular buffer "buffer%". 
+This command initiates a background output stream where the VS1053 is sent anything in the buffer 
+between the readpointer and the write pointer, updating the readpointer as it goes. 
+Can be used for arbitrary waveform output.

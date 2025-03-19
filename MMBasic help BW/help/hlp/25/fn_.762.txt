@@ -1,0 +1,9 @@
+VGA AND HDMI VERSIONS ONLY
+[>763] SPRITE(C, [#]n, m)   <- VGA AND HDMI VERSIONS ONLY
+Returns the number of the sprite which caused the "m"th collision of sprite n. 
+If n=0 then returns the sprite number of "m"th sprite that has a currently active  collision following a SPRITE SCROLL command. 
+If the collision was with the edge of the screen then the return value will be:
+&HF1 collision with left of screen
+&HF2 collision with top of screen
+&HF4 collision with right of screen
+&HF8 collision with bottom of screen

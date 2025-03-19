@@ -1,0 +1,3 @@
+VGA AND HDMI VERSIONS ONLY
+[>772] SPRITE(T, [#]n)   <- VGA AND HDMI VERSIONS ONLY
+Returns a bitmap showing all the sprites currently touching the requested sprite Bits 0-63 in the returned integer represent a current collision with sprites 1 to 64 respectively

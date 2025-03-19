@@ -1,0 +1,5 @@
+NOT VGA AND HDMI VERSIONS
+[>338] GUI TEST LCDPANEL Or GUI TEST TOUCH 
+Will test the display or touch feature on an LCD panel. With GUI TEST LCDPANEL an animated display of colour circles will be rapidly drawn on top of each other. 
+With GUI TEST TOUCH the screen will blank and wait for a touch which will cause a white dot to be placed on the display marking the touch position on the screen. 
+Any character entered at the console will terminate the test.

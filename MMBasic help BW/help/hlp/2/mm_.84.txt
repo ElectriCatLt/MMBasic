@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>85] MM.INFO(HEAP) 
+Returns the amount of MMbasic Heap memory free. MMBasic heap is used for strings, arrays and various other temporary and permanent buffers (eg, audio)

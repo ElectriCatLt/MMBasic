@@ -1,0 +1,5 @@
+VGA VERSION ONLY
+[>401] MAP( n ) = rgb%    <- VGA VERSION ONLY
+This will assign the 24-bit colour 'rgb% to all pixels with the 4-bit colour value of 'n'. 
+The RGB value is converted to one of the available 16 VGA RGB121 colours as set by the resistor network. 
+The change is activated after the MAP SET command.

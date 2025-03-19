@@ -1,0 +1,5 @@
+VS1053 specific
+[>512] PLAY MIDI (VS1053 specific)
+Initiates the real-time midi mode. 
+In this mode midi instructions can be sent to the VS1053 to select 
+which instruments to play on which channels, turn notes on, and turn them off in real timer

@@ -1,0 +1,41 @@
+ALL VERSIONS
+[>442] MATH PID STOP channel 
+Stops a previously initialised PID controller on the channel specified and deletes the internal data structures 
+See https://www.thebackshed.com/forum/ViewTopic.php?FID=16&TID=17263
+For an example of setting up and running a PID controller 
+
+The concept could be as follows:
+DEVICE PID INIT channel%, pid_params!(), callback_function
+pid_params!()
+float Kp
+float Ki
+float Kd
+
+' Derivative low-pass filter time constant float tau
+
+'Output limits
+float limMin
+float limMax
+
+'Integrator limits
+float limMinInt
+float limMaxInt
+
+'Sample time (in milliseconds) float T
+
+'Controller "memory"
+float integrator
+float prevError 'Required for integrator'
+float differentiator
+float prevMeasurement 'Required for differentiator
+
+'Controller output float out
+DEVICE PID START channel
+DEVICE PID STOP channel
+output! = DEVICE(PID channel, setpoint!, measurement!)
+The PID init would set up a MMBasic function to be called every T milliseconds.
+
+Following DEVICE PID START the callback function (MMBasic interrupt) would be called as requested and the Basic program should update the algorithm using the DEVICE(PID function.
+It is left to the MMBasic user to derive the measurement (e.g. ADC input) and set the output (e.g. adjust PWM duty) 
+in the callback function 
+(NB: slow measurements like ADC input could be run in the main program so the value is always available for the PID callback). 

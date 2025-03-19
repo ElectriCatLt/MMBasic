@@ -1,0 +1,22 @@
+PICOMITE VGA AND HDMI ONLY
+[>265] DRAW3D CAMERA n, z_viewplane[,x_camera [,y_camera] [,PAN_X] [,PAN_Y]
+The camera number 'n' and the 'viewplane' z distance are mandatory, all other parameters are optional and all default to 0 
+The camera can be placed anywhere in the plane x, y, 0 but always looks out along the z axis. 
+The viewplane is perpendicular to the Z axis and is a plane sized 65532 x 65532 in the x and y axis stretching, like the world from -32766 to 32766 in the x-axis and -32766 to 32766 in the y-axis 
+However, our VGA display can only show a very small part of the viewplane as limited by the screen dimensions (MM.HRES x MM.VRES). 
+We could call this the "viewport". By default the viewport will be set to +/- MM.HRES\2 either side of the camera x position and +/- MM.VRES either side of the camera y position.
+This means If I place a 3D object at 0,0,Z in the 3D world and set my camera at 0,0,0 in the 3D world then the object will project into the centre of the screen.
+Likewise, if I place a 3D object at 400,400,Z in the 3D world and set my camera at 400,400,0 in the 3D world then the object will also project into the centre of the screen.
+However, there are occasions when this may not be what we want so there are two extra parameters to the CAMERA command - PAN-X and PAN-Y.
+These move the position of the viewport on the viewplane relative to the camera position.
+<CGRE>
+A practical example makes this clearer:
+</CGRE>
+
+Suppose we position a number of objects in the 3D world with their lower extermities at x, 0, z. In other words they are all sitting on the ground.
+To look at them we may want the camera somewhere above the ground so we are looking down on them. 
+If the viewport is centred on the camera (the default) then all the objects will appear in the bottom half of the screen.
+Now this may be exactly what we want but the firmware allows you to pan the viewport up and down and/or left and right relative to the camera.
+So in our example we could pan the viewport down to better frame the image on the screen.
+This does not change the perspective of the image, that is locked in by the relative positions of the object and the camera.
+It merely allows us to frame the image better given our limited screen resolution 

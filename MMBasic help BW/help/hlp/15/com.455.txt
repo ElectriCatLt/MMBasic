@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>456] MOUSE INTERRUPT ENABLE channel, int
+'int' is a user defined subroutine that will be called when the left mouse button is pressed.

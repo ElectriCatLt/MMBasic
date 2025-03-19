@@ -1,0 +1,4 @@
+NOT HDMI AND VGA VERSIONS
+[>312] FRAMEBUFFER WRITE where/where$ NOT HDMI AND VGA VERSIONS
+Specifies the target for subsequent graphics commands. "where" can be N, F, or L where N is the actual display. 
+AA string variable can be used or a literal

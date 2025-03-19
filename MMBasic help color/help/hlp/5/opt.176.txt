@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>177] OPTION SDCARD COMBINED CS
+If this is specified the touch chip select pin is also used for the Sdcard. In this case external circuitry is needed to implement the SD chip select as follows.
+PICT (NEEDS PIC)
+The firmware uses the touch pin as follows: 
+TOUCH_CS low: TOUCH_CS low, SD_CS high | TOUCH CS high: SD_CS low: TOUCH_CS high | TOUCH CS set as input (high impedance) TOUCH_CS and SD_CS high.

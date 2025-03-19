@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>78] MM.INFO(FONT) 
+Returns the number of the currently active font

@@ -1,0 +1,15 @@
+ALL VERSIONS
+[>443] MATH AES128 ENCRYPT/DECRYPT CBC/ECB/CTR key$/key(), in$/in(), out$/out() [,iv$/iv()]
+This command encrypts or decrypts the data in 'in' and puts the answer in 'out' using the AES128 encryption method specified 
+The parameters can each be either a string, integer array, or float array with any mix possible 
+The key must be 16 elements long (16*8=128bits), in and out must be a multiple of 16 elements long. 
+In the case of out being specified as a string (e.g. out$), the string variable must exist and should be set to empty (DIM out$="") 
+The maximum number of elements in 'in' and 'out' is limited by memory when defined as arrays. 
+Strings for encrypting are limited to 240bytes (EBR) and 224bytes (CTR and CBC).  
+For CBC and CTR encryption you can optionally specify an initialisation vector 'iv'. 
+'iv' must be 16 elements long (16*8=128bits). 
+If an initialisation vector is not specified encryption will generate a random initialisation vector. 
+In both cases the output is prepended with the IV. 
+For CBC and CTR, decryption requires that the first 16 elements of the input are the initialisation vector. 
+In the case where you want to transmit a message without IV you should remove the IV before sending the message using standard MMBasic manipulations. 
+In this case the recipient must know the IV as well as the key and create a complete message before using DECRYPT by prepending the IV to the incoming message.

@@ -1,0 +1,5 @@
+ALL VERSIONS
+[>99] MM.INFO(STACK)
+Returns the C stack pointer. Complex or recursive Basic code may result in the error "Stack overflow, expression too complex at depth %" 
+This will occur when the stack is below &H 2003f800. 
+Monitoring the stack will allow the programmer to identify simplifications to the Basic code to avoid the error.

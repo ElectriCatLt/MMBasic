@@ -1,0 +1,3 @@
+WEBMITE VERSION ONLY
+[>191] OPTION WEB MESSAGES ON/OFF 
+Disable informational web messages when set to OFF. Default is ON

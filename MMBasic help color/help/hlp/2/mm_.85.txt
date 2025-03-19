@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>86] MM.INFO(HPOS) 
+The current horizontal position (in pixels) following the last graphics or print command.

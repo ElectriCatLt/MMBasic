@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>742] PIO(READFIFO a, b, c)
+Read from a PIO FIFO 'a' is the pio (0 or 1), 'b' id the state machine (0...3), 'c' is the FIFO register *0...3)

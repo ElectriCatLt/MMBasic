@@ -1,0 +1,59 @@
+ALL VERSIONS
+[>470] ONEWIRE RESET pin or ONEWIRE WRITE pin, flag, length, data [, data...] or  ONEWIRE READ pin, flag, length, data [, data...] 
+Commands for communicating with 1-Wire devices. 
+ONEWIRE RESET will reset the 1-Wire bus ONEWIRE WRITE will send a number of bytes ONEWIRE READ will read a number of bytes 
+'pin' is the I/O pin (located in the rear connector) to use. It can be any pin capable of digital I/O. 
+'flag' is a combination of the following options: 
+<CGRE>
+1 -Send reset before command 
+2 -Send reset after command 
+4 -Only send/recv a bit instead of a byte of data 
+8 -Invoke a strong pullup after the command (the pin will be set high and open drain disabled) 
+</CGRE>
+
+'length' is the length of data to send or receive 'data' is the data to send or variable to receive. 
+The number of data items must agree with the length parameter. 
+
+Appendix C - 1-Wire Communications
+<CGRE>
+1-WIRE COMMUNICATIONS
+</CGRE>
+
+The 1-Wire protocol was developed by Dallas Semiconductor to communicate with chips using a single signalling line. 
+This implementation was written for MMBasic by Gerard Sexton. There are three commands that you can use:
+<CODE>
+ONEWIRE RESET pin
+</CODE>
+
+Reset the 1-Wire bus
+<CODE>
+ONEWIRE WRITE pin, flag, length, data [, data…]
+</CODE>
+
+Send a number of bytes
+<CODE>
+ONEWIRE READ pin, flag, length, data [, data…]
+</CODE>
+
+Get a number of bytes
+Where:
+<CGRE>
+pin - The I/O pin to use. It can be any pin capable of digital I/O.
+</CGRE>
+
+flag - A combination of the following options:
+<CGRE>
+1 - Send reset before command
+2 - Send reset after command
+4 - Only send/recv a bit instead of a byte of data
+8 - Invoke a strong pullup after the command (the pin will be set high and open drain disabled)
+</CGRE>
+
+length - Length of data to send or receive data - Data to send or variable to receive.
+The number of data items must agree with the length parameter.
+The automatic variable MM.ONEWIRE returns true if a device was found 
+After the command is executed, the I/O pin will be set to the not configured state unless flag option 8 is used.
+When a reset is requested the automatic variable MM.ONEWIRE will return true if a device was found. 
+This will occur with the ONEWIRE RESET command and the ONEWIRE READ and ONEWIRE WRITE commands if a reset was requested (flag = 1 or 2).
+The 1-Wire protocol is often used in communicating with the DS18B20 temperature measuring sensor and to help in that regard MMBasic includes the TEMPR() function 
+which provides a convenient method of directly reading the temperature of a DS18B20 without using these functions. 

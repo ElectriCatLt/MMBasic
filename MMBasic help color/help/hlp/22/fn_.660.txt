@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>661] EOF( [#]fnbr ) 
+Will return true if the file previously opened on the SD card for INPUT with the file number '#fnbr' is positioned at the end of the file. 
+For a serial communications port this function will return true if there are no characters waiting in the receive buffer. 
+#0 can be used which refers to the console's input buffer. 
+The # is optional. Also see the OPEN, INPUT and LINE INPUT commands and the INPUT$ function. 

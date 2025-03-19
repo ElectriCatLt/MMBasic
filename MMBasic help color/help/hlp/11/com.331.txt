@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>332] GAMEPAD INTERRUPT DISABLE channel
+Disables interrupts from the gamepad on the channel specified

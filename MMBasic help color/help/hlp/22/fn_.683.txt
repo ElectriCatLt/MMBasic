@@ -1,0 +1,9 @@
+ALL VERSIONS
+[>684] INPUT$(nbr, [#]fnbr) 
+Will return a string composed of 'nbr' characters read from a file on the SD card previously opened for INPUT with the file number '#fnbr'. 
+This function will read all characters including carriage return and new line without translation. 
+Will return a string composed of 'nbr' characters read from a serial communications port opened as 'fnbr'. 
+This function will return as many characters as are waiting in the receive buffer up to 'nbr'. 
+If there are no characters waiting it will immediately return with an empty string. 
+#0 can be used which refers to the console's input buffer. The # is optional. 
+Also see the OPEN command. 

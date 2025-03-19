@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>134] OPTION COLOURCODE OFF
+Disables colours in EDITOR

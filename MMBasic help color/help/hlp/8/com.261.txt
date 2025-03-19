@@ -1,0 +1,51 @@
+PICOMITE VGA AND HDMI ONLY
+[>262] DRAW3D CREATE
+DRAW3D CREATE n, nv, nf, camera, vertices(), fc(), faces(), colours() , edge() [,fill()]<MRK>14,1,120
+DRAW3D CREATE is the command that creates a 3D object and all the information needed for the object is included in the parameter list. We will use a cube as an example.<MRK>14,1,120
+(ASCII drawing)
+
+n is the object number (1-128)
+nv: number of vertices (e.g. 8 for a cube)
+nf: number of faces (e.g. 6 for a cube)
+
+camera: number of the camera to use when displaying the object (1 to 6) vertices(): This is a 3 by nv array that holds the x,y,z coordinates of the 3D object. 
+For example the vertex definition for our cube with side length 2 with Option Base 0 centred on 0,0,0 could be:
+<CODE>
+DIM FLOAT vertices(2,7) = (-1,1,-1, 1,1,-1, 1,-1,-1, -1,-1,-1, -1,1,1, 1,1,1, 1,-1,1, -1,-1,1)
+<CODE>
+
+<CGRE>
+Note that the negative values represent the vertices closest to the camera.
+</CGRE>
+
+facecount(): is a count of how many vertices are needed to define each face, so in our example for the cube which has 6 faces it would be:
+<CODE>
+DIM INTEGER facecount(5)=(4,4,4,4,4,4)
+</CODE>
+
+faces(): This is a very important array and defines the vertices that make up each face of the 3D object. 
+There is one critical thing in setting up this array. The vertices must be listed in a clockwise order for each face as though you were looking at that face from in front of it. 
+It doesn't matter which order the faces are listed as long as they match the correct vertex count in fc() and it doesn't matter which vertex you start on for each face. 
+In our example this array could be: 
+<CODE>
+DIM INTEGER faces(23)=(0,1,2,3, 1,5,6,2, 0,4,5,1, 5,4,7,6, 2,6,7,3, 0,3,7,4)
+</CODE>
+
+colours(): This is an array that holds a simple list of all the colours you want to use to colour the 3D object. 
+So if we want a different colour for each face and another one for all the edges we could set this array as follow:
+<CODE>
+DIM INTEGER colours(6)=(rgb(blue), rgb(green), rgb(yellow), rgb(cyan), rgb(red), rgb(magenta), rgb(yellow))
+</CODE>
+
+edge(): This arrays specifies which of our colours to use for each edge of the 3D object. We will set them all to the array index in colours() holding the value yellow
+<CODE>
+DIM INTEGER edge(5)=(6,6,6,6,6,6)
+</CODE>
+
+fill(): This array specifies which colour to use for each face of the 3D object. We will set them each to a different colour by specifying the array index into colours()
+<CODE>
+DIM INTEGER fill(5)=(0,1,2,3,4,5)
+</CODE>
+
+If the optional parameter fill() is omitted then the 3D object will be drawn as a wireframe 
+Those familiar with 3D graphics will notice that the parameters to DRAW3D CREATE match the way 3D objects are defined in many 3D description files like wrl or ply files.

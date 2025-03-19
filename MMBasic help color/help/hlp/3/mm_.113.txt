@@ -1,0 +1,13 @@
+WEBMITE ONLY
+[>114] MM.INFO(WIFI STATUS) 
+Returns the WIFI status of the connection. 
+Valid returns are: 
+<CGRE>
+0 WiFi is down  
+1 Connected to WiFi  
+2 Connected to WiFi, but no IP address (TCPIP STATUS only) 
+3 Connected to WiFi with an IP address (TCPIP STATUS only) 
+-1 Connection failed  
+-2 No matching SSID found (could be out of range, or down) 
+-3 Authentication failure
+</CGRE>

@@ -1,0 +1,5 @@
+ALL VERSIONS
+[>141] OPTION DEFAULT MODE n 
+<CGRE>
+-> This sets the default display mode on boot. This command must be run at the command prompt (not in a program).
+</CGRE>

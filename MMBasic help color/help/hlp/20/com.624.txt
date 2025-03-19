@@ -1,0 +1,7 @@
+WEBMITE ONLY
+[>625] WEB TCP INTERRUPT InterruptSub
+Start the TCP server running. 
+'InterruptSub' is the subroutine to call when a request is made of the TCP server (ie, an interrupt). 
+<CGRE>
+Note that the OPTION WIFI command must have been used first followed by the OPTION TCP SERVER PORT command to enable the TCP server. 
+</CGRE>

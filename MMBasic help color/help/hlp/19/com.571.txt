@@ -1,0 +1,4 @@
+VGA AND HDMI VERSIONS ONLY
+[>572] SPRITE CLOSE [#]n  (VGA AND HDMI VERSIONS ONLY)
+Closes sprite "n" and releases its memory resources allowing the sprite number to be re-used. 
+The command will give an error if other sprites are copied from this one unless they are closed first.

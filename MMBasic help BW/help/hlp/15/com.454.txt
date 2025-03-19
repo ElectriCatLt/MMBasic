@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>455] MOUSE  
+For all variants of the command. In the case of USB firmware 'channel' is the USB port that the mouse is connected to (1-4). 
+See MM.INFO(USB n) for more information. For PS2 firmware 'channel' is fixed at the value 2

@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>53] MM.DEVICE$ 
+A string representing the device or platform that MMBasic is running on. 

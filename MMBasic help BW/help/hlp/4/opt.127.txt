@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>128] OPTION AUTORUN OFF
+Disables autorun.

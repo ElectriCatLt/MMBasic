@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>90] MM.INFO(OPTION option)  
+Returns the current value of a range of options that affect how a program will run. 
+"option" can be one of AUTORUN, BASE, BREAK, DEFAULT, EXPLICIT, KEYBOARD, ANGLE, HEIGHT, WIDTH, FLASH SIZE

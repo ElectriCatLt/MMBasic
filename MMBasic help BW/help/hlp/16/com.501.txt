@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>502] PLAY PAUSE 
+Will temporarily halt the currently playing file or tone. 

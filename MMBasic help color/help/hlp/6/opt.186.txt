@@ -1,0 +1,4 @@
+NOT VGA OR HDMI VERSIONS
+[>187] OPTION TOUCH T_CS pin, T_IRQ pin [, Beep] or OPTION TOUCH DISABLE 
+Configures MMBasic for the touch sensitive feature of an attached LCD panel. 
+'T_CS pin' and 'T_IRQ p

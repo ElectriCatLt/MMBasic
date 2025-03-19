@@ -1,0 +1,3 @@
+PICOMITE VGA AND HDMI ONLY
+[>267] DRAW3D HIDE n [,n1 [,n2...]]
+This command hides one or more 3D objects that have been rendered using SHOW by clearing the screen in the area occupied by the object.

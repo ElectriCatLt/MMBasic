@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>151] OPTION KEYBOARD I2C
+Configures support for the Solderparty bbq20 mini I2C keyboard. 
+<CGRE>
+Note: OPTION SYSTEM I2C must be set before executing this command
+</CGRE>

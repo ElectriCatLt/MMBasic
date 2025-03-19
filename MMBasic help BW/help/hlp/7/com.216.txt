@@ -1,0 +1,4 @@
+NOT VGA OR HDMI
+[>217] CAMERA 
+Command supporting the OV7670 camera module.
+The PicoMite firmware has support for a OV7670 camera module. See the CAMERA command for details

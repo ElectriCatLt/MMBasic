@@ -1,0 +1,3 @@
+HDMI VERSION ONLY
+[>397] MAP GREYSCALE   <- HDMI VERSION ONLY
+This will set the colour map to 16 or 32 levels of grey (depending on the MODE). MAP GRAYSCALE is also valid.

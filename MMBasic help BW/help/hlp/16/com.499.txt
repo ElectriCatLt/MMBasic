@@ -1,0 +1,5 @@
+ALL VERSIONS
+[>500] PLAY LOAD SOUND array%()
+Loads a 1024 element array comprising 4096 16-bit values between 0 and 4095. 
+This provides the data for any arbitrary waveform that can be played by the PLAY SOUND command. 
+You can use the MEMORY PACK command to create the arrays from a normal 40956 element integer array.

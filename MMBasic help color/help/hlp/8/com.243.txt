@@ -1,0 +1,9 @@
+ALL VERSIONS
+[>244] DATE$ = "DD-MM-YY[YY]" or DATE$ = "DD/MM/YY[YY]" or DATE$ ="YYYY-MM-DD" or DATE$="YYYY/MM/DD" 
+Set the date of the internal clock/calendar. DD, MM and YY are numbers, for example: 
+<CODE>
+DATE$ = "28-7-2014"
+</CODE>
+
+With OPTION RTC AUTO ENABLE the PicoMite firmware starts with the DATE$ programmed in RTC.
+Without OPTION RTC AUTO ENABLE the PicoMite firmware starts with the date set to "01-01-2024" on power up.

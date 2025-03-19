@@ -1,0 +1,7 @@
+NOT ON HDMI VERSIONS
+[>137] OPTION CPUSPEED 
+Change the CPU clock speed. 'speed' is the CPU clock in KHz in the range of 48000 to 378000. 
+Speeds above 133MHz (150MHz for the RP2350) are regarded as overclocking as that is the specified maximum speed of the standard Raspberry Pi Pico. 
+For VGA versions valid speeds are 126, 157.5, 252, 315, and 378MHz. The default is 126MHz. 
+For other versions the CPU speed will default to 133000 (150000 for RP2350). 
+This command must be run at the command prompt (not in a program).

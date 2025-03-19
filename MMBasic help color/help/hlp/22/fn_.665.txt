@@ -1,0 +1,7 @@
+ALL VERSIONS
+[>666] FIX( number ) 
+Truncate a number to a whole number by eliminating the decimal point and all characters to the right of the decimal point. 
+For example 9.89 will return 9 and -2.11 will return -2. 
+The major difference between FIX() and INT() is that FIX() provides a true integer function (i.e. does not return the next lower number for negative numbers as INT() does). 
+This behaviour is for Microsoft compatibility. 
+See also CINT() . 

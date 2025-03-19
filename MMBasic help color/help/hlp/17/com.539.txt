@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>540] RMDIR dir$ 
+Remove, or delete, the directory 'dir$' on the SD card. 

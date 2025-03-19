@@ -1,0 +1,3 @@
+VGA AND HDMI VERSIONS ONLY
+[>102] MM.INFO(TILE HEIGHT) 
+Returns the current setting of the tile height.

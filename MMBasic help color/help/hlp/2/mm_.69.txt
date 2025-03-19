@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>70] MM.INFO$(DRIVE) 
+Returns the active drive "A:" or "B:" 

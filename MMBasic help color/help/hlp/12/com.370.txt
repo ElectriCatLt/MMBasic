@@ -1,0 +1,7 @@
+ALL VERSIONS
+[>371] LOAD IMAGE file$ [, x] [, y] 
+Load a bitmapped image from the SD card and display it on the VGA  screen. 
+''file$' is the name of the file and 'x' and 'y' are the screen coordinates for the top left hand corner of the image. 
+If the coordinates are not specified the image will be drawn at the top left hand position on the screen. 
+If an extension is not specified ".BMP" will be added to the file name. 
+All types of the BMP format are supported including black and white and true colour 24-bit images. 

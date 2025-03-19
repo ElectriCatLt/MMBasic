@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>72] MM.INFO(EXISTS DIR dirname$) 
+Returns a Boolean indicating whether the directory specified exits.

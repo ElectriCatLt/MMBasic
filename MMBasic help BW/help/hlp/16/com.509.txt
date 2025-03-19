@@ -1,0 +1,9 @@
+VS1053 specific
+[>510] PLAY CONTINUE track$ (VS1053 specific)
+Resumes playback of the MP3 track specified. 
+"track$" will be the name of the file that was playing when halted with all file attributes removed eg, 
+PLAY MP3 "B:/mp3/mymp3.mp3" 
+sometime later 
+PLAY HALT 
+later again 
+PLAY CONTINUE "mymp3"

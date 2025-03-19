@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>80] MM.INFO(FONT POINTER n) 
+Returns a POINTER to the start of FONT n in memory

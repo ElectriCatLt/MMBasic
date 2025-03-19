@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>777] SQR( number )   <- VGA AND HDMI VERSIONS ONLY
+Returns the square root of the argument 'number'. 

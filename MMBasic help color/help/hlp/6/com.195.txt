@@ -1,0 +1,12 @@
+ALL VERSIONS
+[>196] ADC OPEN freq, n_channels [,interrupt] 
+This allocates up to 4 ADC channels for use and sets them to be converted at the specified frequency. The range of pins are GP26, GP27, GP28, and GP29 for the RP2940 and RP2350A. 
+Plus GP55, GP56, GP57, GP58 on the RP2350B. 
+If the number of channels is one then it will always be GP26 used, if two then GP26 and GP27 are used, etc. 
+Sampling of multiple channels is sequential (there is only one ADC). The pins are locked to the function when ADC OPEN is active 
+The maximum total frequency is CPUspeed/96 (eg, 346KHz if all four channels are to be sampled with the CPU set at 133MHz). 
+<CGRE>
+Note that a aggregate sampling frequency over 500Khz is overclocking the ADC. 
+</CGRE>
+
+The optional interrupt parameter specifies an interrupt to call when the conversion completes. If not specified then conversion will be blocking

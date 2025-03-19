@@ -1,0 +1,11 @@
+VGA and HDMI VERSIONS
+[>801] MB_HELP_FOR_PICOMITE 
+LONG CMD,OPT,FN or MM NAME  
+Description text one line or multiline          
+Description text one line or multiline           
+
+NNN. three type description symbols and '.' dot, are mandatory. Max 50 symbols!
+Free form dievice suported Max 50 chars.
+Description KEYWORDS separaded by ',' comas. Coamas at the begining and end is mandatory Max 250 chars.
+Long (full) command, function,option, mm. ,help file , etc. description . Max 250 chars.
+Multiline text. Max 250 chars per row. 

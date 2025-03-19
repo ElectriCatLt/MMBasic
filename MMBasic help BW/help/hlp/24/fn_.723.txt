@@ -1,0 +1,39 @@
+ALL VERSIONS
+[>724] MATH(M_DETERMINANT array!()) 
+Returns the determinant of the array. The array must be square. 
+
+MMBasic supports a full range of functions to allow the manipulation of complex numbers. In this implementation complex numbers have a 32- bit real 
+and 32-bit imaginary part and to make this work in MMBasic, it uses integers 
+(64-bit) to hold these.
+CREATION
+complex% = MATH(C_CPLX r!, i!)
+complex% = MATH(C_POLAR radius!, angle!)
+Floating returns
+real! = MATH(C_REAL complex%)
+imag! = MATH(C_IMAG complex%)
+arg! = MATH(C_ARG complex%)
+mod! = MATH(C_MOD complex%)
+phase! = MATH(C_PHASE complex%)
+complex1% = MATH(C_CONJ complex2%)
+complex1% = MATH(C_SIN complex2%)
+complex1% = MATH(C_COS complex2%)
+complex1% = MATH(C_TAN complex2%)
+complex1% = MATH(C_ASIN complex2%)
+complex1% = MATH(C_ACOS complex2%)
+complex1% = MATH(C_ATAN complex2%)
+complex1% = MATH(C_SINH complex2%)
+complex1% = MATH(C_COSH complex2%)
+complex1% = MATH(C_TANH complex2%)
+complex1% = MATH(C_ASINH complex2%)
+complex1% = MATH(C_ACOSH complex2%)
+complex1% = MATH(C_ATANH complex2%)
+complex1% = MATH(C_PROJ complex2%)
+BASIC ARITHMETIC
+complex1% = MATH(C_ADD complex2%,complex3%)
+complex1% = MATH(C_SUB complex2%,complex3%)
+complex1% = MATH(C_MUL complex2%,complex3%)
+complex1% = MATH(C_DIV complex2%,complex3%)
+complex1% = MATH(C_POW complex2%,complex3%)
+complex1% = MATH(C_AND complex2%,complex3%)
+complex1% = MATH(C_OR complex2%,complex3%)
+complex1% = MATH(C_XOR complex2%,complex3%)

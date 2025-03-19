@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>653] DAY$(date$) 
+Returns the day of the week for a given date as a string "Monday", "Tuesday" etc. 
+The format for date$ is "DD-MM-YY", "DD-MM-YYYY", or "YYYY-MM-DD". Use NOW to get the day for the current date, e.g. PRINT DAY$(NOW) 

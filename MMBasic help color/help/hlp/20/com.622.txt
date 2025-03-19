@@ -1,0 +1,9 @@
+WEBMITE ONLY
+[>623] WEB TCP CLIENT STREAM command$, buffer%(), readpointer%, writepointer%
+Connects to a server previously opened with WEB OPEN TCP STREAM. 
+'command$' is a string and is the request to be sent to the server. 
+'buffer%()' is an integer array which will receive the ongoing responses and acts as a  circular buffer of bytes received. 
+The firmware maintains the parameter 'writepointer%' as the data from the server arrives.
+'readpointer%' should be maintained by the Basic program as it removes data from the circular buffer. 
+If 'writepointer%' catches up with 'readpointer%' then 'readpointer%' will be incremented to stay one byte ahead and incoming data will be lost. 
+This command is designed to be compatible with the PLAY STREAM command to allow the implementation of streaming internet audio.

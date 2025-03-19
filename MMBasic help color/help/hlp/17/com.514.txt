@@ -1,0 +1,3 @@
+VS1053 specific
+[>515] PLAY NOTE ON channel%, note%, velocity% (VS1053 specific)
+Turns on the note on the channel specified when in real time MIDI mode

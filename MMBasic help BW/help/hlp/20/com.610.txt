@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>611] WEB  WEBMITE ONLY
+Webmite WEB commands
+The WEB commands are used to manage the Internet capability of the WebMite.

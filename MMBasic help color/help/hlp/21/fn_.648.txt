@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>649] COS( number ) 
+Returns the cosine of the argument 'number' in radians. 

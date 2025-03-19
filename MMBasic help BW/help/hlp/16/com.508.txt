@@ -1,0 +1,5 @@
+VS1053 specific
+[>509] PLAY HALT (VS1053 specific)
+This command works when a MP3 file is playing. 
+It stops playback and records the current file position to allow playback to be resumed from the same point. 
+This command is specifically designed to support for mp3 audio books

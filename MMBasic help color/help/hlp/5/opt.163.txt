@@ -1,0 +1,10 @@
+ALL VERSIONS
+[>164] OPTION MODBUFF ENABLE/DISABLE [sizeinK]
+Creates or removes an area of flash memory used for loading and playing .MOD files. 
+If enabled then a mod buffer is created with a size of 128Kbytes. 
+This can be overridden with "sizeinK". 
+<CGRE>
+Note that this option reserves part of the Flash Filesystem (ie, it shrinks the Flash Filesystem). 
+</CGRE>
+
+The default is disabled.

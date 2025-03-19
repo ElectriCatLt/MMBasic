@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>225] CHAIN fname$ [,cmdline$] 
+BETA 6.02 ONLY!
+Allows the program to run another program with the variable space preserved - command is recommended to be used in top level program and not from within a subroutine (may work OK but not tested for side-effects)

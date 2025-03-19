@@ -1,0 +1,4 @@
+HDMI VERSION ONLY
+[>395] MAP( n ) = rgb%   <- HDMI VERSION ONLY
+This will assign the 24-bit colour 'rgb% to all pixels with the 4 or 8-bit colour value of 'n'. 
+The change is activated after the MAP SET command.

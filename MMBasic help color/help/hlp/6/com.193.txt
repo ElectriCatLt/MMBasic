@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>194] A:  B:      Shortcut
+Shortcut for DRIVE "A:" and DRIVE "B:" at the command prompt

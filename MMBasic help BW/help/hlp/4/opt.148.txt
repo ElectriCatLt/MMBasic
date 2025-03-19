@@ -1,0 +1,3 @@
+NOT WEBMITE VERSION
+[>149] OPTION HEARTBEAT ON/OFF 
+Enables or disables the output of the heartbeat LED. If it is disabled the program can control the LED via GP25.

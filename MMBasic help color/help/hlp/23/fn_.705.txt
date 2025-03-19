@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>706] MATH(TANH a) 
+Returns the hyperbolic tan of a 

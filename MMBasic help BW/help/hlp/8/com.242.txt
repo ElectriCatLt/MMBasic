@@ -1,0 +1,28 @@
+ALL VERSIONS
+[>243] CSUB name [type [, type] ...] /hex [[ hex[...] / END CSUB 
+
+CSUB name [type [, type] ...] 
+hex [[ hex[...] 
+hex [[ hex[...] 
+END CSUB 
+
+
+Defines the binary code for an embedded machine code program module written in C or ARM assembler. The module will appear in MMBasic as the command 
+'name' and can be used in the same manner as a built-in command. Multiple embedded routines can be used in a program with each defining 
+a different module with a different 'name'. The first 'hex' word is a 32 bit word which is the offset in bytes from the start of the CSUB to the entry point of 
+the embedded routine (usually the function main()). The following hex words are the compiled binary code for the module. These are automatically 
+programmed into MMBasic when the program is saved. Each 'hex' must be exactly eight hex digits representing the bits in a 32-bit word 
+and be separated by one or more spaces or new lines. The command must be terminated by a matching END CSUB. Any errors in the 
+data format will be reported when the program is run. During execution MMBasic will skip over any CSUB commands so they can be placed anywhere in the 
+program. The type of each parameter can be specified in the definition. 
+For example: 
+CSUB MySub integer, integer, string 
+This specifies that there will be three parameters, the first two being integers and the third a string. 
+Note: 
+-Up to ten arguments can be specified ('arg1', 'arg2', etc). 
+-If a variable or array is specified as an argument the C routine will receive a pointer to the memory allocated to the variable or array and the C routine can change this memory to return a value to the caller. 
+In the case of arrays, they should be passed with empty brackets e.g. arg(). In the CSUB the argument will be supplied as a pointer to the first element of the array. 
+-Constants and expressions will be passed to the embedded C routine as pointers to a temporary memory space holding the value. 
+DATA constant[,constant]... Stores numerical and string constants to be accessed by READ. In general string constants should be surrounded by double quotes ("). 
+An exception is when the string consists of just alphanumeric  characters that do not represent MMBasic keywords (such as THEN, WHILE, etc). In that case quotes are not needed. 
+Numerical constants can also be expressions such as 5 * 60. 

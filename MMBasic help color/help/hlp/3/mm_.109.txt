@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>110] MM.INFO(WRITEBUFF) 
+Returns the address in memory of the current buffer used for drawing commands.

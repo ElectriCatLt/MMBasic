@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>374] LOCAL variable [, variables] 
+See DIM for the full syntax. 
+Defines a list of variable names as local to the subroutine or function. 
+This command uses exactly the same syntax as DIM and will create variables that will only be visible within the subroutine or function. 
+They will be automatically discarded when the subroutine or function exits. 

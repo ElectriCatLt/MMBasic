@@ -1,0 +1,5 @@
+ALL VERSIONS
+[>520] POKE DISPLAY HRES n. (or VRES n)
+POKE DISPLAY HRES n
+POKE DISPLAY VRES n
+These commands change the stored value of MM.HRES and MM.VRES allowing the programmer to configure non-standard displays.

@@ -1,0 +1,15 @@
+ALL VERSIONS
+[>798] Using MMBasic - Watchdog Timer
+One of the uses for the Raspberry Pi Pico is as an embedded controller. 
+It can be programmed in MMBasic and when the program is debugged and ready for "prime time" the OPTION AUTORUN configuration setting can be turned on. 
+The module will then automatically run its program when power is applied and act as a custom circuit performing some special task. 
+The user need not know anything about what is running inside it. 
+However, there is the possibility that a fault in the program could cause MMBasic to generate an error and return to the command prompt. 
+This would be of little use in an embedded situation as the device would not have anything connected to the console. 
+Another possibility is that the BASIC program could get itself stuck in an endless loop for some reason. 
+In both cases the visible effect would be the same... the program would stop running until the power was cycled. To guard against this the watchdog timer can be used. 
+This is a timer that counts down to zero and when it reaches zero the processors will be automatically restarted (the same as when power was first applied), 
+this will occur even if MMBasic was sitting at the command prompt. 
+Following the restart the automatic variable MM.WATCHDOG will be set to true to indicate that the restart was caused by a watchdog timeout. 
+The WATCHDOG command should be placed in strategic locations in the program to keep resetting the timer and therefore preventing it from counting down to zero. 
+Then, if a fault occurs, the timer will not be reset, it will count down to zero and the program will be restarted (assuming the AUTORUN option is set).

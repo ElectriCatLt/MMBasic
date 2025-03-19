@@ -1,0 +1,5 @@
+WEBMITE ONLY
+[>627] WEB TCP SEND cb%, data%() or WEB TCP CLOSE cb%
+These two commands allow more flexibility in using the TCP server. 
+Unlike WEB TRANSMIT PAGE or WEB TRANSMIT FILE, WEB TCP SEND does not create any sort of header, nor does it close the TCP connection after transmission. 
+It just sends exactly what is in the LONGSTRING data%() and it is up to the Basic programmer to close the connection when appropriate. 

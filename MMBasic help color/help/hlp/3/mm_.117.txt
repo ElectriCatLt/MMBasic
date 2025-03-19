@@ -1,0 +1,7 @@
+ALL VERSIONS
+[>118] MM.ONEWIRE 
+Following a 1-Wire reset function this integer variable will be set to indicate the result of the operation: 
+<CGRE>
+0 = Device not found, 
+1 = Device found.
+</CGRE>

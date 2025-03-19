@@ -1,0 +1,4 @@
+NOT VGA OR HDMI VERSIONS
+[>156] OPTION LCDPANEL options or OPTION LCDPANEL DISABLE
+Configures the PicoMite firmware to work with an attached LCD panel. 
+See the chapter LCD Displays for the details. This command must be run at the command prompt (not in a program).

@@ -1,0 +1,27 @@
+    |\__/,|   (`\  
+  _.|o o  |_   ) )
+-(((---(((--------
+-2025 Electricat- 
+
+This help is mostly copy of Picomites` family official manual but in form  of searchable text database.
+As it is stored in SD card and in plain text format and does not take too much space, additional examples and reading materials can be added, comparing to official manual.
+Any beta changes in firmwares, like new commands or functionality, can be added or removed fast and easy way with no need to re-print paper version of manual. 
+Thanks to LIBRARY functionality, this help can be called typing 'help' in command prompt. Later user can get back to program editing.
+
+Use should be simple. User just enter one word search phrase and help returns everything maching phrase. 
+Try and enter 'DRAWING' and program will list in short form everything relateted to drawing - commands, functions or tutorials.
+Every topic has number [nn]. If user enters >nn, topic will be listed in full format.
+For example type RUN and program will list few topics. List begins with number [>59]
+If user will type '>59' topic will be listed in full format.
+
+Similar effect has key '-f' 
+If user would enter 'RUN -f', same topics fill be listed, but this time in full format.
+
+If user would type in '-x' or press 'ctrl+C' - program will exit. '-x' is more gracefull way to exit.
+Key '-s" would list keyword suggestions.
+
+It must be noted: search phrase is not case sensitive, but keys '-f', '-x', '-s' and '-h' are CASE SENSITIVE.
+
+Manual can be built from main large file and following different flavours. 
+Short or long version, black and white or color - it`s up to user`s choice. 
+Hope this program will serve You well. Good luck! 

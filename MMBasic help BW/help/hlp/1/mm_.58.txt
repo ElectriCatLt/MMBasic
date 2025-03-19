@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>59] MM.INFO$(AUTORUN)
+Returns the setting of the <t1>OPTION AUTORUN</t2> command 

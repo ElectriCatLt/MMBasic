@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>564] SETPIN pin, PIOn  
+Reserve pin for use by a PIO0 or PIO1 (see Appendix F for PIO details).

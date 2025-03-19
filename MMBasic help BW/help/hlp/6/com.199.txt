@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>200] ADC RUN array1%(),array2%)
+Runs the ADC continuously in double buffered mode. The ADC first fills array1% and then array2% and then back to array1% etc. 
+If more than one ADC channel is specified in the ADC OPEN command the data are interleaved. 
+The data is returned as packed 8-bit values (Use MEMORY UNPACK to convert to a normal array). 
+MM.INFO(ADC) will return the number of the buffer currently available for reading (1 or 2).

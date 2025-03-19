@@ -1,0 +1,6 @@
+NOT VGA OR HDMI
+[>222] CAMERA TEST tnum
+Enables or disables a test signal from the camera. 
+tnum=2 generates colourbars and 
+tnum=0 sets back to the visual input. 
+tnum = 1 and tnum = 3 do something but what?

@@ -1,0 +1,5 @@
+NOT ON WEBMITE VERSION
+[>554] SETPIN GP25, DOUT | HEARTBEAT
+This version of SETPIN controls the on-board LED. If it is configured as DOUT then it can be switched on and off under program control. 
+If configured as HEARTBEAT then it will flash 1s on, 1s off continually while powered. 
+This is the default state and will be restored to this when the user program stops running.

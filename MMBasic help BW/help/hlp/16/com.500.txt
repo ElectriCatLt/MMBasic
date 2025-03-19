@@ -1,0 +1,13 @@
+ALL VERSIONS
+[>501] PLAY SOUND soundno, channelno, type [,frequency] [,volume] 
+Play a series of sounds simultaneously on the audio output. 'soundno' is the sound number 
+and can be from 1 to 4 allowing for four simultaneous sounds on each channel. 
+'channelno' specifies the output channel. It can be L (left speaker), R (right speaker) or B (both speakers) 
+'type' is the type of waveform. It can be S (sine wave), Q (square wave), T (triangle wave), W (rising sawtooth) or O (turn off sound). 
+'frequency' is the frequency from 1 to 20000 (Hz) and it must be specified except when type is O. 
+'volume' is optional and must be between 1 and 25. It defaults to 25 
+The first time PLAY SOUND is called all other audio usage will be blocked and will remain blocked until PLAY STOP is called. 
+Output can be stopped  temporarily using PLAY PAUSE and PLAY RESUME. 
+Calling SOUND on an already running 'soundno' will immediately replace  the previous output. 
+Individual sounds are turned off using type "O" 
+Running 4 sounds simultaneously on both channels of the audio output consumes about 23% of the CPU. 

@@ -1,0 +1,8 @@
+NOT HDMI AND VGA VERSIONS
+[>314] FRAMEBUFFER COPY from, to [,b] NOT HDMI AND VGA VERSIONS
+Does a highly optimised full screen copy of one framebuffer to another. "from" and "to" can be N, F, or L where N is the physical display. You can 
+only copy from N on displays that support BLIT and transparent text. 
+The firmware will automatically compress or expand the RGB resolution when copying to and from unmatched framebuffers.
+Of course copying from RGB565 to RGB121 loses information but for many applications (eg, games) 16 colour levels is more than enough. 
+When copying to an LCD display the optional parameter "b" can be used (FRAMEBUFFER COPY F/L, N, B). 
+This instructs the firmware to action the copy using the second CPU in the Raspberry Pi Pico and control returns immediately to the Basic program

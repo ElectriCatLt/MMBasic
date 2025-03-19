@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>109] MM.INFO(VERSION) 
+Returns the version number as a floating point number

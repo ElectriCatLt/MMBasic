@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>670] GPS(ALTITUDE) 
+Returns current altitude (if sentence GGA is enabled).

@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>162] OPTION LIST 
+This will list the settings of any options that have been changed from their default setting and are the permanent type. 

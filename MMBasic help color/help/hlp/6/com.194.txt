@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>195] ADC
+The ADC commands provide an alternate method of recording analog inputs and are intended for high speed recording of many readings into an array.

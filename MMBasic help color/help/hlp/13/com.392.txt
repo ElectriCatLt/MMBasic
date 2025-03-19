@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>393] LOOP [UNTIL expression] 
+Terminates a program loop: see DO. 

@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>91] MM.INFO$(PIN pinno) 
+Returns the status of I/O pin 'pinno'. Valid returns are: OFF, DIN, DOUT, AIN, etc

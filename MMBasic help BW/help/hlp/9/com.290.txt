@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>291] EXIT FUNCTION  
+Provides an early exit from a defined function. 

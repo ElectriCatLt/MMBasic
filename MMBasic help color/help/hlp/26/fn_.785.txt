@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>786] UCASE$( string$ ) 
+Returns 'string$' converted to uppercase characters. 

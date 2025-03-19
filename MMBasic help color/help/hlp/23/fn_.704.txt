@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>705] MATH(SINH a) 
+Returns the hyperbolic sine of a 

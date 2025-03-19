@@ -1,0 +1,22 @@
+ALL VERSIONS
+[>471] OPEN fname$ FOR mode AS [#]fnbr 
+Opens a file for reading or writing. 
+'fname' is the filename with an optional extension separated by a dot (.). 
+Long file names with upper and lower case characters are supported. A directory path can be specified with the backslash as directory separators. 
+The parent of the current directory can be specified by using a directory name of .. (two dots) and the current directory with . (a single dot). 
+For example 
+OPEN "..\dir1\dir2\filename.txt" FOR INPUT AS #1 
+'mode' is INPUT, OUTPUT, APPEND or RANDOM. 
+INPUT will open the file for reading and throw an error if the file does not exist. 
+OUTPUT will open the file for writing and will automatically overwrite any existing file with the same name. 
+APPEND will also open the file for writing but it will not overwrite an existing file; instead any writes will be appended to the end of the file. 
+If there is no existing file the APPEND mode will act the same as the OUTPUT mode (i.e. the file is created then opened for writing). 
+
+RANDOM will open the file for both read and write and will allow random access using the SEEK command. 
+
+When opened the read/write pointer is positioned at the end of the file. 'fnbr' is the file number (1 to 10).
+
+RANDOM works the same as output and creates a file if one does not exist The # is optional. Up to 10 files can be open simultaneously. 
+
+The INPUT, LINE INPUT, PRINT, WRITE and CLOSE commands as well as the EOF() and INPUT$() functions all use 'fnbr' to identify the file being operated on. 
+See also ON ERROR and MM.ERRNO for error handling. 

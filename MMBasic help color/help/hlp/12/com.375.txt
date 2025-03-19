@@ -1,0 +1,9 @@
+ALL VERSIONS
+[>376] LONGSTRING AES128 ENCRYPT/DECRYPT CBC/ECB/CTR key$/key[!/%](), in%(), out%() [,iv$/iv[!/%]()]
+Encrypts or decrypts the longstring in in%() putting the answer in out%() 
+For CBC and CTR modes the encryption will generate a random initialisation vector and prepend out%() with the IV. 
+If an explicit IV is specified this will be used instead of the random vector and this will be prepended to out%() 
+For CBC and CTR decryption the firmware assumes that the first 16 bytes of in%() are the initialisation vector. 
+In the case where you want to transmit a message without IV you can use LONGSTRING RIGHT to remove the IV before sending the message. 
+In this case the recipient must know the IV as well as the key and create a complete longstring before using DECRYPT. 
+This can be done by using LONGSTRING CONCAT to add the incoming message to a longstring containing the IV.

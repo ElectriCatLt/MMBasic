@@ -1,0 +1,7 @@
+ALL VERSIONS
+[>743] PIO(NEXT LINE [channel])
+If channel is not specified then it uses the last pio specified by a PIO ASSEMBLE command or gives an error if there hasn't been one.
+If channel is specified, it returns the next line for that channel which will be zero if that channel has not been used.
+<CRED>
+BETA 6.02 ONLY!
+</CRED>

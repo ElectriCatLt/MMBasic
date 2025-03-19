@@ -1,0 +1,5 @@
+WEBMITE ONLY
+[>621] WEB SCAN [array%()]
+Scans for all available wifi connections. 
+If 'array%()' is specified the output will be stored in a Longstring, otherwise output will be to the console. 
+The command can be used whether ot not an network connection is already active.

@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>504] PLAY STOP 
+Will terminate the playing of the file or tone. 
+When the program terminates for whatever reason the sound output will also be automatically stopped. 

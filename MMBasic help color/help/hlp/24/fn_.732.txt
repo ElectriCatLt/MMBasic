@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>733] PEEK(WP,n%)PEEK with increment to the next word
+PEEK(wp n%) ' returns the word at address n% and increments n% to point to the next word.

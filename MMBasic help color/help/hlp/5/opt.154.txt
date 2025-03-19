@@ -1,0 +1,10 @@
+NOT VGA OR HDMI VERSIONS
+[>155] OPTION LCDPANEL VIRTUAL_C  or OPTION LCDPANEL VIRTUAL_M
+Configures a virtual LCD panel without a physically connected panel. 
+<CODE>
+VIRTUAL _C = Colour, 4bit, 320 x 240 
+VIRTUAL _M = Monochrome, 640 x 480 
+</CODE>
+
+Using this feature a program can draw graphical images on this virtual panel and then save them as a BMP file. 
+Useful for creating a graphic image for export without an attached display

@@ -1,0 +1,4 @@
+NON USB VERSIONS
+[>460] MOUSE CLOSE channel
+Closes access to the mouse and restores the pins to normal use. 
+The command will error if OPTION MOUSE has been set.

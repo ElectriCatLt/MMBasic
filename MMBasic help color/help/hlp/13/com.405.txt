@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>406] MATH RANDOMIZE [n]
+Seeds the Mersenne Twister algorithm. If n is not specified the seed is the time in microseconds since boot 
+The Mersenne Twister algorithm gives a much better random number than the C-library inbuilt function 

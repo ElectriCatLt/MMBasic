@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>61] MM.INFO(ADC DMA) 
+Returns true (1) if the ADC DMA is active.

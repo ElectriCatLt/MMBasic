@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>82] MM.INFO(FONTWIDTH)
+Integers representing the width of the current font (in pixels).

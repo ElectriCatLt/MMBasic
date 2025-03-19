@@ -1,0 +1,5 @@
+WEBMITE ONLY
+[>632] WEB UDP SEND addr$, port, data$
+Used to send a datagram to a remote receiver. 
+In this case the IP address must be specified and can be either a numeric address (eg, "192.168.1.147") or a normal text address (eg, "google.com"). 
+The port number of the receiver must also be specified and the message itself. The SEND command can be used as a response to an incoming message or stand-alone.

@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>68] MM.INFO$(PATH) 
+Returns the path of the current program or NONE if called after a NEW or EDIT Command.

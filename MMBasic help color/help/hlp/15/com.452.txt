@@ -1,0 +1,60 @@
+HDMI VERSIONS ONLY
+[>453] MODE n 
+HDMI video supports a number of resolutions (see OPTION RESOLUTION). 
+This command will select the mode 'n' depending on the resolution: OPTION RESOLUTION 640 x 480
+
+<CODE>
+MODE 1
+</CODE>
+
+640 x 480 x 2-colours (monochrome). Default at startup. Use the command as normal. 
+Tiles width is fixed at 8 pixels. Tile height defaults to 12 pixels but can be from 8 to MM.HRES. 
+Tiles colours are specified using the standard RGB888 notation. This is converted to RGB555. 
+A framebuffer (F) and a layer buffer (L) can be created. These can be used for creating images and copying to the display screen (N)
+
+<CRED>
+BETA 6.02 ONLY! 
+</CRED>
+<CGRE>
+Layer buffer now available in HDMI mode 1 
+For more, read Graphics Functions; FRAMEBUFFERS AND LAYERS
+</CGRE>
+
+<CODE>
+MODE 2
+</CODE>
+
+320 x 240 x 16 colours. A framebuffer (F) can be created. This can be used for creating images and copying to the display screen (N). 
+In addition a layer buffer can be created. 
+Any pixels written to the layer buffer will automatically appear on the display sitting on top of whatever may be in the main display buffer. 
+A colour can be specified (0-15: defaults to 0) which does not show allowing the main display buffer to show through. 
+Map functionality is available to override the default colours. 
+
+<CODE>
+MODE 3
+</CODE>
+
+640 x 480 x 16 colours. Colour mapping to RGB555 palette. A framebuffer (F) can be created. 
+It can be used for creating images and copying to the display screen (N). In addition a layer buffer can be created. 
+Any pixels written to the layer buffer will automatically appear on the display sitting on top of whatever may be in the main display buffer. 
+A colour can be specified (0-15: defaults to 0) which does not show allowing the main display buffer to show through. 
+
+<CODE>
+MODE 4 
+</CODE>
+
+320 x 240 x 32768 colours. This is full RGB555 allowing good quality colour images to be displayed. 
+A framebuffer (F) and a layer buffer (L) can be created. 
+These have no impact on the display and can be used for creating images and copying to the display screen (N). Only one can be created 
+
+<CODE>
+MODE 5 
+</CODE>
+
+320 x 240 x 256 colours. A framebuffer (F) can be created. This has no impact on the display. 
+It can be used for creating images and copying to the display screen (N). 
+In addition a layer buffer can be created. This does not use user memory. 
+Any pixels written to the layer buffer will automatically appear on the display sitting on top of whatever may be in the main display buffer. 
+A colour can be specified (0-255: defaults to 0) which does not show allowing the main display buffer to show through. 
+Map functionality is available to override the default colours of the 256 available. 
+Each of the 256 colours can be mapped to any RGB555 colour. 

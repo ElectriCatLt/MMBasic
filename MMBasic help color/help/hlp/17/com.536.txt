@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>537] REM string 
+REM allows remarks to be included in a program. 
+<CGRE>
+Note the Microsoft style use of the single quotation mark (') to denote remarks is also supported and is preferred. 
+</CGRE>

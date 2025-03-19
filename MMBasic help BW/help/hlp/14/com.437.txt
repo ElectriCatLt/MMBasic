@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>438] MATH FFT PHASE signalarray!(), phasearray!() 
+Generates phases for frequencies for the data in  "signalarray!". 
+"signalarray" must be floating point and the size must be a power of 2 (e.g. s(1023) assuming OPTION BASE is zero) 
+"phasearray" must be floating point and the size must be the same as the signal array
+The command will return the phase angle of the signal at various frequencies according to the formula  above.

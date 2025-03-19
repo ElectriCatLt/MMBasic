@@ -1,0 +1,5 @@
+VS1053 specific
+[>511] PLAY MIDIFILE file$ [,interrupt] (VS1053 specific)
+The MIDI file is played in the background. 
+'interrupt' is optional and is the name of a subroutine which will be called when the file has finished playing. 
+If file$ is a directory the Pico will play all of the files in that directory in turn.

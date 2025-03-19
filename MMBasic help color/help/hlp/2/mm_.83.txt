@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>84] MM.INFO(FLASH ADDRESS n) 
+Returns the address of the flash slot n.

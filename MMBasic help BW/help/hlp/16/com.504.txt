@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>505] PLAY VOLUME left, right 
+Will adjust the volume of the audio output. 
+'left' and 'right' are the levels to use for the left and right channels and can be between 0 and 100 with 100 being the maximum volume. 
+There is a linear relationship between the specified level and the output. 
+The volume defaults to maximum when a program is run. 

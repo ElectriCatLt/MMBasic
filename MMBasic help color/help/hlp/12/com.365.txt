@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>366] LIST [fname$] or LIST ALL [fname$] 
+List a program on the console. LIST on its own will list the program with a pause at every screen full. 
+LIST ALL will list the program without pauses. 
+This is useful if you wish to transfer the program to a terminal emulator on a PC that has the ability to capture its input stream to a file. 
+If the optional 'fname$' is specified then that file on the SD card will be listed. 

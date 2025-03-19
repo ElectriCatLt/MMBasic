@@ -1,0 +1,3 @@
+NOT VGA OR HDMI
+[>247] DEVICE CAMERA 
+See CAMERA command

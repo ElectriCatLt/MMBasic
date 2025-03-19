@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>457] MOUSE INTERRUPT DISABLE channel
+Disables an interrupt on the left mouse button

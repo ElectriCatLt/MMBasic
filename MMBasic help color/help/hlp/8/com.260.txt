@@ -1,0 +1,38 @@
+NOT WEBMITE VERSION
+[>261] DRAW3D 
+The 3D engine includes commands for manipulating 3D images including setting the camera, creating, hiding, rotating, etc. 
+Command DRAW3D has a number of sub commands.
+
+DRAW3D CAMERA, DRAW3D CLOSE, DRAW3D CLOSE ALL, DRAW3D CREATE , DRAW3D HIDE , DRAW3D HIDE ALL, DRAW3D RESET, DRAW3D ROTATE, DRAW3D SHOW, DRAW3D WRITE
+
+Before looking at the commands in detail I will try and explain the concept and the limitations of the engine.
+The 3D world is an area of space 65532 x 65532 x 32766 units (x, y, z) centred at 0,0,0 
+In other words an object can be placed from -32766 to 32766 in the x-axis, -32766 to 32766 in the y-axis and 0 to 32766 in the z-axis You can define up to 128 3D objects numbered 1 to 128.
+
+Each object is described in terms of how many vertices it has, how many faces it has, which vertices make up each face and the colours of the edges and infill of each face. 
+Objects can have any number of vertices and faces limited only by system memory.
+The vertices are specified as x,y,z coordinates referenced to the object centre at 0,0,0 In addition for each object you will define the "camera" that is used to view the object. 
+The 3D engine supports up to 6 camera positions numbered 1 to 6 
+
+All cameras look along their Z axis and before you display a 3D object the associated camera must be initialised by defining the x,y position of the camera and its viewplane. 
+In camera terms the viewplane can be thought of as the focal length of the camera lens. So the bigger the value of the viewplane the more the camera "magnifies" the image.
+For example, if we position a 3D object 1000 units away from the camera and the viewplane is at 200 then the projected image of the object onto the viewplane will be 20% of its original size. 
+If we "zoom" the viewplane to a "focal length" of 800 the projected image will now be 80% of its original size.
+When a 3D object is created the data used to create it is stored in CMM2 memory and any MMBasic arrays used to create the object can be "erased" if required.
+
+All objects are stored in their initial orientation as defined by their initialising data but they can be rotated in three dimensions using the DRAW3D ROTATE command. 
+This command acts upon the initial orientation and stores a rotated copy transparently in the object data internally in the firmware. 
+Rotation takes place around the objects own centre. If you wish to rotate around any position in the 3D world this should be done as first a rotation of the object and then a move of the object. 
+It is important to understand that every rotation requested for an object starts from the initial orientation and is not cumulative. 
+(However, this can be overridden - see the DRAW3D RESET command) 
+
+Rotation is specified using a quaternion but don't worry I've included a very simple MATH command to convert yaw, pitch and roll angles into the required quaternion (MATH Q_EULER)
+Rotation has no effect on a displayed object but merely updates the internal memory definition of the object.
+There are two commands used to place an object in the 3D world - DRAW3D WRITE and DRAW3D SHOW. 
+The only difference is that, assuming the object was already displayed, the SHOW command will clear a rectangle on the current write page sufficient to remove the existing object image 
+before displaying it whereas DRAW3D WRITE just overwrites whatever in on the write page with the 2D representation of the object.
+It is entirely up to the MMBasic programmer to deal with things like overlap of objects in the 3D world and on the screen but to aid this objects that have been SHOWn can be removed 
+and the rectangular area of the screen in which they were drawn cleared using the DRAW3D HIDE command.
+
+All objects and camera positions are deleted on any mode change and every time a program is run. Hopefully the above gives you a basic understanding of how the 3D engine works and its limitations.
+The way the camera works may seem to create a specific limitation in terms of multiple views of an object but we will see in a subsequent post how this can be overcome.

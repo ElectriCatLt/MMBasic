@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>369] LIST SYSTEM I2C
+Produces a display showing the addresses of all I2C device connected to the STSTEM I2C pins
+BETA 6.02 ONLY!

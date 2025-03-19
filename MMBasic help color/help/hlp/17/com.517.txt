@@ -1,0 +1,17 @@
+ALL VERSIONS
+[>518] POKE (BYTE,SHORT,WORD,INTEGER,FLOAT,VAR,VARTBL)
+<CODE>
+POKE BYTE addr%, byte or POKE SHORT addr%, short% or POKE WORD addr%, word%  or POKE INTEGER addr%, int% or POKE FLOAT addr%, float! or POKE VAR var, offset, byte or POKE VARTBL, offset, byte 
+</CODE>
+
+Will set a byte or a word within the virtual memory space.
+POKE BYTE will set the byte (i.e. 8 bits) at the memory location 'addr%' to 'byte'. 'addr%' should be an integer.
+POKE SHORT will set the short integer (i.e. 16 bits) at the memory location 'addr%' to 'word%'. 'addr%' and short%' should be integers.
+POKE WORD will set the word (i.e. 32 bits) at the memory location 'addr%' to 'word%'. 'addr%' and 'word%' should be integers.
+POKE INTEGER will set the MMBasic integer (i.e. 64 bits) at the memory location 'addr%' to int%'. 'addr%' and int%' should be integers.
+POKE FLOAT will set the word (i.e. 32 bits) at the memory location 'addr%' to 'float!'. 'addr%' should be an integer and 'float!' a floating point number.
+POKE VAR will set a byte in the memory address of 'var'. 'offset' is the ±offset from the address of the variable. An array is specified as var().
+POKE VARTBL will set a byte in MMBasic's variable table. 'offset' is the ±offset from the start of the variable table. 
+<CGRE>
+Note that a comma is required after the keyword VARTBL.
+</CGRE>

@@ -1,0 +1,28 @@
+ALL VERSIONS
+[>552] SETPIN pin, cfg, target [,option] 
+Will configure an external I/O pin. Refer to the chapter Using the I/O pins for a general description of the Pico's input/output capabilities. 
+'pin' is the I/O pin to configure, 
+'cfg' is the mode that the pin is to be set to and 
+'option' is an optional parameter. 
+'cfg' is a keyword and can be any one of the following:
+OFF Not configured or inactive 
+AIN Analog input (i.e. measure the voltage on the input).
+ARAW Fast analog input returning a value between 0 and 1023.
+DIN Digital input 
+If 'option' is omitted the input will be high impedance If 'option' is the keyword "PULLUP" or "PULLDOWN" a constant current of about 50uA 
+will be used to pull the input pin up or down to 3.3V. Due to a bug in the RP2350 chips it is recommended that a pulldown be implemented using a 8.2K or less resistor.
+FIN Frequency input 'option' can be used to specify the gate time (the length of time used to count the input cycles). 
+It can be any number between 10 ms and 100000 ms. 
+The PIN() function will always return the frequency correctly scaled in Hz regardless of the gate time used. 
+If 'option' is omitted the gate time will be 1 second. The pins can be GP6, GP7, GP8 or GP9 (can be changed with OPTION COUNT).
+PIN Period input 'option' can be used to specify the number of input cycles to average the period measurement over. 
+It can be any number between 1 and 10000. 
+The PIN() function will always return the average period of one cycle correctly scaled in ms regardless of the number of cycles used for the average. 
+If 'option' is omitted the period of just one cycle will be used. The pins can be GP6, GP7, GP8 or GP9 (can be changed with OPTION COUNT).
+CIN Counting input 'option' can be used to specify which edge triggers the count and if any pullup or pulldown is enabled 2 specifies a falling edge with pullup, 
+3 specifies that both a falling and rising edge will trigger a count with no pullup applied, 5 specifies both edges but with a pullup applied. 
+If 'option' is omitted a rising edge will trigger the count. Due to a bug in the RP2350 chips pulldown is not recommended. 
+The pins can be GP6, GP7, GP8 or GP9 (can be changed with OPTION COUNT). 
+DOUT Digital output 'option' is not used in this mode. 
+The functions PIN() and PORT() can also be used to return the value on one or more output pins. 
+See the function PIN() for reading inputs and the statement PIN()= for setting an output. See the command below if an interrupt is configured.

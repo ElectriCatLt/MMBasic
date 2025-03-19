@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>464] ON ERROR ABORT 
+Will cause MMBasic to display an error message, abort the program and return to the command prompt. 
+This is the normal behaviour and is the default when a program starts running. 

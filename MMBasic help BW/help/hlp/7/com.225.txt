@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>226] CHDIR dir$ 
+Change the current working directory on the SD card to 'dir$' 
+The special entry ".." represents the parent of the current directory and "." represents the current directory. "/" is the root directory. 

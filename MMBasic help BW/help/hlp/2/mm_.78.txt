@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>79] MM.INFO(FONT ADDRESS n) 
+Returns the address of the memory location with the address of FONT n

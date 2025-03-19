@@ -1,0 +1,34 @@
+ALL VERSIONS
+[>754] RGB(red, green, blue) or  RGB(shortcut) 
+Generates an RGB true colour value. 'red', 'blue' and 'green' represent the intensity of each colour. 
+A value of zero represents black and 255 represents full intensity. 
+'shortcut' allows common colours to be specified by naming them. 
+The colours that can be named are 
+<CGRE>
+white, yellow, lilac, brown, fuchsia, rust, magenta, red, cyan, green, cerulean, midgreen, cobalt, myrtle, blue and black. 
+</CGRE>
+For example, 
+<CODE>
+RGB(red) or RGB(cyan). 
+</CODE>
+
+Unoficial note (means it is not from official user manual)
+Predefinded colour values are:
+<CGRE>
+WHITE       RGB(255,  255,  255)
+YELLOW      RGB(255,  255,    0)
+LILAC       RGB(255,  128,  255)
+BROWN       RGB(255,  128,    0)
+FUCHSIA     RGB(255,  64,   255)
+RUST        RGB(255,  64,     0)
+MAGENTA     RGB(255,  0,    255)
+RED         RGB(255,  0,      0)
+CYAN        RGB(0,    255,  255)
+GREEN       RGB(0,    255,    0)
+CERULEAN    RGB(0,    128,  255)
+MIDGREEN    RGB(0,    128,    0)
+COBALT      RGB(0,    64,   255)
+MYRTLE      RGB(0,    64,     0)
+BLUE        RGB(0,    0,    255)
+BLACK       RGB(0,    0,      0)
+</CGRE>

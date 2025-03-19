@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>98] MM.INFO$(SOUND)
+Returns the current activity on the audio output (OFF, PAUSED, TONE, WAV, FLAC, SOUND)

@@ -1,0 +1,26 @@
+ALL VERSIONS
+[>31] A Tutorial - STRUCTURE OF A BASIC PROGRAM
+A BASIC program starts at the first line and continues until it runs off the end or hits an END command - at which point MMBasic will display the command prompt (>) on the console and wait for something to be entered.
+A program consists of a number of statements or commands, each of which will cause the BASIC interpreter to do something (the words statement and command generally mean the same and are used interchangeable in this tutorial).
+Normally each statement is on its own line but you can have multiple statements in the one line separated by the colon character (:).
+For example;
+<CODE>
+A = 24.6 : PRINT A
+</CODE>
+
+Each line can start with a line number. Line numbers were mandatory in the early BASIC interpreters however modern implementations (such as MMBasic) do not need them. 
+You can still use them if you wish but they have no benefit and generally just clutter up your programs.
+
+This is an example of a program that uses line numbers:
+<CODE>
+50 A = 24.6
+60 PRINT A
+</CODE>
+
+A line can also start with a label which can be used as the target for a program jump using the GOTO command. 
+This will be explained in more detail when we cover the GOTO command but this is an example (the label name is JmpBack):
+<CODE>
+JmpBack: A = A + 1
+PRINT A
+GOTO JmpBack
+</CODE>

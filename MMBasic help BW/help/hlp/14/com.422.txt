@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>423] MATH V_NORMALISE inV(), outV() 
+Converts a vector inV() to unit scale and puts the answer in outV()(sqr(x*x + y*y +.......)=1 
+There is no limit on number of elements in the vector 

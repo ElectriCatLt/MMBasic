@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>747] PIO(FLEVEL pio ,sm, DIR) dir can be RX or TX. 
+Returns the level of the specific fifo

@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>748] PIO(.WRAP) 
+Returns the location of the .wrap directive in PIO ASSEMBLE

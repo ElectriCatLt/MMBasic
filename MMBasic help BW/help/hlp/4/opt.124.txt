@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>125] OPTION AUDIO SPI Cspin,  CLKpin, MOSIpin  or OPTION AUDIO DISABLE 
+Configures the audio output to be directed to a MCP48n2 DAC connected to the specified pins. 
+The LDAC pin on the DAC should be connected to GND.

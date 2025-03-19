@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>753] RAD( degrees ) 
+Converts 'degrees' to radians. 

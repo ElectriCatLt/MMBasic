@@ -1,0 +1,5 @@
+ALL VERSIONS
+[>535] READ SAVE or READ RESTORE 
+READ SAVE will save the virtual pointer used by the READ command to point to the next DATA to be read. 
+READ RESTORE will restore the pointer that was previously saved. 
+This enables subroutines to READ data and then restore the read pointer so as not to disturb other parts of the program that may be reading the same data statements. These commands can be nested.

@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>77] MM.INFO(BCOLOUR) 
+Returns the current background colour

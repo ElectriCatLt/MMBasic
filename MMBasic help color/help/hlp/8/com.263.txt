@@ -1,0 +1,5 @@
+PICOMITE VGA AND HDMI ONLY
+[>264] DRAW3D RESET n [,n1 [,n2...]}
+This command takes the current rotated version of the object(s) and copies it into the initialisation data. 
+Whilst this isn't recommended for iterative rotations it is very useful in establishing multiple views of the same object. 
+Later in this document I will show how to use DRAW3D RESET to create and simultaneously manipulate front and plan views of identical objects

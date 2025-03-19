@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>650] CWD$ 
+The current working directory on the SD card. Invalid for exFAT format. The format is: A:/dir1/dir2. 

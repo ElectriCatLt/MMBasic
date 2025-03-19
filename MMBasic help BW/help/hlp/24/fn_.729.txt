@@ -1,0 +1,30 @@
+ALL VERSIONS
+[>730] PEEK (BYTE or SHORT or WORD or INTEGER)
+
+PEEK(BYTE addr%) 
+PEEK(SHORT addr%) 
+PEEK(WORD addr%) 
+PEEK(INTEGER addr%) 
+PEEK(FLOAT addr%) 
+PEEK(VARADDR var) 
+PEEK(CFUNADDR cfun) 
+PEEK(VAR var, ±offset)  
+PEEK( VARTBL, ±offset) 
+PEEK( PROGMEM, ±offset) 
+
+
+Will return a byte or a word within the PIC32 virtual memory space. 
+BYTE will return the byte (8-bits) located at 'addr%' 
+SHORT will return the short integer (16-bits) located at 'addr%' 
+WORD will return the word (32-bits) located at 'addr%' 
+INTEGER will return the integer (64-bits) located at 'addr%' 
+FLOAT will return the floating point number (32-bits) located at 'addr%' 
+VARADDR will return the address (32-bits) of the variable 'var' in memory. An array is specified as var(). 
+CFUNADDR will return the address (32-bits) of the CFunction 'cfun' in memory. This address can be passed to another CFunction which can then call it to perform some common process. 
+VAR, will return a byte in the memory allocated to 'var'. An array is specified as var(). 
+VARTBL, will return a byte in the memory allocated to the variable table maintained by MMBasic. 
+Note that there is a comma after the keyword VARTBL. 
+
+PROGMEM, will return a byte in the memory allocated to the program. 
+Note that there is a comma after the keyword PROGMEM. 
+Note that 'addr%' should be an integer. 

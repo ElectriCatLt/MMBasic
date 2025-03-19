@@ -1,0 +1,7 @@
+ALL VERSIONS
+[>531] RAM
+RAM command functions like the FLASH command with 5 program slots available in PSRAM. 
+All commands except RAM LOAD (copies a RAM slot to the main flash program space) can be used in a program.
+RAM FILE LOAD n,fname$ [,O[VERWRITE]] can be used to load a RAM slot from a standard disk .BAS file
+RP2350 with PSRAM only!
+BETA 6.02 ONLY!

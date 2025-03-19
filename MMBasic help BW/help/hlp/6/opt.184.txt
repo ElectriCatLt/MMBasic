@@ -1,0 +1,4 @@
+WEBMITE ONLY
+[>185] OPTION TFTP OFF|ON 
+Enables or disables the TFTP server. 
+Default is on. 

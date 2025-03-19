@@ -1,0 +1,6 @@
+HDMI VERSIONS ONLY
+[>174] OPTION RESOLUTION nn [,cpuspeedinKhz] 
+For firmware with HDMI video set the video resolution to 'nn'. 
+Where 'nn' is: 640x480 or 640 // 1280x720 or 1280 // 1024x768 or 1024.  
+For 640x480 the display frequency can be set to 60Hz (252Mhz) or 75Hz (315MHz) by appending 'cpuspeedinKHz' to the command (ie, 252000 or 315000). 
+Each HDMI resolution can operate in a number of modes which are set using the MODE command.

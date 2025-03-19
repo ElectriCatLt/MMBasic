@@ -1,0 +1,35 @@
+ALL VERSIONS
+[>331] GAMEPAD CONFIGURE vid, pid, i0, c0, i1, c1, i2, c2, i3, c3, i4, c4, i5, c5, i6, c6, i7, c7, i8, c8, i9, c9, i10, c10, i11, c11, i12, c12, i13, c13, i14, c14, i15, c15
+Use GAMEPAD CONFIGURE to set up a gamepad that isn't supported before plugging it in. 
+All 34 parameters are mandatory. 
+BETA 6.02 ONLY!
+
+Note:
+struct s_Buttons {
+uint8_t index; // which report element relates to this bit set to 0xFF if bit not used
+// code can be a bit number 0-7 for positive if pressed
+// 128-135 for negative if pressed
+// 64 for value less than 64 if pressed
+// 192 for value greater than 192 if pressed
+uint8_t code ;
+};
+struct s_Gamepad {
+uint16_t vid;
+uint16_t pid;
+struct s_Buttons b_R;
+struct s_Buttons b_START;
+struct s_Buttons b_HOME;
+struct s_Buttons b_SELECT;
+struct s_Buttons b_L;
+struct s_Buttons b_DOWN;
+struct s_Buttons b_RIGHT;
+struct s_Buttons b_UP;
+struct s_Buttons b_LEFT;
+struct s_Buttons b_R2;
+struct s_Buttons b_X;
+struct s_Buttons b_A;
+struct s_Buttons b_Y;
+struct s_Buttons b_B;
+struct s_Buttons b_L2;
+struct s_Buttons b_TOUCH;
+};

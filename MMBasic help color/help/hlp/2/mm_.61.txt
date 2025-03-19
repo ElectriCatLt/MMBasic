@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>62] MM.INFO(BOOT COUNT)
+Returns the number of times the Pico has been restarted since the flash drive was last formatted.

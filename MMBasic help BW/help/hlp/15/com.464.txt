@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>465] ON ERROR IGNORE 
+Will cause any error to be ignored. 

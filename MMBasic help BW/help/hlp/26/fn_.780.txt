@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>781] TAN( number ) 
+Returns the tangent of the argument 'number' in radians. 

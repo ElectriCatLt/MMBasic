@@ -1,0 +1,12 @@
+ALL VERSIONS
+[>368] LIST PINS
+Lists pins
+
+This is actually quite a sneaky implementation. 
+There is a CSUB command CallExecuteProgram which allows a CSUB to call a Basic subroutine in the user's program. 
+It`s embedded  Basic implementation of the sub FREEPINS into the firmware completely transparently. 
+When you call LIST PINS you are actually running a little Basic program but you don't see it and it doesn't use any user resource. 
+AND the code is 100x simpler than doing the same thing in C
+<CRED>
+BETA 6.02 ONLY!
+</CRED>

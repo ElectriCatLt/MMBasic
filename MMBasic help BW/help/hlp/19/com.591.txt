@@ -1,0 +1,5 @@
+VGA AND HDMI VERSIONS ONLY
+[>592] SPRITE SWAP [#]n1, [#]n2 [,orientation] (VGA AND HDMI VERSIONS ONLY)
+Replaces the sprite 'n1' with the sprite 'n2'. The sprites must have the same width and height and 'n1' must be displayed or an error will be generated. 
+Refer to SPRITE SHOW for details of the orientation parameter. 
+The replacement sprite inherits the background from the original as well as its position in the list of order drawn.

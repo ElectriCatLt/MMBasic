@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>467] ON ERROR CLEAR. 
+They are also cleared when the program is run and when ON ERROR IGNORE and ON ERROR SKIP are used. 
+ON ERROR IGNORE can make it very difficult to debug a program so it is strongly recommended that only ON ERROR SKIP be used. 

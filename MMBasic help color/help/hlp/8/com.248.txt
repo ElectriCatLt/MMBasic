@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>249] DEVICE HUMID 
+See HUMID command

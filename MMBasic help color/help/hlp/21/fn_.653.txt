@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>654] DEG( radians ) 
+Converts 'radians' to degrees. 

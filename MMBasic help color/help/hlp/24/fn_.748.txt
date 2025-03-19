@@ -1,0 +1,7 @@
+ALL VERSIONS
+[>749] PIO(.WRAP TARGET) 
+Returns the location of the .wrap target directive in PIO ASSEMBLE. 
+These can be used in the PIO(EXECCTRL function as follows: 
+<CODE>
+PIO (EXECCTRL jmp_pin PIO(.WRAP TARGET), PIO(.WRAP)  [,side_pindir] [,side_en])
+</CODE>

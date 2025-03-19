@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>64] MM.INFO$(LCDPANEL)
+Returns the name of the configured LCD panel or a blank string.

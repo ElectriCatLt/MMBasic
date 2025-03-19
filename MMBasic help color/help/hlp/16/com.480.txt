@@ -1,0 +1,7 @@
+ALL VERSIONS
+[>481] PIO INIT MACHINE pio%, statemachine%, clockspeed [,pinctrl] [,execctrl] [,shiftctrl] [,startinstruction]
+PIO interrupts have priority have keyboard interrupts but before anything else. 
+As with all interrupts interrupt conditions are processed one at a time. 
+Initialises PIO 'pio%' with state machine 'statemachine%'. 'clockspeed' is the clock speed of the state machine in kHz. 
+The four optional arguments are variables holding initialising values of the state machine registers and the address of the first instruction to execute (defaults to zero). 
+These decide how the PIO will operate. It is anticipated that eventually the PIO assembler will be able to generate the register values for the user along with the program array based on the defined assembler directives.

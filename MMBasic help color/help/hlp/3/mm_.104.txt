@@ -1,0 +1,15 @@
+ALL VERSIONS
+[>105] MM.INFO(USB n) 
+Return the device code for any device connected to channel 'n' which is a number from 1 to 4. 
+The returned device code can be: 
+<CGRE>
+0=not in use, 
+1=keyboard, 
+2=mouse, 
+128=ps4, 
+129=ps3, 
+130=SNES/Generic
+</CGRE>
+
+By default a connected keyboard will be allocated to channel 1, a mouse the channel 2, and gamepads to channel 3 and then channel 4. 
+If 2 or more keyboards or mice are connected or 3 or more gamepads then the additional devices will be allocated to the highest available channel.

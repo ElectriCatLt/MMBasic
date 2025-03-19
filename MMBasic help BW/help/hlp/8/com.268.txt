@@ -1,0 +1,3 @@
+PICOMITE VGA AND HDMI ONLY
+[>269] DRAW3D CLOSE n [,n1 [,n2...]]
+This command both hides any 3D objects that have been rendered using SHOW and deletes the object in memory freeing up both the memory used and the object "slot"

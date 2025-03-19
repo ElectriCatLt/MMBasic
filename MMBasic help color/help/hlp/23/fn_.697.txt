@@ -1,0 +1,7 @@
+ALL VERSIONS
+[>698] LOF( [#]fnbr ) 
+For a file on the SD card this will return the current length of the file in bytes. 
+For a serial communications port opened as 'fnbr' this function will return the space (in characters) remaining in the transmit buffer. 
+<CGRE>
+Note that when the buffer is full MMBasic will pause when adding a new character and wait for some space to become available. The # is optional. 
+</CGRE>

@@ -1,0 +1,4 @@
+NOT HDMI AND VGA VERSIONS
+[>315] FRAMEBUFFER WAIT NOT HDMI AND VGA VERSIONS
+Pauses processing until the LCD display enters frame blanking. Implemented for ILI9341, ST7789_320 and ILI9488 displays. 
+Used to reduce artefacts when writing to the screen

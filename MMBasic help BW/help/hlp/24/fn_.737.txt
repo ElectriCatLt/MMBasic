@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>738] PIO(DMA RX POINTER) or PIO(DMA TX POINTER) 
+Returns the current data item being written or read by the PIO.

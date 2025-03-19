@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>740] PIO (PINCTRL no_side_set_pins [,no_set_pins] [,no_out_pins] [,IN base] [,side_set_base] [,set_base][, out_base])
+Helper function to calculate the value of pinctrl for the INIT MACHINE command. 
+<CGRE>
+Note: The pin parameters must be formatted as Gpn.
+</CGRE>

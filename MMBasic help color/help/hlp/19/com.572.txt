@@ -1,0 +1,3 @@
+VGA AND HDMI VERSIONS ONLY
+[>573] SPRITE CLOSE ALL (VGA AND HDMI VERSIONS ONLY)
+Closes all sprites and releases all sprite memory. The screen is not changed

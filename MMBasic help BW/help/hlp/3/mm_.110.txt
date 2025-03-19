@@ -1,0 +1,4 @@
+WEBMITE ONLY
+[>111] MM.INFO(TCP PORT) 
+WEBMITE ONLY 
+Returns the TCP port set as a server or 0 if not set

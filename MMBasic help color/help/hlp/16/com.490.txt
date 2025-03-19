@@ -1,0 +1,10 @@
+ALL VERSIONS
+[>491] PIXEL x, y [,c] 
+Set a pixel on the VGA screen to a colour. 
+'x' is the horizontal coordinate and 'y' is the vertical coordinate of the pixel.
+'c' is a 24 bit number specifying the colour. 
+'c' is optional and if omitted the current foreground colour will be used.
+All parameters can be expressed as arrays and the software will plot the number of pixels as determined by the dimensions of  the smallest array.
+'x' and 'y' must both be arrays or both be single variables /constants otherwise an error will be generated.
+'c' can be either an array or a  single variable or constant.
+See the section Graphics Commands and Functions for a definition of the colours and graphics coordinates. 

@@ -1,0 +1,7 @@
+ALL VERSIONS
+[>129] OPTION AUTORUN ON [,NORESET] or OPTION AUTORUN n [,NORESET] or OPTION AUTORUN OFF
+Instructs MMBasic to automatically run a program on power up or restart. 
+ON will cause the current program in program memory to be run. Specifying 'n' will cause that location in flash memory to be run. 'n' must be in the range 1 to 3. 
+Specifying the optional parameter "NORESET" will maintain AUTORUN even if the program causes a system error (by default this will cause the firmware to cancel any OPTION AUTORUN setting). 
+OFF will disable the autorun option and is the default for a new program. 
+Entering the break key (default CTRL-C) at the console will interrupt the running program and return to the command prompt.

@@ -1,0 +1,4 @@
+VGA AND HDMI VERSIONS ONLY
+[>575] SPRITE HIDE [#]n  (VGA AND HDMI VERSIONS ONLY)
+Removes sprite n from the display and replaces the stored background. 
+To restore a screen to a previous state sprites should be hidden in the opposite order to which they were written "LIFO"

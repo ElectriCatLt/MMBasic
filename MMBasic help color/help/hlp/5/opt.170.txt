@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>171] OPTION PSRAM PIN n  or OPTION PSRAM DISABLE
+Enable/disable PSRAM support. 'n' is the PSRAM chip select (CS) pin and can be 0, 8, 19, or 47. 
+Typically GP47 is used for Pimoroni boards. Default is disabled. 

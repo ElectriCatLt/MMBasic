@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>63] MM.INFO$(CPUSPEED)
+Returns the CPU speed as a string 

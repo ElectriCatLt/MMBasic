@@ -1,0 +1,53 @@
+HDMI VERSIONS ONLY
+[>454] OPTION RESOLUTION
+
+OPTION RESOLUTION 1280 x 720
+<CODE>
+MODE 1
+</CODE>
+
+1280 x 720 x 2-colours with RGB332 tiles (use the TILE command as normal)
+
+<CODE>
+MODE 2
+</CODE>
+
+320 x 180 x 16colours with 2 optional layers and colour mapping to RGB332 palette
+
+<CODE>
+MODE 3
+</CODE>
+
+640 x 360 x 16 colours with optional layer and colour mapping to RGB332 palette
+
+<CODE>
+MODE 5
+</CODE>
+
+320 x 180 x 256 colours with optional layer (no memory usage) 
+
+OPTION RESOLUTION 1024 x 768
+
+<CODE>
+MODE 1
+</CODE>
+
+1024 x 768 x 2 colours with RGB332 tiles (use the TILE command as normal)
+
+<CODE>
+MODE 2
+</CODE>
+
+256 x 192 x 16 colours with 2 optional layers and colour mapping to RGB332 palette
+
+<CODE>
+MODE 3
+</CODE>
+
+512 x 384 x 16 colours with optional layer and colour mapping to RGB332 palette
+
+<CODE>
+MODE 5
+</CODE>
+
+256 x 192 x 256 colours with optional layer.

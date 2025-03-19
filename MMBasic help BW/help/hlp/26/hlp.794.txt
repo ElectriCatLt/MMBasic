@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>795] Using MMBasic - Interrupting A Running Program
+A program is set running by the RUN command. 
+You can interrupt MMBasic and the running program at any time by typing CTRL-C on the console input and MMBasic will return to the command prompt.

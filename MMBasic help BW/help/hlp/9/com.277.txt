@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>278] EDIT FILE 
+Command used in a program will now only be memory limited the same as EDIT
+BETA 6.02 ONLY!

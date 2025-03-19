@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>238] CONTINUE DO or CONTINUE FOR 
+Skip to the end of a DO/LOOP or a FOR/NEXT loop. 
+The loop condition will then be tested and if still valid the loop will continue with the next iteration. 

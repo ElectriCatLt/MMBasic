@@ -1,0 +1,5 @@
+ALL VERSIONS
+[>411] MATH INTERPOLATE in1(), in2(), ratio, out() 
+This command implements the following equation on every array element: out = (in2 - in1) * ratio + in1
+Arrays can have any number of dimensions and must be distinct and have the same number of total elements. 
+The command works with bot integer and floating point arrays in any mixture

@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>76] MM.INFO(FCOLOUR) 
+Returns the current foreground colour 

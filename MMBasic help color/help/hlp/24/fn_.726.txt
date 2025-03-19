@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>727] MAX( arg1 [, arg2 [, ...]] )  or MIN( arg1 [, arg2 [, ...]] ) 
+Returns the maximum or minimum number in the argument list. 
+<CGRE>
+Note that the comparison is a floating point c
+</CGRE>

@@ -1,0 +1,11 @@
+ALL VERSIONS
+[>799] Using MMBasic - PIN Security
+Sometimes it is important to keep the data and program in an embedded controller confidential. In the PicoMite firmware this can be done by using the OPTION PIN command. 
+This command will set a pin number (which is stored in flash) and whenever the PicoMite firmware returns to the command prompt (for whatever reason) the user at the console will be prompted to enter the PIN number. 
+Without the correct PIN the user cannot get to the command prompt and their only option is to enter the correct PIN or reboot the PicoMite firmware. 
+When it is rebooted the user will still need the correct PIN to access the command prompt. 
+Because an intruder cannot reach the command prompt they cannot list or copy a program, they cannot change the program or change any aspect of MMBasic or the PicoMite firmware. 
+Once set the PIN can only be removed by providing the correct PIN as set in the first place. 
+If the number is lost the only method of recovery is to reload the PicoMite firmware (which will erase the program and all options).
+There are other time consuming ways of accessing the data (such as using a programmer to examine the flash memory) so this should not be regarded as the ultimate security 
+but it does act as a significant deterrent.

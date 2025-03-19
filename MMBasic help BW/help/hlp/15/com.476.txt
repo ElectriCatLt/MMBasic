@@ -1,0 +1,16 @@
+ALL VERSIONS
+[>477] PIO assemble pio,linedata$
+This command will assemble and load text based PIO assembler code including labels for jumps 
+Use: PIO assemble pio,".program anything" to initialise the assembler 
+Use: PIO assemble pio,".side_set n [opt] [pindirs]" if using side set. 
+This is mandatory in order to correctly construct the op-codes if one or more side set pins are used. 
+It does not load the pinctrl register as this is specific to the state-machine. 
+Also note the "opt" parameter changes the op-code on instructions that have a side parameter 
+
+Use: PIO assemble pio,".line n" to assemble starting from a line other than 1 - this is optional 
+Use: PIO assemble pio,".end program [list]" to terminate the assembly and program the pio. 
+The optional parameter LIST causes a hex dump of the op-codes to the terminal. 
+Use: PIO assemble pio,"label:" to define a label. This must appear as a separate command.
+Use: PIO assemble "'.wrap target" to specify where the program will wrap to. See PIO(.wrap target) for how to use this.
+Use: PIO assemble ".wrap" to specify where the program should wrap back to from ".wrap target" . See PIO(.wrap) for how to use this. 
+Use: PIO assemble pio "instruction [parameters]" to define the actual PIO instructions that will be converted to machine code

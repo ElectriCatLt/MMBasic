@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>67] MM.INFO$(CURRENT)
+Returns the name of the current program when loaded from a file or NONE if called after a NEW, AUTOSAVE, XMODEM or EDIT Command.

@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>65] MM.INFO(LCD320)
+Returns true if the display is capable of 320x240 operation using the OPTION LCD320 command

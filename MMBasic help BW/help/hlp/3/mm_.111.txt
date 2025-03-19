@@ -1,0 +1,3 @@
+WEBMITE ONLY
+[>112] MM.INFO(UDP PORT) 
+WEBMITE ONLY Returns the UDP port set as a server or 0 if not set

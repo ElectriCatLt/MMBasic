@@ -1,0 +1,16 @@
+ALL VERSIONS
+[>445] MEMORY SET 
+MEMORY SET address, byte, numberofbytes
+MEMORY SET BYTE address, byte, numberofbytes
+MEMORY SET SHORT address, short, numberofshorts
+MEMORY SET WORD address, word, numberofwords
+MEMORY SET INTEGER address, integervalue ,numberofintegers [,increment]
+MEMORY SET FLOAT address, floatingvalue ,numberofloats [,increment]
+This command will set a region of memory to a value. 
+BYTE = One byte per memory address. 
+SHORT = Two bytes per memory address. 
+WORD = Four bytes per memory address. 
+FLOAT = Eight bytes per memory address.
+'increment' is optional and controls the increment of the 'address' pointer as the operation is executed. 
+For example, if increment=3 then only every third element of the target is set. 
+The default is 1.

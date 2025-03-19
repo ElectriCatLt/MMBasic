@@ -1,0 +1,99 @@
+ALL VERSIONS
+[>23] Program and Data Storage.Flash Slots.Flash Filesystem.
+The BASIC program is held in flash memory and is run from there. When a program is edited via EDIT or loaded via the console it will be saved there. 
+
+Flash memory is non-volatile so the program will not be lost if the power is lost or the processors is reset.
+In addition to this program memory there are three other locations where programs can be saved. 
+These are described in detail below and are Flash Slots, the Flash Filesystem and an attached SD Card Flash Slots 
+
+There are three of these which can be used to save completely different programs or previous versions of the program you are working on (in case you need to revert to an earlier version). 
+In addition, MMBasic will allow a BASIC program to load and run another program saved to a numbered flash location while retaining all the variables and settings of the original program - 
+this is called chaining and allows for a much larger program to be run than the amount of program memory would normally allow.
+To manage these numbered locations in flash you can use the following commands 
+<CGRE>
+Note that in the following n is a number from 1 to 3:
+</CGRE>
+
+<CODE>
+FLASH SAVE n
+</CODE>
+
+Save the program in the program memory to the flash location n.
+<CODE>
+FLASH LOAD n
+</CODE>
+
+Load a program from flash location n into the program memory.
+<CODE>
+FLASH RUN n
+</CODE>
+
+Run a program from flash location n, clears all variables but does not erase or change the program held in the main program memory.
+<CODE>
+FLASH LIST
+</CODE>
+
+Display a list of all flash locations including the first line of the program.
+<CODE>
+FLASH LIST n [,ALL]
+</CODE>
+
+Lists the program held in location n. Use FLASH LIST n,ALL to list without page breaks
+<CODE>
+FLASH ERASE n
+</CODE>
+
+Erase flash location n.
+<CODE>
+FLASH ERASE ALL
+</CODE>
+
+Erase all flash locations.
+<CODE>
+FLASH CHAIN n
+</CODE>
+
+Run the program in flash location n, leaving all variables intact. As with FLASH RUN this command but does not erase or change the program held in the main program memory.
+<CODE>
+FLASH OVERWRITE n
+</CODE>
+
+Erase flash location n and then save the program in the program memory to that location.
+<CODE>
+FLASH DISK LOAD f$ [,O] 
+</CODE>
+
+Loads a flash slot with a binary file created using LIBRARY DISK SAVE.
+Overwrites the slot if the optional "O" is specified.
+
+In addition, the command OPTION AUTORUN can be used to specify a flash program location to be set running when power is applied or the CPU restarted. 
+This option can also be used without specifying a flash location and in that case MMBasic will automatically run the program in program memory.
+Notes:
+<CGRE>
+-> It is recommended that you include a comment describing the program as the first line of the program. This will then be displayed by the FLASH LIST command and will help identify the program.
+-> All BASIC programs saved to flash may be erased if you upgrade (or downgrade) the PicoMite firmware. So make sure that you backup these first.
+-> The LIBRARY command uses Slot 3 for saving library data therefore only 2 slots will be available if the library feature is used.
+</CGRE>
+<CGRE>
+FLASH FILESYSTEM
+</CGRE>
+
+This is an area of the Raspberry Pi Pico's flash memory which is automatically created by the firmware and will look like a normal disk drive to MMBasic. It is called drive A: and data and programs can be read/written
+using the normal BASIC file commands (SAVE, RUN, OPEN, etc). In addition, sub directories can be created and deleted and long filenames used.
+For example, to run a program: 
+<CODE>
+RUN "A:/MyProgram.bas"
+</CODE>
+
+Open a text file for random access:
+<CODE>
+OPEN "A:/data/database.dat" FOR RANDOM as #4
+</CODE>
+
+This drive is automatically created when the PicoMite firmware is loaded so it will always be available to the BASIC program. 
+It can be used to store programs, images, music, configuration data, log files and much more.
+Its size varies depending on the amount of flash memory - on a Raspberry Pi Pico with 2MB flash it will be 200 to 500KB, 
+on a Raspberry Pi Pico 2 with 4MB flash it will be a little over 2MB and on a module with 16MB the flash filesystem will be up to 14MB in size.
+The system will create and maintain the file "BOOTCOUNT" on the Flash Filesystem. 
+This keeps a count of the number of times the device has been restarted and can be read with the function MM.INFO(boot count).
+

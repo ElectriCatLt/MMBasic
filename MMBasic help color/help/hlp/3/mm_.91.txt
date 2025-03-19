@@ -1,0 +1,5 @@
+ALL VERSIONS
+[>92] MM.INFO$(PINNO GPnn) 
+Returns the physical pin number for a given GP number. 
+GPnn can be an unquoted string (GP01), a string literal("GP01") or a string variable. 
+Ie, A$="GP01": MM.INFO(PINNO A$) .

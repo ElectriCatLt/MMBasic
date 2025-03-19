@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>81] MM.INFO(FONTHEIGHT) 
+Integers representing the height of the current font (in pixels).

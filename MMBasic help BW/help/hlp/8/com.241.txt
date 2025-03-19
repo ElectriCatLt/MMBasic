@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>242] CPU SLEEP n 
+Will cause the processor to sleep for 'n' seconds. 
+Note that the CPU does not have a true low power sleep so the power saving is limited. 

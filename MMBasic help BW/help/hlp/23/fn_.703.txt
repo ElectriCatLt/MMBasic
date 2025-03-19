@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>704] MATH(LOG10 a) 
+Returns the base 10 logarithm of a 

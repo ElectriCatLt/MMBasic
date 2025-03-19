@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>333] GAMEPAD MONITOR
+Use GAMEPAD MONITOR before plugging in a gamepad and when plugged in it will show the before and after report with each change of buttons
+BETA 6.02 ONLY!

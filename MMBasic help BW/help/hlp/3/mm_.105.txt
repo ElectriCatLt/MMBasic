@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>106] MM.INFO(VARCNT) 
+Returns the number of variables in use in the MMBasic program.

@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>93] MM.INFO(PERSISTENT)
+Recovers any value saved after SAVE PERSISTENT n% whitch saves the value n% in memory that will survive a watchdog reset (RP2040 and RP2350) or a physical reset (RP2040 only)
+<CRED>
+BETA 6.02 ONLY!
+</CRED>

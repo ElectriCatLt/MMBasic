@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>562] SETPIN pin, PWMnx 
+'n' is the PWM number (0 to 7) and 'x' and is the channel (A or B). n and x are optional. 
+The setpin can be changed until the PWM command is issued. At that point the pin becomes locked to PWM until PWMn,OFF is issued.

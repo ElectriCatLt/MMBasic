@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>120] MM.WATCHDOG 
+An integer which is true if MMBasic was restarted as the result of a  Watchdog timeout (see the WATCHDOG command) otherwise false. 

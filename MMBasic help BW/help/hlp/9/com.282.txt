@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>283] END FUNCTION 
+Marks the end of a user defined function. See the FUNCTION command. Each function must have one and only one matching END FUNCTION statement. 
+Use EXIT FUNCTION if you need to return from a function from within its body. 

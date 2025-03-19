@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>703] MATH(COSH a) 
+Returns the hyperbolic cosine of a 

@@ -1,0 +1,19 @@
+ALL VERSIONS
+[>546] SAVE CONTEXT [CLEAR] or LOAD CONTEXT [KEEP]
+<CODE>
+SAVE CONTEXT [CLEAR]
+</CODE>
+
+Saves the variable space and optionally clears it. Command should be used in top level program and not from within a subroutine (may work OK but not tested for side-effects). 
+Note:
+<CGRE>
+If used in a subroutine a subsequent LOAD CONTEXT must DEFINITELY be in the same subroutine or a crash/corruption will DEFINITELY happen.
+</CGRE>
+<CODE>
+LOAD CONTEXT [KEEP]
+</CODE>
+
+Restores the variable space to the previously saved state and optionally preserves the stored variables to allow a second LOAD if required. 
+<CRED>
+BETA 6.02 ONLY!
+</CRED>

@@ -1,0 +1,102 @@
+ALL VERSIONS
+[>685] INSTR( [start-position,] string-searched$, string- pattern$ [,size] )  
+Returns the position at which 'string-pattern$' occurs in 'string-searched$', beginning at 'start-position'. 
+If 'start-position' is not provided it will default to 1. Both the position returned and 'start-position' use 1 for the first character, 2 for the second, etc. 
+The function returns zero if 'string-pattern$' is not found. If the optional parameter "size" is specified the "string-pattern" is treated as a regular expression. 
+
+Appendix E - Regex Syntax
+The alternate forms of the INSTR() and LINSTR() functions can take a regular expression as the search pattern.
+The alternate form of the commands are:
+<CODE>
+INSTR([start],text$, search$ [,size])
+LINSTR(text%(),search$ [,start] [,size]
+</CODE>
+
+In both cases specifying the size parameter causes the firmware to interpret the search string as a regular expression. 
+The size parameter is a floating point variable that is used by the firmware to return the size of a matching string. 
+If the variable doesn't exist it is created. As implemented in MMBasic you need to apply the returned start and size values to the MID$ function to extract the matched string. 
+eg,
+<CODE>
+IF start THEN match$=MID$(text$,start,size) ELSE match$=”” ENDIF
+</CODE>
+
+The library used for the regular expressions implements POSIX draft P1003.2/D11.2, except for some of the internationalization features. 
+See http://mirror.math.princeton.edu/pub/oldlinux/Linux.old/Ref-docs/POSIX/all.pdf section 2.8 for details of constructing Regular Expressions or other online tutorials.
+The syntax of regular expressions can vary slightly with the various implementations. 
+This document is asummary of the syntax and supported operations used in the MMBasic implementation.
+<CGRE>
+Anchors
+</CGRE>
+
+    ^       Start of string
+    $       End of string
+    \b      Word Boundary
+    \B      Not a word boundary
+    \<      Start of word
+    \>      End of word
+<CGRE>
+Qualifiers
+</CGRE>
+
+    *       0 or more (not escaped)
+    \+      1 or more
+    \?      0 or 1
+    \{3\}   Exactly 3
+    \{3,\}  3 or more
+    \{3,5\} 3,4 or 5
+<CGRE>
+Groups and Ranges
+</CGRE>
+
+    (a\|b)  a or b
+    \(…\)     group
+    [abc]   Range (a or b or c)
+    [^abc]  Not (a or b or c]
+    [a-q]   lower case letters a to q
+    [A-Q]   upper case letters A to Q
+    [0-7]   Digits from 0 to 7
+<CGRE>
+Escapes Required to Match Normal Characters
+</CGRE>
+
+    \^ to match ^ (caret)
+    \. to match . (dot)
+    \* to match * (asterix)
+    \$ to match $ (dollar)
+    \[ to match [ (left bracket)
+    \\ to match \ (backslash)
+<CGRE>
+Escapes with Special Functions
+</CGRE>
+
+    \+ See Quantifiers
+    \? See Quantifiers
+    \{ See Quantifiers
+    \} See Quantifiers
+    \| See Groups and Ranges
+    \( See Groups and Ranges
+    \) See Groups and Ranges
+    \w See Character Classes
+<CGRE>
+Character Classes
+</CGRE>
+
+    \w digits,letters and _
+    [:word:] digits,letters and _
+    [:upper:] Upper case letters_
+    [:lower:] Lower case letters_
+    [:alpha:] All letters
+    [:alnum:] Digits and letters
+    [:digit:] Digits
+    [:xdigit:] Hexidecimal digits
+    [:punct:] Puntuation
+    [:blank:] Space and tab
+    [:space:] Blank charaters
+    [:cntrl:] Control charaters
+    [:graph:] Printed characters
+    [:print:] Printed chars and spaces
+    
+Example expression to match an IP Address which is contained within a word boundary.
+<CODE>
+"\<[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\>"
+</CODE>

@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>71] MM.INFO(EXISTS FILE fname$) 
+Returns 1 if the file specified exists, returns -1 if fname$ is a directory, otherwise returns 0. 

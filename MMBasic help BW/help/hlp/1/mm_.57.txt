@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>58] MM.INFO() MM.INFO$()
+These two versions can be used interchangeably but good programming practice would require that you use the one corresponding to the returned datatype. 

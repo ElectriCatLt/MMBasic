@@ -1,0 +1,3 @@
+VGA AND HDMI VERSIONS ONLY
+[>577] SPRITE RESTORE  (VGA AND HDMI VERSIONS ONLY)
+Restores the sprites that were previously hidden with SPRITE HIDE ALL.

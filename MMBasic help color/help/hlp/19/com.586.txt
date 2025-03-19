@@ -1,0 +1,4 @@
+VGA AND HDMI VERSIONS ONLY
+[>587] SPRITE NEXT [#]n, x, y (VGA AND HDMI VERSIONS ONLY)
+Sets the X and Y coordinate of the sprite to be used when the screen is next scrolled or the SPRITE MOVE command is executed. 
+Using SPRITE NEXT rather than SPRITE SHOW allows multiple sprites to be moved as part of the same atomic transaction.

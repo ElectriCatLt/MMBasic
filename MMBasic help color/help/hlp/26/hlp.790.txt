@@ -1,0 +1,12 @@
+ALL VERSIONS
+[>791] Commands and Program Input
+At the command prompt you can enter a command and it will be immediately run. 
+Most of the time you will do this to tell the PicoMite firmware to do something like run a program or set an option. 
+But this feature also allows you to test out commands at the command prompt.
+To enter a program the easiest method is to use the EDIT command. 
+This will invoke the full screen program editor which is built into the PicoMite firmware and is described later in this manual. 
+It includes advanced features such as search and copy, cut and paste to and from a clipboard.
+You could also compose the program on your desktop computer using something like Notepad and then 
+transfer it to the Raspberry Pi Pico via the XModem protocol (see the XMODEM command) or by streaming it up the console serial link (see the AUTOSAVE command).
+One thing that you cannot do is use the old BASIC way of entering a program which was to prefix each line with a line number. 
+Line numbers are optional in MMBasic so you can still use them if you wish but if you enter a line with a line number at the prompt MMBasic will simply execute it immediately.

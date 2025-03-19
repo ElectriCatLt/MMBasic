@@ -1,0 +1,21 @@
+ALL VERSIONS
+[>40] A Tutorial - GOTO and Labels
+One method of controlling the flow of the program is the GOTO command. This essentially tells MMBasic to jump to another part of the program and continue executing from there. 
+The target of the GOTO is a label and this needs to be explained first.
+A label is an identifier that marks part of the program. It must be the first thing on the line and it must be terminated with the colon (:) character. 
+The name that you use can be up to 31 characters long and must follow the same rules as for a variable's name. For example, in the following program line LoopBack is a label:
+LoopBack: a = a + 1
+When you use the GOTO command to jump to that particular part of the program you would use the command like this:
+GOTO LoopBack
+To put all this into context the following program will print out all the numbers from 1 to 10:
+z = 0
+LoopBack: z = z + 1
+PRINT z
+IF z < 10 THEN GOTO LoopBack
+The program starts by setting the variable z to zero then incrementing it to 1 in the next line. The value of z is printed and then tested to see if it is less than 10. 
+If it is less than 10 the program execution will jump back to the label LoopBack where the process will repeat. Eventually the value of z will reach 10 and the program will run off the end and terminate.
+Note that a FOR loop can do the same thing (and is simpler), so this example is purely designed to illustrate what the GOTO command can do.
+
+In the past the GOTO command gained a bad reputation. This is because using GOTOs it is possible to create a program that continuously jumps from one point to another (often referred to as "spaghetti code") 
+and that type of program is almost impossible for another programmer to understand. 
+With constructs like the multiline IF statements the need for the GOTO statement has been reduced and it should be used only when there is no other way of changing the program's flow.

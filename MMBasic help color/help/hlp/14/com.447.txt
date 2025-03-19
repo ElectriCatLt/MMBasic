@@ -1,0 +1,5 @@
+ALL VERSIONS
+[>448] MEMORY PRINT #]fnbr , nbr, address%/array() MEMORY INPUT [#]fnbr , nbr, address%/array()
+These commands save or read 'nbr' of data bytes from or to memory from or to an open disk file. 
+The memory to be saved can be specified as an integer array in which case the nbr of bytes to be saved or read is checked against the array size. 
+Alternatively, a memory address can be used in which case no checking can take place and user errors could result in a crash of the firmware..

@@ -1,0 +1,27 @@
+ALL VERSIONS
+[>127] OPTION AUDIO I2S BCLKpin, DATApin
+This allows a I2S DAC to be used to provide high quality Audio. The firmware transmits the data in 32-bit mode and FLAC, MP3, and WAV data is output with no loss of information.
+This command reserves BCLKpin and BCLKpin+1 for the bit clock and word clock and Datapin for the I2S data. It requires an I2S DAC that can PLL the bitclock to create its own master clock. 
+Tested on PCM5102A and TDA1387T , UDA1334A .
+
+For example:
+<CODE>
+OPTION AUDIO I2S GP1,GP5
+GP1 is the bit clock
+GP2 is the word clock
+GP5 is the data pin
+</CODE>
+
+All normal audio should work TONE, MP3, FLAC, WAV, MOD, SOUND
+Note that you will see jitter on the BCLK. For the CPU at 150MHz the PIO needs to run at 44100*128 = 5644800 = 1/26.57 of the CPU clock speed. 
+The way the H/W does this is to add or subtract clock ticks to the length of the PIO clock to give an average of 26.57 CPU ticks per PIO clock - hence jitter. 
+I2S DAC could be enabled for RP2040. 
+<CRED>
+NB: for RP2040 VGA and WEB versions there are no PIO available for user use if I2S is enabled.RP2040 doesn't have enough memory or CPU to decode MP3  
+</CRED>
+<CGRE>
+NOTE: For VGA version the I2S PIO now shares with the VGA PIO (PIO0) so PIO 1 is available for use in MMBasic 
+</CGRE>
+<CRED>
+BETA 6.02 ONLY!
+</CRED>

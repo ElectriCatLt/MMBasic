@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>451] MID$( str$, start [, num]) = str2$ 
+The characters in 'str$', beginning at position 'start', are replaced by the characters in 'str2$'. 
+The optional 'num' refers to the number of characters from 'str2' that are used in the replacement. 
+If 'num' is omitted, all of 'str2' is used. 
+Whether 'num' is omitted or included, the replacement of characters never goes beyond the original length of 'str$'.

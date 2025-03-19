@@ -1,0 +1,12 @@
+ALL VERSIONS
+[>386] LONGSTRING PRINT [#n,] src%() 
+Prints the longstring stored in 'src%()' to the file or COM port opened as '#n'. 
+If '#n' is not specified the output will be sent to the console. 
+
+<CRED>
+BETA 6.02 ONLY!
+</CRED>
+<CGRE>
+Supports ; at the end of LONGSTRING PRINT to suppress the CR/LF 
+</CGRE>
+

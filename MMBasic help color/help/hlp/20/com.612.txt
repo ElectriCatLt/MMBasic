@@ -1,0 +1,10 @@
+WEBMITE ONLY
+[>613] WEB MQTT CONNECT addr$, port, user$, passwd$ [, interrupt]
+Connect to an MQTT Broker. 
+'addr$' is the IP address, 
+'port' is the port number to use, 
+'user$' is the user name, 
+'passwd$' is the account's password and 
+'interrupt' is optional and if specified is the subroutine to call when a message is received. 
+WEB CONNECT does not disconnect from a previously connected network so should only be used where nothing has been previously set up 
+or where a previously configured network is not active or a previously configured network has failed to connect on boot (no parameters) 

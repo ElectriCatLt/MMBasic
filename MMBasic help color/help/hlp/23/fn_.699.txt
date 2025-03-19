@@ -1,0 +1,13 @@
+HDMI AND VGA ONLY
+[>700] MAP( n )
+Returns the 24-bit RGB value for the index 'n' in the colour map table. See the MAP command. 
+This allows the Basic programmer to use a colour specified by the MAP command e.g 
+<CODE>
+MAP(8),RGB(100,100,100)
+MAP SET
+Pixel x,y,map(8)
+</CODE>
+<CRED>
+NB: for VGA all colours set by the map command will be converted to the nearest RGB121 colour as determined by the VGA resistor network. 
+For HDMI displays colours will be converted to the nearest RGB555 colour (640x480 resolution) or RGB332 colour (1024x768 or 1280x720 resolution) 
+</CRED>

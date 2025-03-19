@@ -1,0 +1,4 @@
+WEBMITE ONLY
+[>631] WEB UDP INTERRUPT intname
+Sets up a BASIC interrupt routine that will be triggered whenever a UDP datagram is received. 
+The contents will be saved in MM.MESSAGE$. The IP address of the sender will be stored in MM.ADDRESS$. 

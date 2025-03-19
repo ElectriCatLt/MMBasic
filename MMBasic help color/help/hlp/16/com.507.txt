@@ -1,0 +1,7 @@
+VS1053 specific
+[>508] PLAY MP3 file$ [, interrupt] (VS1053 specific)
+Will play a MP3 file on the sound output. 
+'file$' is the MP3 file to play (the extension of .mp3 will be appended if missing). 
+The sample rate should be 44100Hz stereo. The MP3 file is played in the background. 
+'interrupt' is optional and is the name of a subroutine which will be called when the file has finished playing. 
+If file$ is a directory the Pico will play all of the files in that directory in turn. 

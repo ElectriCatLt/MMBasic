@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>96] MM.INFO$(PLATFORM) 
+Returns the string previously set with OPTION PLATFORM.

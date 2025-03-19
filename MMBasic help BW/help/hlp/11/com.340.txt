@@ -1,0 +1,5 @@
+ALL VERSIONS
+[>341] I2C OPEN speed, timeout 
+'speed' is the clock speed (in KHz) to use and must be one of 100, 400 or 1000. 
+'timeout' is a value in milliseconds after which the master send and receive commands will be interrupted if they have not completed. 
+The minimum value is 100. A value of zero will disable the timeout (though this is not recommended).

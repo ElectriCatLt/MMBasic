@@ -1,0 +1,15 @@
+ALL VERSIONS
+[>543] RTC SETREG reg, value or RTC GETREG reg, var 
+<CODE>
+RTC SETREG reg, value  
+RTC GETREG reg, var 
+</CODE>
+
+The RTC SETREG and GETREG commands can be used to set or read the contents of registers within the chip. 
+'reg' is the register's number, 
+'value' is the number to store in the register and 
+'var' is a variable that will receive the number read from the register. 
+These commands are not necessary for normal operation but they can be used to manipulate special features of the chip (alarms, output signals, etc). 
+They are also useful for storing temporary information in the chip's battery backed RAM. 
+These chips are I2C devices and must be connected to the two I2C pins as specified by OPTION SYSTEM I2C with appropriate pullup resistors. 
+Also see the command OPTION RTC AUTO ENABLE.

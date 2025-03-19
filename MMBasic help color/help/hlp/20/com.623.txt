@@ -1,0 +1,3 @@
+WEBMITE ONLY
+[>624] WEB CLOSE TCP CLIENT
+Closes the connection to the remote server opened with WEB OPEN TCP CLIENT. This must be done before another open is attempted. 

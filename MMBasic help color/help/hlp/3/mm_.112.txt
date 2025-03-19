@@ -1,0 +1,3 @@
+WEBMITE ONLY
+[>113] MM.INFO(TCPIP STATUS) 
+Returns the TCPIP status of the connection 

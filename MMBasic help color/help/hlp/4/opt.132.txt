@@ -1,0 +1,8 @@
+ALL VERSIONS
+[>133] OPTION CASE LOWER | UPPER | TITLE 
+<CGRE>
+-> Change the case used for listing command and function names when using the LIST command. 
+</CGRE>
+
+The default is TITLE but the old standard of MMBasic can be restored using OPTION CASE UPPER. 
+This command must be run at the command prompt (not in a program). 

@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>547] SAVE PERSISTENT n%
+Saves the value n% in memory that will survive a watchdog reset (RP2040 and RP2350) or a physical reset (RP2040 only)
+<CRED>
+BETA 6.02 ONLY! 
+</CRED>

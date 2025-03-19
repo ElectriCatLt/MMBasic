@@ -1,0 +1,3 @@
+HDMI AND VGA VERSIONS ONLY
+[>319] FRAMEBUFFER CREATE HDMI AND VGA VERSIONS ONLY
+Creates a framebuffer "F" with a colour space and resolution to match the current display mode

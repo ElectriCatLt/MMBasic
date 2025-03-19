@@ -1,0 +1,11 @@
+ALL VERSIONS
+[>412] MATH WINDOW in(), minout, maxout, out() [,minin, maxin]
+This command takes the "in" array and scales it between "minout" and "maxout" returning the answer in "out".  
+Optionally, it can also return the minimum and maximum values found in the original data ("minin" and "minout").
+Note: "minout" can be greater than "maxout" and in this case the data will be both scaled and inverted.e.g 
+
+DIM IN(2)=(1,2,3)
+DIM OUT(2)
+MATH WINDOW IN(),7,3,OUT(),LOW,HIGH
+Will return OUT(0)=7, OUT(1)=5,OUT(2)=3,LOW=1,HIGH=3
+This command can massively simplify scaling data for plotting etc.

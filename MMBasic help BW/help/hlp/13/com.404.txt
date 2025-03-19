@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>405] MATH commands
+structures in the firmware and there is the advantage that once debugged they are there for everyone without re-inventing the wheel. 
+Note: 2 dimensional maths matrices are always specified DIM matrix(n_columns, n_rows) and of course the dimensions respect OPTION BASE. 
+
+Quaternions are stored as a 5 element array w, x, y, z, magnitude.

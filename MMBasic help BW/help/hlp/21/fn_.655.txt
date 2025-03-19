@@ -1,0 +1,11 @@
+ALL VERSIONS
+[>656] DEVICE(MOUSE channel, funct)
+Returns data from a mouse connected via 'channel'. A PS2 mouse is always allocated channel 2. Normally a USB mouse is also allocated to channel 2 but 
+this can vary. See MM.INFO(USB n) for more information. 'funct' is a 1 letter 
+code indicating the information to return as follows:
+X the X coordinate (0 to MM.HRES-1)
+Y the Y coordinate (0 to MM.VRES-1)
+L the state of the left mouse button
+R the state of the right mouse button
+M the state of the middle mouse button (wheel click)
+D 1 if there has been a double click of the left mouse button

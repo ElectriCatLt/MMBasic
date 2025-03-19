@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>255] DEVICE WII 
+See WII command

@@ -1,0 +1,3 @@
+VGA AND HDMI VERSIONS ONLY
+[>768] SPRITE(N)   <- VGA AND HDMI VERSIONS ONLY
+Returns the number of displayed (active) sprites

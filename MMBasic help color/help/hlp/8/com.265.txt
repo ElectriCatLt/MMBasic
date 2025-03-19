@@ -1,0 +1,13 @@
+PICOMITE VGA AND HDMI ONLY
+[>266] DRAW3D SHOW n, x, y, z [,nocull] or DRAW3D WRITE n, x, y, z [,nocull]
+DRAW3D SHOW , DRAW3D WRITE
+This says that we want to position the centre of the object at coordinates x, y, z in our virtual 3D world. 
+This command also projects the object 'n' onto the imaginary screen at "viewpoint" from the camera. 
+The mechanism of projection interprets the relative position of the object in 3 dimensions and does full perspective compensation 
+taking into account the relative positions of each vertex in three dimensional space relative to the viewplane and the x,y coordinates of the camera. 
+As it displays the object it calculates the screen coordinates of the minimum rectangle into which the rendered object fits. 
+This allows a subsequent SHOW command (but not WRITE command) to erase the previous render and draw the object onto a clean screen.
+The firmware uses the technique of a combination of hidden face culling (faces pointing away from the viewer are not drawn) 
+and Painter's algorithm (furthest face drawn first) to render the 3D object onto the viewplane.
+Set nocull to 1 to disable hidden face culling and rely on Painter's algorithm for the display. Omit or set to 0 for normal culling. 
+Setting nocull to 1 allows you to see inside hollow objects but decreases rendering efficiency and may result in artefacts on objects that have concave faces.

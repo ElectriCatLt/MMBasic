@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>83] MM.INFO$(FLASH) 
+Reports which flash slot the program was loaded from if applicable

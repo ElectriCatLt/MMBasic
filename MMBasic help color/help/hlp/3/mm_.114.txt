@@ -1,0 +1,3 @@
+VGA AND HDMI VERSIONS ONLY
+[>115] MM.HRES 
+Integers representing the current horizontal  resolution of the VGA/HDMI video output or the LCD display panel (if configured) in pixels.

@@ -1,0 +1,7 @@
+ALL VERSIONS
+[>408] MATH SET nbr, array() 
+Sets all elements in array() to the value nbr. 
+<CGRE>
+Note this is the fastest way of clearing an array by setting it to zero.
+</CGRE>
+

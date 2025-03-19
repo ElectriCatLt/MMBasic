@@ -1,0 +1,3 @@
+VGA OR HDMI VERSIONS MODE 1 ONLY
+[>599] TILE HEIGHT n 
+Sets the height of the tiles. 'n' can be between 12 and 480 (RP2040) or between 8 and 480 (RP2350)

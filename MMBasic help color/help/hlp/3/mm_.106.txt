@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>107] MM.INFO$(LINE) 
+Returns the current line number as a string. LIBRARY returned if in the Library and UNKNOWN if not in a program. 
+Assists in diagnostics while unit testing.

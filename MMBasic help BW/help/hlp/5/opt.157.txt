@@ -1,0 +1,4 @@
+NOT VGA OR HDMI VERSIONS
+[>158] OPTION LCDPANEL USER hres, vres
+Configures a user written display driver in MMBasic. 
+See the file "User Display Driver.txt" in the PicoMite firmware distribution for a description of how to write the driver.

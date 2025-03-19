@@ -1,0 +1,33 @@
+ALL VERSIONS
+[>51] A Tutorial - STATIC VARIABLES
+LOCAL variables are reset to their initial values (normally zero or an empty string) every time the subroutine or function starts, however there are times when you would like the variable to retain its value between calls. 
+This type of variable is defined with the STATIC command.
+We can demonstrate how STATIC variables are useful by extending the ErrMsg subroutine to prevent duplicated calls to the subroutine repeatedly displaying the same message. 
+For example, our program might call this subroutine from multiple places but if the message is the same in a number of subsequent calls we would like to see the message just once.
+This is our new subroutine:
+SUB ErrMsg Msg$
+STATIC STRING lastmsg
+LOCAL STRING tstr
+IF Msg$ <> lastmsg THEN
+tstr = "Error: " + Msg$
+PRINT tstr
+lastmsg = Msg$
+ENDIF
+END SUB
+To keep track of the last message displayed we use a static variable called lastmsg. 
+This will hold the text of the last message and we can compare it to the current message text to determine if it is different and therefore should be printed. 
+This would give just one message every time a call is made with a duplicate message text.
+The STATIC command uses exactly the same syntax as DIM. This means that you can define different types of static variables including arrays and you can also initialise them to some value.
+The static variable is created on the first time the STATIC command is encountered and it is automatically set to zero (if a float or integer) or an empty string. 
+On subsequent calls to the subroutine or function MMBasic will recognise that the variable has already been created and it will leave its value untouched (ie, whatever it was in the previous call). 
+As with DIM you can alsoinitialise a static variable to some value. For example:
+STATIC INTEGER var = 123
+On the first call (when the variable is created) it will be initialised to 123 but on subsequent calls it will keep whatever its value was previously set to.
+Mostly static variables are used to keep track of the state of something while inside a subroutine or function. A state is a record of something that has happened previously.
+Examples include:
+-> Has the COM port already been opened?
+-> What steps in a sequence have we completed?
+-> What text has already been displayed?
+
+Normally you will use global variables (created using DIM) to track a state but sometimes you want this to be contained within a module and this is where static variables are valuable. 
+Just like LOCAL the use of STATIC helps to make your subroutines and functions more self contained and portable.

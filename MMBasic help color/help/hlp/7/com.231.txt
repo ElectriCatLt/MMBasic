@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>232] COLOUR fore [, back] or COLOR fore [, back] 
+Sets the default colour for commands (PRINT, etc) that display on the on the VGA monitor. 
+'fore' is the foreground colour, 
+'back' is the background colour. 
+The background is optional and if not specified will default to black. 

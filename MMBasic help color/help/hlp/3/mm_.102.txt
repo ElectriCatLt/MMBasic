@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>103] MM.INFO(TRACK) 
+Returns the name of the FLAC, MP3, WAV or MIDI file currently playing on the audio output.

@@ -1,0 +1,8 @@
+ALL VERSIONS
+[>482] PIO INIT MACHINE pio%,statemachine%, clockspeed[,pinctrl] [,execctrl] [,shiftctrl][,startinstruction] [,sideout [,setout] [,outout]
+See PIO INIT MACHINE pio%, statemachine%, clockspeed [,pinctrl] [,execctrl] [,shiftctrl] [,startinstruction] for more detailed info.
+
+Sideout, setout, and outout can be set to 0 (default) or 1 to specify if pins defined in pinctrl should be initialised as inputs (0) or outputs (1)
+<CRED>
+BETA 6.02 ONLY!
+</CRED>

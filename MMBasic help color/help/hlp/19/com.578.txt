@@ -1,0 +1,4 @@
+VGA AND HDMI VERSIONS ONLY
+[>579] SPRITE INTERRUPT sub  (VGA AND HDMI VERSIONS ONLY)
+Specifies the name of the subroutine that will be called when a sprite collision occurs. 
+See Appendix H for how to use the function SPRITE to interrogate details of what has collided.

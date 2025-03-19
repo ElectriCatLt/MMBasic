@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>567] SETTICK PAUSE, target [, nbr]  or  SETTICK RESUME, target [, nbr] 
+Pause or resume the specified tick timer. When paused the interrupt is delayed but the current count is maintained. 

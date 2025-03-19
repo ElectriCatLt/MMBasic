@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>664] EXP( number ) 
+Returns the exponential value of 'number', i.e. ex where x is 'number'. 

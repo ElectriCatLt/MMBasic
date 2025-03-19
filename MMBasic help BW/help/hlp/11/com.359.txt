@@ -1,0 +1,8 @@
+ALL VERSIONS
+[>360] LINE x1, y1, x2, y2 [, LW [, C]] 
+On the VGA monitor this command will draw a line starting at the coordinates 'x1' and 'y1' and ending at 'x2' and 'y2'. 
+'LW' is the line's width and is only valid for horizontal or vertical lines. It defaults to 1 if not specified or if the line is a diagonal. 
+'C' is an integer representing the colour and defaults to the current foreground colour. 
+All parameters can be expressed as arrays and the software will plot the number of lines as determined by the dimensions of the smallest array. 
+'x1', 'y1', 'x2', and 'y2' must all be arrays or all be single variables /constants otherwise an error will be generated. 
+'lw' and 'c' can be either arrays or single variables/constants. 

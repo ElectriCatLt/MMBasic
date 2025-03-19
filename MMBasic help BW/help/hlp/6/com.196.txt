@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>197] ADC FREQUENCY freq 
+This changes the sampling frequency of the ADC conversion without having to close and re-open 

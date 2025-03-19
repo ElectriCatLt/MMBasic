@@ -1,0 +1,9 @@
+ALL VERSIONS
+[>260] DO <statements> LOOP UNTIL expression 
+<CODE>
+DO 
+<statements> 
+LOOP UNTIL expression 
+</CODE>
+
+Loops until the expression following UNTIL is true. Because the test is made at the end of the loop the statements inside the loop will be executed at least once, even if the expression is true. 

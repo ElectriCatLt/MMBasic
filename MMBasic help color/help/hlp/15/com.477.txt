@@ -1,0 +1,17 @@
+ALL VERSIONS
+[>478] PIO DMA RX pio, sm, nbr, data%() [,completioninterrupt] [,transfersize] [,loopbackcount] or PIO DMA TX pio, sm, nbr, data%() [,completioninterrupt] [,transfersize] [,loopbackcount]
+Sets up DMA transfers from PIO to MMBasic memory pio specifies which of the two pio instances to use (0 or 1 sm specifies which of the state machine to use (0-3) nbr specifies how many 32-bit words to transfer. 
+See below for the special case of setting nbr to zero. 
+data%() is the array that will either supply or receive the PIO data The optional parameter completioninterrupt is the name of a MMBasic subroutine rthat will be called when the DMA completes and in the case of DMA_OUT the FIFO has been emptied. 
+If the optional interrupt is not used then the status of the DMA can be checked using the functions 
+<CODE>
+MM.INFO(PIO RX DMA) 
+MM.INFO(PIO TX DMA) 
+</CODE>
+
+The optional parameter transfersize allows the user to override the normal 32-bit transfers and select 8, 16, or 32. 
+The optional parameter loopbackcount specifies how many data items are to be read or written before the DMA starts again at the beginning of the buffer 
+The parameter must be a power of 2 between 2 and 32768 Due to a limitation in the RP2040/RP2350 if loopbackcount is used the MMBasic array must be aligned in memory to the number of bytes in the loop Thus if the array is 64 integers long 
+which is 512 bytes then the array must be aligned to a 512byte boundary in memory All MMBasic arrays are aligned to a 256 byte boundary but to create an array which is guaranteed to be aligned 
+to a 512 byte boundary or greater the PIO MAKE RING BUFFER command must be used 
+If loopbackcount is set then "nbr" can be set to 0. In this case the transfer will run continuously repeatedly filling the buffer until explicitly stopped

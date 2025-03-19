@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>75] MM.INFO$(MODIFIED file$) 
+Returns the date/time that file$ was modified, Empty string if not found 

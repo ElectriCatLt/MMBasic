@@ -1,0 +1,45 @@
+ALL VERSIONS
+[>327] FUNCTION xxx (arg1 [,arg2, ...]) [AS <type>} <statements> xxx = <return value> END FUNCTION 
+<CODE>
+FUNCTION xxx (arg1 
+[,arg2, ...]) [AS <type>} 
+<statements> 
+<statements> 
+xxx = <return value> 
+END FUNCTION 
+</CODE>
+
+Defines a callable function. This is the same as adding a new function to MMBasic while it is running your program. 'xxx' is the function name and it must meet the specifications for naming a variable.
+The type of the function can be specified by using a type suffix (i.e. xxx$) or by specifying the type using AS <type> at the end of the functions definition. 
+For example: 
+<CODE>
+FUNCTION xxx (arg1, arg2) AS STRING 'arg1', 'arg2', etc 
+</CODE>
+
+are the arguments or parameters to the function (the brackets are always required, even if there are no arguments). 
+An array is specified by using empty brackets. i.e. arg3(). The type of the argument can be specified by using a type suffix (i.e. arg1$) or by specifying the type using AS <type> (i.e. arg1 AS STRING).  
+The argument can also be another defined function or the same function if  recursion is to be used (the recursion stack is limited to 50 nested calls). 
+To set the return value of the function you assign the value to the function's name. 
+For example: 
+<CODE>
+FUNCTION SQUARE(a) 
+SQUARE = a * a 
+END FUNCTION 
+</CODE>
+
+Every definition must have one END FUNCTION statement. When this is reached the function will return its value to the expression from which it was called. 
+The command EXIT FUNCTION can be used for an early exit.  
+You use the function by using its name and arguments in a program just as you would a normal MMBasic function. 
+For example:  
+<CODE>
+PRINT SQUARE(56.8)  
+</CODE>
+
+When the function is called each argument in the caller is matched to the argument in the function definition. 
+These arguments are available only inside the function.  Functions can be called with a variable number of arguments. 
+Any omitted arguments in the function's list will be set to zero or a null string.
+Arguments in the caller's list that are a variable and have the correct type will be passed by reference to the function. This means that any changes 
+to the corresponding argument in the function will also be copied to the caller's variable and therefore may be accessed after the function has ended. 
+Arrays are passed by specifying the array name with empty brackets (e.g. arg()) and are always passed by reference and must be the correct type. 
+You must not jump into or out of a function using commands like GOTO, GOSUB, etc. 
+Doing so will have undefined side effects including the possibility of ruining your day. 

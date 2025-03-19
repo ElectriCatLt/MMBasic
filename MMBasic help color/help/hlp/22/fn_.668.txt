@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>669] GPS()
+The GPS functions are used to return data from a serial communications channel opened as GPS. 
+The function GPS(VALID) should be checked before any of these functions are used to ensure that the returned value is valid.

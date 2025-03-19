@@ -1,0 +1,5 @@
+VGA VERSION ONLY
+[>400] MAP commands    <- VGA VERSION ONLY
+The MAP commands allow the programmer to select the colours used in 4-bit colour modes. 
+Each value in the 4-bit colour pallet can be set to one of the 16 available colours . 
+See the MAP function for more information.

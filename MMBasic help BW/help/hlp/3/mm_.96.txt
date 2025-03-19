@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>97] MM.INFO(PS2) 
+Reports the last raw message received on the PS2 interface if enabled.

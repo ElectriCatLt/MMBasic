@@ -1,0 +1,97 @@
+PICOMITE VGA AND HDMI ONLY
+[>272] 3D EXAMPLE - display a 3D object on the screen using the DRAW3D SHOW and DRAW3D WRITE commands.
+We set up the data defining the cube as follows:
+We set up the vertices using:
+<CODE>
+DIM FLOAT vertices(2,7) = (-1,1,-1, 1,1,-1, 1,-1,-1, -1,-1,-1, -1,1,1, 1,1,1, 1,-1,1, -1,-1,1)
+DIM INTEGER facecount(5)=(4,4,4,4,4,4)
+DIM INTEGER faces(23)=(0,1,2,3, 1,5,6,2, 0,4,5,1, 5,4,7,6, 2,6,7,3, 0,3,7,4)
+DIM INTEGER colours(6)=(rgb(blue), rgb(green), rgb(yellow), rgb(cyan), rgb(red), rgb(magenta),rgb(yellow))
+DIM INTEGER edge(5)=(6,6,6,6,6,6)
+DIM INTEGER fill(5)=(0,1,2,3,4,5)
+</CODE>
+
+So we have 8 vertices and 6 faces. We will use camera number 1 to display the cube and we will create object number 1
+<CODE>
+DIM n=1, nv=8, nf=6, camera=1
+</CODE>
+
+But first it is worth revisiting one aspect of object creation. 
+Our example cube has a side length of 2 so even at 100% it would only cover a maximum of 4 pixels on the screen - not very useful.
+Luckily there is a simple command we can use to scale the vertices before creating the object.
+We can make the cube the size we want by simply multiplying all the elements in the vertex array by the amount we want. So to make the length of each side 200 we can use:
+<CODE>
+MATH SCALE vertices(), 100.0, vertices()
+</CODE>
+
+Now we can create the object in memoryDRAW3D CREATE n, nv, nf, camera, vertices(), facecount(), faces(), colours(), edge(), fill()
+We need to set up the camera specified for the object in the create command before we can display it. To do this we use the command
+<CODE>
+DIM INTEGER viewplane=500
+DRAW3D CAMERA n, viewplane
+</CODE>
+
+We are not specifying any optional parameters for the CAMERA command so this says position the camera at 3D coordinates 0, 0, 0 with a "viewplane" 500 units in front of the camera along the z axis and orthogonal to it. 
+In our world the camera is always at a z position of zero and objects will always be positioned with a positive value of z.
+As defined above there are two commands for displaying (rendering) a 3D object: DRAW3D WRITE and DRAW3D SHOW. 
+The only difference is that, assuming the object was already displayed, the SHOW command will clear a rectangle on the current write page sufficient 
+to remove the existing object image before displaying it whereas DRAW3D WRITE just overwrites whatever in on the write page with the 2D representation of the object.
+The syntax for both commands is the same so will concentrate on DRAW3D SHOW 
+<CODE>
+DIM INTEGER x=0, y=0, z=1000
+PAGE WRITE 1
+DRAW3D SHOW n, x, y, z
+</CODE>
+
+It couldn't get any easier. This says that we want to position the centre of the object at coordinates x, y, z in our virtual 3D world. 
+The camera specified for our object is at a position 0, 0, 0. This command projects the object 'n' onto the imaginary screen at "viewpoint" from the camera.
+We will output to page 1 so we can get a nice tear free display. Unlike sprites, 3D objects do not store the background image when the object is written or restore it when the object moves. 
+It is recommended that 3D objects are written onto a blank page and are blitted or page copied (with transparency) onto the background image. 
+Alternatively, putting 3D objects onto page 1 in 12-bit mode with the background on page 0 will work very well.
+The mechanism of perspective is quite complex but the second example program, attached below, shows how the movement of the camera (represented by the cursor)
+changes the image of the cuboid with the one nearest the camera bigger than the one further away, the bottom of the octahedron bigger than the top and the side of the octahedron nearest the camera bigger than the side further away.
+One last point. Neither the x, y positions of 3D objcts or the camera positions are constrained by the screen size. 
+In fact they can go from -32766 to + 32766 (0-32766 for Z for the object - the camera is always at z=0). There are lots of combinations where a 3D object will render off the physical display page. 
+This is perfectly acceptable and allow valid objects to exist in the "world" without the constraints of screen space.
+Now a static cube is pretty boring so let's make it rotate continuously:
+<CODE>
+DIM FLOAT yaw=rad(1), pitch=rad(2), roll=rad(0.5)
+DIM FLOAT q(4)
+DO
+MATH Q_EULER yaw, pitch, roll, q()
+DRAW3D ROTATE q(),n
+DRAW3D show n,x,y,z
+INC yaw,RAD(1)
+INC pitch,RAD(2)
+INC roll,RAD(0.5)
+PAGE COPY 1 to 0,B
+LOOP
+And here is the whole program:
+Simple cube example
+DIM FLOAT vertices(2,7) = (-1,1,-1, 1,1,-1, 1,-1,-1, -1,-1,-1, -1,1,1, 1,1,1, 1,-1,1, -1,-1,1)
+DIM INTEGER facecount(5)=(4,4,4,4,4,4)
+DIM INTEGER faces(23)=(0,1,2,3, 1,5,6,2, 0,4,5,1, 5,4,7,6, 2,6,7,3, 0,3,7,4)
+DIM INTEGER colours(6)=(rgb(blue), rgb(green), rgb(yellow), rgb(cyan), rgb(red), rgb(magenta),
+rgb(yellow))
+DIM INTEGER edge(5)=(6,6,6,6,6,6)
+DIM INTEGER fill(5)=(0,1,2,3,4,5)
+DIM n=1, nv=8, nf=6, camera=1
+MATH SCALE vertices(), 100.0, vertices()
+DRAW3D CREATE n, nv, nf, camera, vertices(), facecount(), faces(), colours(), edge(), fill()
+DIM FLOAT yaw=rad(1), pitch=rad(2), roll=rad(0.5)
+DIM FLOAT q(4)
+DIM INTEGER viewplane=500
+DRAW3D CAMERA n, viewplane
+DIM INTEGER x=0, y=0, z=1000
+PAGE WRITE 1
+DRAW3D SHOW n, x, y, z
+DO
+MATH Q_EULER yaw, pitch, roll, q()
+DRAW3D ROTATE q(),n
+DRAW3D show n,x,y,z
+INC yaw,RAD(1)
+INC pitch,RAD(2)
+INC roll,RAD(0.5)
+PAGE COPY 1 to 0,B
+LOOP
+</CODE>

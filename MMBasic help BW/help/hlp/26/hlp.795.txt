@@ -1,0 +1,5 @@
+ALL VERSIONS
+[>796] Using MMBasic - Setting Options
+Many options can be set by using commands that start with the keyword OPTION. 
+They are listed in their own section of this manual. For example, you can change the CPU clock speed with the command:
+OPTION CPUSPEED speed

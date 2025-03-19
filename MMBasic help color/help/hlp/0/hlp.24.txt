@@ -1,0 +1,189 @@
+ALL VERSIONS
+[>25] MMBasic Support for Flash and SD Card Filesystems
+The MMBasic support for the Flash Filesystem and SD Cards is almost identical. This allows programs to use either filesystem with minimal modification. 
+The Flash Filesystem is referred to as drive A: while the SD Card (when connected) is drive B:. 
+The default drive can be set with the DRIVE command and then the drive prefix is not needed.
+In the following note that:
+<CGRE>
+-> Upper/lowercase characters and spaces are allowed. The file system on the SD Card is NOT case sensitive HOWEVER THE FLASH FILESYSTEM IS CASE SENSITIVE (this is the only difference between the two).
+-> Long file/directory names are supported in addition to the old 8.3 format.
+-> The maximum file/path length is 63 characters.
+-> Any file path that uses the drive letter must be a full path from the root (ie, "A:/mypath/myfile.txt").
+-> Directory paths are allowed in file/directory strings. (i.e., OPEN "A:\dir1\dir2\file.txt" FOR ...).
+-> Either forward or back slashes can be used in paths. Eg, \dir\file.txt is the same as /dir/file.txt.
+-> On startup the active drive (ie, the default) is A: (the Flash Filesystem).
+-> The current PicoMite firmware time is used for file create and last access times.
+-> Up to ten files can be simultaneously open, mixed between the A: and B: drives.
+-> Except for INPUT, LINE INPUT and PRINT the # in #fnbr is optional and may be omitted.
+</CGRE>
+
+Programs can be loaded from or saved to the Flash Filesystem and SD Cards using these commands.
+<CODE>
+-> LOAD fname$ [, R]
+</CODE>
+
+Load a BASIC program. The optional suffix ",R" will cause the program to be run after it has been loaded (in this case fname$ must be a string constant).
+<CODE>
+-> RUN fname$
+</CODE>
+
+Load a BASIC program and run it. fname$ can be a variable.
+<CODE>
+-> SAVE fname$
+</CODE>
+
+Save the current program to the Flash Filesystem or SD Card. 
+
+These are the basic commands for reading and writing data.
+<CODE>
+->  OPEN fname$ FOR mode AS #fnbr
+</CODE>
+
+Opens a file for reading or writing. 'fname$' is the file name. 'mode' can be INPUT, OUTPUT, APPEND or RANDOM. '#fnbr' is the file number (1 to 10).
+<CODE>
+->  PRINT #fnbr, expression [[,; ]expression] ... etc
+</CODE>
+
+Outputs text to the file opened as #fnbr.
+<CODE>
+-> INPUT #fnbr, list of variables
+</CODE>
+
+Read a list of comma separated data into the variables specified from the file previously opened as #fnbr.
+<CODE>
+->  LINE INPUT #fnbr, variable$
+</CODE>
+
+Read a complete line into the string variable specified from the file previously opened as #fnbr.
+<CODE>
+->  FLUSH #fnbr
+</CODE>
+
+Forces any buffered writes to be written to the Flash Filesystem or SD Card. It is recommended that this command be used regularly where data loss could occur in the event of power loss.
+<CODE>
+-> CLOSE #fnbr [,#fnbr] ...
+</CODE>
+
+Close the file(s) previously opened with the file number '#fnbr'.
+<CGRE>
+BASIC FILE AND DIRECTORY MANIPULATION. 
+</CGRE>
+
+Most can be done at the command prompt or from within a BASIC program.
+<CODE>
+-> DRIVE drive$
+</CODE>
+
+Sets the active disk drive as 'drive$'. 'drive$' can be "A:" or "B:" where A is the flash drive and B is the SD Card (if configured).
+<CODE>
+-> DRIVE "A:/FORMAT"
+</CODE>
+
+Reformat the Flash Filesystem (drive A:) to its initial state.
+<CODE>
+->  FILES [wildcard]
+</CODE>
+
+Search the current directory and list the files/directories found. 
+<CGRE>
+Note: Can only be used at the command prompt, not within a program.
+</CGRE>
+<CODE>
+-> LIST fname$
+</CODE>
+
+List the contents of a program or text file on the console.
+<CODE>
+-> KILL fname$
+</CODE>
+
+Delete a file in the current directory on the current drive. See the command reference for more details on wildcard deletes.
+<CODE>
+-> MKDIR dname$
+</CODE>
+
+Creates a sub directory in the current directory on the current drive.
+<CODE>
+-> CHDIR dname$
+</CODE>
+
+Change into to the directory $dname. $dname can also be ".." (dot dot) for up one directory or "\" for the root directory. 
+The starting point is the current directory on the current drive.
+<CODE>
+-> RMDIR dir$
+</CODE>
+
+Remove, or delete, the directory 'dir$' in the current directory on the current drive.
+<CODE>
+-> SEEK #fnbr, pos
+</CODE>
+
+Will position the read/write pointer in a file that has been opened for RANDOM access to the 'pos' byte.
+<CODE>
+-> RENAME fromname$ AS toname$
+</CODE>
+
+Will rename the file fromname$ to have the name toname$ in the current directory on the current drive
+<CODE>
+-> COPY [mode] fromname$ TO toname$
+</CODE>
+
+Will copy the file fromname$ to have the file toname$.
+See the command reference for more details on the optional mode and wildcard copies.
+Also there are a number of functions that support the above commands.
+<CODE>
+-> INPUT$(nbr, #fnbr)
+</CODE>
+
+Will return a string composed of 'nbr' characters read from a file previously opened for INPUT or RANDOM with the file number '#fnbr'. 
+If less than 'nbr' characters are available the function will return with what it has (including an empty string if no characters are available).
+<CODE>
+-> DIR$( fspec, type )
+</CODE>
+
+Will search for files and return the names of entries found.
+<CODE>
+-> CWD$
+</CODE>
+
+Will return the current working directory.
+<CODE>
+-> EOF( #fnbr )
+</CODE>
+
+Will return true if the file previously opened for INPUT with the file number '#fnbr' is positioned at the end of the file.
+<CODE>
+-> LOC( #fnbr )
+</CODE>
+
+For an open file this will return the current position of the read/write pointer in the file.
+<CODE>
+-> LOF( #fnbr )
+</CODE>
+
+Will return the current length of the file in bytes.
+<CODE>
+-> MM.INFO(drive)
+</CODE>
+
+Will return the current active drive - ie, "A:" or "B:"
+<CODE>
+-> MM.INFO(free space)
+</CODE>
+
+Will return how much space is left on the active drive
+<CODE>
+-> MM.INFO(disk size)
+</CODE>
+
+Will return the size of the active drive
+<CODE>
+-> MM.INFO(exists file fname$)
+</CODE>
+
+Will return true if the file exists
+<CODE>
+-> MM.INFO(exists dir dirname$)
+</CODE>
+
+Will return true if the directory exists

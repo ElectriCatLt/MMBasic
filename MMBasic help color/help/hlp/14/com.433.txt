@@ -1,0 +1,22 @@
+ALL VERSIONS
+[>434] MATH C
+<CODE>
+MATH C_ADD array1%(), array2%(), array3%()
+MATH C_SUB array1%(), array2%(), array3%()
+MATH C_MULT array1%(), array2%(), array3%()
+MATH C_DIV array1%(), array2%(), array3%()
+MATH C_ADD array1!(), array2!(), array3!()
+MATH C_SUB array1!(), array2!(), array3!()
+MATH C_MULT array1!(), array2!(), array3!()
+MATH C_DIV array1!(), array2!(), array3!()
+</CODE>
+
+These commands do cell by cell operations (hence C_) on identically sized arrays. 
+There are no restrictions on the number of dimensions and no restrictions on using the same array twice or even three times in the parameters.
+The datatype must be the same for all the arrays. 
+Eg, 
+<CODE>
+MATH C_MULT a%(),a%(),a%() 
+</CODE>
+
+will square all the values in the array a%()

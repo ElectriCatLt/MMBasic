@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>793] Editing the Command Line
+When entering a line at the command prompt the line can be edited using the left and right arrow keys to move along the line, the Delete key to delete a character, 
+the Backspace to delete before the cursor and the Insert key to switch between insert and overwrite modes.
+Home/End will move to the beginning/end of the line and Home pressed twice will terminate the edit. At any point the Enter key will send the line to MMBasic which will execute it. 
+The up and down arrow keys will move through a history of previously entered command lines which can be edited and reused.

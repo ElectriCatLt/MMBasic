@@ -1,0 +1,5 @@
+ALL VERSIONS
+[>370] LOAD file$ [,R] 
+Loads a program called 'file$' from an SD card into program memory. 
+If the optional suffix ,R is added the program will be immediately run without prompting (in this case 'file$' must be a string constant). 
+If an extension is not specified ".BAS" will be added to the file name. 

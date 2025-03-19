@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>55] MM.CMDLINE$ 
+This constant variable containing any command line arguments passed to the current program is automatically created when an MMBasic program runs; 
+see RUN and * commands for details.
+-> Programs run from the Editor or using OPTION AUTORUN will set MM.CMDLINE$ to the empty string.
+-> If not required this constant variable may be removed from memory using ERASE MM.CMDLINE$

@@ -1,0 +1,16 @@
+VGA VERSIONS
+[>20] VGA Video
+For versions of the firmware that support a VGA video output is automatically enabled at startup - there are no options that need to be set.
+The output is in the standard VGA format with a pixel rate of 25.175MHz and a frame rate of 60Hz. 
+There are two or three modes which can be selected using the MODE command:
+MODE 1  Monochrome with a resolution of 640 x 480 (default at startup)<MRK>7,1,6
+MODE 2  16 colours with a resolution of 320 x 240<MRK>7,1,6
+MODE 3  16 colours with a resolution of 640 x 480 (RP2350 only)<MRK>7,1,6
+<CGRE>
+In MODE 2 and 3 the output is 16 colours in the 4-bit RGB121 format (i.e. 1 bit for red, 2 bits for green, and 1 bit for blue). 
+In MODE 2 the pixels are duplicated along both the x and y axis giving a 320 x 240 resolution while the monitor still sees a 640 x 480 signal.
+</CGRE>5,1,2
+
+The output from MMBasic is written as a bitmap to a framebuffer. 
+The firmware then uses the second CPU in the processor to feed this framebuffer data, a pixel line at a time, via DMA to one of the RP2040's programmable I/O controllers (PIO0) to generate the display. 
+As this runs independently of the main RP2040 processors there is little or no impact on MMBasic caused by generating the VGA output.

@@ -1,0 +1,29 @@
+ALL VERSIONS
+[>800] Using MMBasic - The Library
+Using the LIBRARY feature it is possible to create BASIC functions, subroutines and embedded fonts and add them to MMBasic to make them permanent and part of the language. 
+For example, you might have written a series of subroutines and functions that perform sophisticated bit manipulation; 
+these could be stored as a library and become part of MMBasic and perform the same as other built-in functions that are already part of the language. 
+An embedded font can also be added the same way and used just like a normal font. 
+To install components into the library you need to write and test the routines as you would with any normal BASIC routines. 
+When they are working correctly you can use the LIBRARY SAVE command. 
+This will transfer the routines (as many as you like) to a non-visible part of flash memory where they will be available to any BASIC program 
+but will not show when the LIST command is used and will not be deleted when a new program is loaded or NEW is used. 
+However, the saved subroutines and functions can be called from within the main program and can even be run at the command prompt (just like a built-in command or function).
+Some points to note:
+-> Library routines act exactly like normal BASIC code and can consist of any number of subroutines, functions, embedded C routines and fonts. 
+The only difference is that they do not show when a program is listed and are not deleted when a new program is loaded.
+-> Library routines can create and access global variables and are subject to the same rules as the main program - for example, respecting OPTION EXPLICIT if it is set.
+-> When the routines are transferred to the library MMBasic will compress them by removing comments,extra spaces, blank lines and the hex codes in embedded C routines and fonts. 
+This makes the library space efficient, especially when loading large fonts. Following the save the program area is cleared.
+-> You can use the LIBRARY SAVE command multiple times. With each save the new contents of the program space are appended to the already existing code in the library.
+-> You can use line numbers in the library but you cannot use a line number on an otherwise empty line as the target for a GOTO, etc. 
+This is because the LIBRARY SAVE command will remove any blank lines.
+-> You can use READ commands in the library but they will default to reading DATA statements in the main program memory. 
+If you want to read from DATA statements in the library you must use the RESTORE command before the first READ command. This will reset the pointer to the library space.
+-> The library is saved to program flash memory Slot 3 and this will not be available for storing a program if LIBRARY SAVE is used.
+-> You can see what is in the library by using the LIBRARY LIST command which will list the contents of the library space.
+-> The LIBRARY contents can be saved to disk using LIBRARY DISK SAVE fname$ and restored using LIBRARY DISK LOAD fname$ 
+
+To delete the routines in the library space you use the LIBRARY DELETE command. 
+This will clear the space and return the Flash Slot 3 used by the library back to being available for storage for normal programs. 
+The only other way to delete a library is to use OPTION RESET.

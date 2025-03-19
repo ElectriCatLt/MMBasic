@@ -1,0 +1,12 @@
+ALL VERSIONS
+[>11] Program Initialisation
+The library can also include code that is not contained within a subroutine or function. 
+This code (if it exists) will be run automatically before a program starts running (ie, via the RUN command). 
+This feature can be used to initialise constants or setup MMBasic in some way. 
+For example, if you wanted to set some constants you could include the following lines in the library code:
+<CODE>
+CONST TRUE = 1
+CONST FALSE = 0
+</CODE>
+
+For all intents and purposes, the identifiers TRUE and FALSE have been added to the language and will be available to any program that is run.

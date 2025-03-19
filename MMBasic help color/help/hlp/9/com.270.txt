@@ -1,0 +1,4 @@
+PICOMITE VGA AND HDMI ONLY
+[>271] DRAW3D DIAGNOSE objectno, x, y, z
+This command calculates the position of the 3D object and then lists the faces in depth order with an analysis of whether they would be hidden or not based on their surface normal. 
+Using the command will help to test 3D object definitions to make sure all faces are correctly specified with their vertices correctly clockwise ordered when looking at the face from the outside of the object.

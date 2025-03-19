@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>69] MM.INFO(DISK SIZE) 
+Returns the capacity of the SD card in bytes 

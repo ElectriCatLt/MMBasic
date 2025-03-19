@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>252] DEVICE LCD 
+See LCD command

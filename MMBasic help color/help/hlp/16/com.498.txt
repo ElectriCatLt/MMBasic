@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>499] PLAY MODSAMPLE Samplenum, channel [,volume]
+Plays a specific sample in the mod file on the channel specified. The volume is optional and can be between 0 and 64. 
+This command can only be used when there is a mod file already playing and allows sound effects to be output whilst the background music is still playing.

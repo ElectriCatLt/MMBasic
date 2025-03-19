@@ -1,0 +1,17 @@
+NOT HDMI AND VGA VERSIONS
+[>316] FRAMEBUFFER MERGE [colour] [,mode] [,updaterate] NOT HDMI AND VGA VERSIONS
+Copies the contents of the Layer buffer and Framebuffer onto the LCD display omitting all pixels of a particular colour. Preconditions for the command 
+are that FRAMEBUFFER and LAYERBUFFER are both created FRAMEBUFFER MERGE - writes the contents of the framebuffer to the physical display 
+overwriting any pixels in the framebuffer that are set in the layerbuffer (not zero) 
+FRAMEBUFER MERGE col - writes the contents of the framebuffer to the physical display overwriting any pixels in the framebuffer that are 
+in the layerbuffer not set to the transparent colour "col". 
+The colour is specified as a number between 0 and 15 representing: 
+0:BLACK, 1:BLUE, 2:MYRTLE, 3:COBALT, 4:MIDGREEN, 5:CERULEAN, 6: GREEN, 7:CYAN, 8:RED, 9:MAGENTA, 10:RUST, 11:FUCHSIA, 12:BROWN, 13:LILAC, 14:YELLOW, 15:WHITE
+
+FRAMEBUFFER MERGE col,B - as above except that the transfer to the physical display takes place on the second CPU and control returns to Basic 
+immediately FRAMEBUFFER MERGE col,R [,updaterate] - sets the second CPU to continuously update the physical display with the merger of the two buffers.  
+Automatically sets FRAMEBUFFER WRITE F if not F or L already set. By default the screen will update as fast as possible (At 133MHz an ILI9341 in
+SPI mode updates about 13 times a second, in 8-bit parallel mode the ILI9341 achieves 27 FPS) If "updaterate" is set then the screen will update to 
+the rate specified in milliseconds (unless that is less than the fastest achievable on the display) 
+NB: FRAMEBUFFER WRITE cannot be set to N while continuous merged update is active. FRAMEBUFFER MERGE col,A - aborts the continuous updates 
+In addition deleting either the layerbuf or framebuffer, ctrl-C, or END will abort the automatic update as well.

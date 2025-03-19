@@ -1,0 +1,15 @@
+ALL VERSIONS
+[>794] Using MMBasic - Shortcut Keys
+The function keys on the keyboard used for the console can be used at the command prompt to automatically enter common commands. 
+These function keys will insert the text followed by the Enter key so that the command is immediately executed:
+<CGRE>
+F2      RUN<MRK>14,1,4
+F3      LIST<MRK>14,1,4
+F4      EDIT<MRK>14,1,4
+F5      Sends ESC sequence to clear the VT100 screen. Also clears the console.<MRK>14,1,4
+F10     AUTOSAVE<MRK>14,1,4
+F11     XMODEM RECEIVE<MRK>14,1,4
+F12     XMODEM SEND<MRK>14,1,4
+</CGRE>
+
+Function keys F1, and F5 to F9 can be programmed with custom text. See the OPTION FNKey command.

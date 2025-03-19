@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>737] PIN( TEMP ) 
+Returns the temperature of the RP2040 chip (see the RP2040 data sheet for the details) 

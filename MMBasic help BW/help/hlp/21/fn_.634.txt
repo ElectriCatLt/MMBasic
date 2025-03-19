@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>635] MMBASIC Functions 
+Functions related to communications functions (I2C, 1-Wire, and SPI) are described in the appendices  
+Square brackets indicate that the parameter or characters are optional. 

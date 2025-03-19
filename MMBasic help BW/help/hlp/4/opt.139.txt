@@ -1,0 +1,7 @@
+VGA AND HDMI VERSIONS ONLY
+[>140] OPTION DEFAULT COLOURS foreground [,background]
+Set the default foreground and background colours for both the monochrome and colour modes. 
+The colour must be one of the following: 
+white, yellow, lilac, brown, fuchsia, rust, magenta, red, cyan, green, cerulean, midgreen, cobalt, myrtle, blue and black. 
+A numeric value cannot be used. The default is white, black. 
+If background is omitted it defaults to black.

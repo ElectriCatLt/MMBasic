@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>101] MM.INFO(SYSTEM HEAP) 
+Returns the free space on the System Heap.

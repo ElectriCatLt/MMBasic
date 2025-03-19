@@ -1,0 +1,10 @@
+ALL VERSIONS
+[>193] About MBASIC commands
+Square brackets indicate that the parameter or characters are optional. 
+' (single quotation mark) 
+Starts a comment and any text following it will be ignored. Comments can be placed anywhere on a line. 
+? (question mark) 
+Shortcut for the PRINT command. 
+/* ...........  */ 
+Start and end of multiline comments. /* and */ must be the first non-space characters at the start of a line and have a space or end-of-line after them (i.e. they are MMBasic commands). 
+Multi-line comments cannot be used inside subroutines and functions. Any characters after */ on a line are also treated as  a comment.

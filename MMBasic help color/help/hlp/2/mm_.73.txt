@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>74] MM.INFO$(FILESIZE file$) 
+Returns the size of file$ in bytes or -1 if not found, -2 if a directory. 

@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>718] MATH(SD a()) 
+Returns the standard deviation of all values in the a() array, a() can have any number of dimensions 

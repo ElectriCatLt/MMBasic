@@ -1,0 +1,136 @@
+ALL VERSIONS
+[>44] A Tutorial - STRINGS
+Strings are another variable type (like floating point and integers). Strings are used to hold a sequence of characters. For example, in the command:
+<CODE>
+PRINT "Hello"
+</CODE>
+
+The string "Hello" is a string constant. 
+<CGRE>
+Note that a constant is something that does not change (as against a variable, which can) and that string constants are always surrounded by double quotes.
+</CGRE>
+
+String variables names use the dollar symbol ($) as a suffix to identify them as a string instead of a normal floating point variable and you can use ordinary assignment to set their value. 
+The following are examples (note that the second example uses an array of strings):
+<CODE>
+Car$ = "Holden"
+Country$(12) = "India"
+Name$ = "Fred"
+</CODE>
+
+You can also join strings using the plus operator:
+<CODE>
+Word1$ = "Hello"
+Word2$ = "World"
+Greeting$ = Word1$ + " " + Word2$
+</CODE>
+
+In which case the value of Greeting$ will be "Hello World".
+Strings can also be compared using operators such as = (equals), <> (not equals), < (less than), etc.
+For example:
+<CODE>
+IF Car$ = "Holden" THEN PRINT "Was an Aussie made car"
+</CODE>
+
+The comparison is made using the full ASCII character set so a space will come before a printable character. 
+Also the comparison is case sensitive so 'holden' will not equal "Holden". Using the function UCASE() to convert the string to upper case you can then have a case insensitive comparison. 
+For example:
+<CODE>
+IF UCASE$(Car$) = "HOLDEN" THEN PRINT "Was an Aussie made car"
+</CODE>
+
+You can have arrays of strings but you need to be careful when you declare them as you can rapidly run out of RAM (general memory used for storing variables, etc). 
+This is because MMBasic will by default allocate 255 bytes of RAM for each element of the array. For example, a string array with 100 elements will by default use 25K of RAM. 
+To alleviate this you can use the LENGTH qualifier to limit the maximum size of each element. 
+For instance, if you know that the maximum length of any string that will be stored in the array will be less than 20 characters you can use the following declaration to allocate just 20 bytes for each element:
+<CODE>
+DIM MyArray$(100) LENGTH 20
+</CODE>
+
+The resultant array will only use 2K of RAM.
+<CGRE>
+Note that sometimes people think that by using the LENGTH qualifier when declaring a normal (non array) string variable they will save some RAM. This is not correct; they always occupy 256 bytes.
+</CGRE>
+
+<CGRE>
+MANIPULATING STRINGS
+</CGRE>
+
+String handling is one of MMBasic's strengths and using a few simple functions you can pull apart and generally manipulate strings. The basic string functions are:
+<CODE>
+LEFT$(string$, nbr )
+</CODE>
+Returns a su
+bstring of string$ with nbr of characters from the left (beginning) of the string.
+<CODE>
+RIGHT$(string$, nbr )
+</CODE>
+
+Same as the above but return nbr of characters from the right (end) of the string.
+<CODE>
+MID$(string$, pos, nbr )
+</CODE>
+
+Returns a substring of string$ with nbr of characters starting from the character pos in the string (ie, the middle of the string).
+For example 
+<CODE>
+if S$ = "This is a string" then: R$ = LEFT$(S$, 7)
+</CODE>
+
+would result in the value of R$ being set to: "This is" and:
+<CODE>
+R$ = RIGHT$(S$, 8) </CODE>
+would result in the value of R$ being set to: "a string" 
+finally: 
+<CODE>
+R$ = MID$(S$, 6, 2) 
+</CODE>
+
+would result in the value of R$ being set to: "is"
+<CGRE>
+Note that in MID$() the first character position in a string is number 1, the second is number 2 and so on. 
+</CGRE>
+
+So, counting the first character as one, the sixth position is the start of the word "is".
+Another useful function is:
+<CODE>
+INSTR(string$, pattern$ )
+</CODE>
+
+Returns a number representing the position at which pattern$ occurs in string$.
+This can be used to search for a string inside another string. The number returned is the position of the substring inside the main string. 
+Like with MID$() the start of the string is position 1. 
+For example 
+<CODE>
+if S$ = "This is a string" Then: pos = INSTR(S$, " ") 
+</CODE>
+
+would result in pos being set to the position of the first space in S$ (ie, 5).
+INSTR() can be combined with other functions so this would return the first word in S$:
+<CODE>
+R$ = LEFT$(S$, INSTR(S$, " ") - 1)
+</CODE>
+
+There is also an extended version of INSTR():
+<CODE>
+INSTR(pos, string$, pattern$ )
+</CODE>
+
+Returns a number representing the position at which pattern$ occurs in string$ when starting the search at the character position pos.
+So we can find the second word in S$ using the following:
+<CODE>
+pos = INSTR(S$, " ")
+R$ = LEFT$(S$, INSTR(pos + 1, S$, " ") - 1)
+</CODE>
+
+This last example is rather complicated so it might be worth working through it in detail so that you can understand how it works.
+<CGRE>
+Note that INSTR() will return the number zero if the sub string is not found and that any string function will throw an error (and halt the program) if that is used as a character position. 
+</CGRE>
+
+So, in a practical program you would first check for zero being returned by INSTR() before using that value.
+For example:
+<CODE>
+pos = INSTR(S$, " ")
+if pos > 0 THEN R$ = LEFT$(S$, INSTR(pos + 1, S$, " ") - 1)
+</CODE>

@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>731] PEEK(BP, n%) 
+PEEK(bp n%) ' returns the byte at address n% and increments n% to point to the next byte.

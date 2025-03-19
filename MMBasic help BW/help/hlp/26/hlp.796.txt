@@ -1,0 +1,9 @@
+ALL VERSIONS
+[>797] Using MMBasic - Saved Variables
+This can be done with the VAR SAVE command which will save the variables listed on its command line in non-volatile flash memory. 
+The space reserved for saved variables is 16KB. 
+These variables can be restored with the VAR RESTORE command which will add all the saved variables to the variable table of the running program. 
+Normally this command is placed near the start of a program so that the variables are ready for use by the program. This facility is intended for saving calibration data, user selected options and other items which change infrequently. 
+It should not be used for high-speed saves as you may wear out the flash memory. The flash used for the Raspberry Pi Pico has a high endurance but this can be exceeded by a program that repeatedly saves variables. 
+If you do want to save data often you should add a real time clock chip. The RTC commands can then be used to store and retrieve data from the RTC's battery backed memory. 
+See the RTC command for more details.

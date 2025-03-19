@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>744] PIO (FDEBUG pio) 
+Returns the value of the FSDEBUG register for the pio specified

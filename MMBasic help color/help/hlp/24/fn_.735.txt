@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>736] PIN( BOOTSEL ) 
+Returns the state of the boot select switch allowing it to be used as a user input in a program.

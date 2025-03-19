@@ -1,0 +1,45 @@
+PICOMITE VGA AND HDMI ONLY
+[>274] 3D EXAMPLE - Wall from a high view with panned viewport
+<CODE>
+option explicit
+option default none
+option base 0
+mode 1,8
+DIM INTEGER x=-600,y,z,layer=0
+DIM FLOAT Q(4), yaw=0, pitch=0, roll=0
+const camerax=0, cameray=700, viewplane=400, panx= -150, pany=-250
+dim integer nv=8, nf=6 ' cube has 8 vertices and 6 faces
+const camera1 = 1
+dim float vertices(2,7) = (-1,1,-1, 1,1,-1, 1,-1,-1, -1,-1,-1, -1,1,1, 1,1,1, 1,-1,1, -1,-1,1)
+dim integer fc(5)=(4,4,4,4,4,4) ' define the number of vertices in each face
+dim integer faces(23)=(0,1,2,3, 1,5,6,2, 0,4,5,1, 5,4,7,6, 2,6,7,3, 0,3,7,4) 'define the vertice
+dim integer colours(6)=(rgb(blue), rgb(green), rgb(magenta), rgb(cyan), rgb(red), rgb(brown),
+rgb(yellow))
+dim integer edge(5)=(6,6,6,6,6,6) 'define the colours used for the edges of each face
+dim integer fill(5)=(0,1,2,3,4,5) 'define the colours used to fill each face
+'
+MATH SCALE vertices(), 20, vertices()
+dim float slice(7)
+math slice vertices(),2,,slice()
+math scale slice(),2,slice()
+math insert vertices(),2,,slice()
+DRAW3D CREATE 1, nv, nf, camera1, vertices(), fc(), faces(), colours(), edge(), fill()
+DRAW3D CAMERA 1, viewplane, camerax, cameray, panx, pany
+PAGE WRITE 1
+circle camerax,MM.VRES-cameray,4,,,rgb(white),rgb(white)
+timer=0
+for y=0 to 550 step 45
+for z=0 to 960 step 85
+DRAW3D write 1,x,y,1600-z+layer
+'pause 500
+next z
+if layer=0 then
+layer=40
+else
+layer=0
+endif
+next y
+print timer
+page copy 1 to 0
+do:loop
+</CODE>

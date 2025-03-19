@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>198] ADC CLOSE 
+Releases the pins to normal usage 

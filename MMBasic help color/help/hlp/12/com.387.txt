@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>388] LONGSTRING RESIZE addr%(), nbr 
+Sets the size of the longstring to nbr. This overrides the size set by other longstring commands so should be used with caution. 
+Typical use would be in using a longstring as a byte array. 

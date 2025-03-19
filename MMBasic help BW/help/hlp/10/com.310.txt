@@ -1,0 +1,3 @@
+NOT HDMI AND VGA VERSIONS
+[>311] FRAMEBUFFER LAYER NOT HDMI AND VGA VERSIONS
+Creates a framebuffer "L" with a RGB121 colour space and resolution to match the configured SPI colour display

@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>551] SERVO channel [positionA] [,positionB]
+Control a standard servo. 'positionA' and 'positionB' can be between -20 and 120 and will generate a 50Hz signal between 800uSec and 2.2mSec 
+As with the PWM command the pins must be set up with SETPIN n,PWM 
+To use just channel B use the syntax: SERVO channel,,positionB 
+Refer to the pinout to give the channel and sub-channel (A or B) for each pin

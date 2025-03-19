@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>100] MM.INFO$(SYSTEM I2C) 
+Returns I2C, I2C2, or NOT SET as applicable.

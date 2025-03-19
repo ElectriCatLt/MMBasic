@@ -1,0 +1,3 @@
+NOT HDMI AND VGA VERSIONS
+[>313] FRAMEBUFFER CLOSE [which] NOT HDMI AND VGA VERSIONS
+Closes a framebuffer and releases the memory. The optional parameter "which" can be F or L. If omitted closes both.

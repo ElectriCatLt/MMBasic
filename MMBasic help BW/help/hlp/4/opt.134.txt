@@ -1,0 +1,7 @@
+ALL VERSIONS
+[>135] OPTION COLOURCODE ON or OPTION COLOURCODE OFF 
+-> Turn on or off colour coding for the editor's output. Keywords will be in cyan, comments in yellow, etc. or 
+
+The keyword COLORCODE (USA spelling) can also be used.  
+This requires a terminal emulator that can interpret the appropriate  escape codes (eg, Tera Term). 
+This command must be run at the command prompt (not in a program). 

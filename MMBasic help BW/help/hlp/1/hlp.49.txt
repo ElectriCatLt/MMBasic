@@ -1,0 +1,16 @@
+ALL VERSIONS
+[>50] A Tutorial - LOCAL VARIABLES
+Variables that are created using DIM or that are just automatically created are called global variables. 
+This means that they can be seen and used anywhere in the program including within subroutines and functions. 
+However, inside a subroutine or function you will often need to use variables for various tasks that are internal to the subroutine/function. 
+In portable code you do not want the name you chose for such a variable to clash with a global variable of the same name. To this end you can define a variable using the LOCAL command within the subroutine/function.
+The syntax for LOCAL is identical to the DIM command, this means that the variable can be an array, you can set the type of the variable and you can initialise it to some value.
+For example, this is our ErrMsg subroutine but this time it has been extended to use a local variable for joining the error message strings.
+SUB ErrMsg Msg$
+LOCAL STRING tstr
+tstr = "Error: " + Msg$
+PRINT tstr
+END SUB
+The variable tstr is declared as LOCAL within the subroutine, which means that (like the argument list) it will only exist within the subroutine and will vanish when the subroutine exits. 
+You can have a global variable called tstr in your main program and it will be different from the variable tstr in the subroutine (in this case the global tstr will be hidden within the subroutine).
+You should always use local variables for operations within your subroutine or function because they help make the module much more self contained and portable.

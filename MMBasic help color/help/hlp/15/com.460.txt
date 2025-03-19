@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>461] NEW 
+Erases the current program and clears all non permanent options and variables including saved variables. 
+This command resets the interpreter to a known state. 

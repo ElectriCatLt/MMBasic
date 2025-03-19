@@ -1,0 +1,5 @@
+VGA AND HDMI VERSIONS ONLY
+[>578] SPRITE HIDE SAFE [#]n (VGA AND HDMI VERSIONS ONLY)
+Removes sprite n from the display and replaces the stored background. Automatically hides all more recent sprites as well as the requested one and then replaces them afterwards. 
+This ensures that sprites that are covered by other sprites can be removed without the user tracking the write order. 
+Of course this version is less performant than the simple version and should only be used it there is a risk of the sprite being partially covered.

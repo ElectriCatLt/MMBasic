@@ -1,0 +1,15 @@
+ALL VERSIONS
+[>792] Using MMBasic - Program Structure
+A BASIC program starts at the first line and continues until it runs off the end of the program or hits an END command - at which point MMBasic will display the command prompt (>) on the console and wait for something to be entered.
+A program consists of a number of statements or commands, each of which will cause the BASIC interpreter to do something (the words statement and command generally mean the same and are used interchangeably). 
+Normally each statement is on its own line but you can have multiple statements in the one line separated by the colon character (:). For example.
+<CODE>
+A = 24.6 : PRINT A
+</CODE>
+
+The BASIC language was introduced in 1964 by Dartmouth College in the USA as a computer language for teaching programming and accordingly it is easy to use and learn. 
+At the same time, it has proved to be a competent and powerful programming language and as a result it became very popular in the late 70s and early 80s. 
+Even today some large commercial data systems are still written in the BASIC language (primarily Pick Basic).
+The BASIC interpreter used in the PicoMite firmware's is called MMBasic and is a modern version of the BASIC language which loosely emulates the Microsoft BASIC interpreter that was popular years ago.
+For a programmer the greatest advantage of BASIC is its ease of use. Some more modern languages such as C and C++ can be truly mind bending but with BASIC you can start with a one line program and get something sensible out of it. 
+MMBasic is also powerful in that you can draw sophisticated graphics, manipulate the external I/O pins to control other devices and communicate with otherdevices using a range of built-in communications protocols.

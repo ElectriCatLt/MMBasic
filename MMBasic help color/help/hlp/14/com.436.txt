@@ -1,0 +1,7 @@
+ALL VERSIONS
+[>437] MATH FFT MAGNITUDE signalarray!(),magnitudearray!() 
+Generates magnitudes for frequencies for the data in "signalarray!" 
+"signalarray" must be floating point and the size must be a power of 2 (e.g. s(1023) assuming OPTION BASE is zero) 
+"magnitudearray" must be floating point and the size must be the same as the signal array 
+The command will return the magnitude of the signal at various frequencies according to the formula: 
+frequency at array position N = N * sample_frequency / number_of_samples

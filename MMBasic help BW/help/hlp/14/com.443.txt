@@ -1,0 +1,14 @@
+ALL VERSIONS
+[>444] MEMORY 
+List the amount of memory currently in use. 
+For example:  
+Program:
+0K ( 0%) Program (0 lines) 108K (100%) 
+Free  RAM:  0K ( 0%) 0 Variables  0K ( 0%) 
+
+General 
+140K (100%) Free 
+
+Notes: 
+- Memory usage is rounded to the nearest 1K byte.
+- General memory is used by serial I/O buffers, etc. 

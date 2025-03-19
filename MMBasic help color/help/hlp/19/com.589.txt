@@ -1,0 +1,12 @@
+VGA AND HDMI VERSIONS ONLY
+[>590] SPRITE SHOW [#]n, x,y, layer [,options] (VGA AND HDMI VERSIONS ONLY)
+Displays sprite 'n' on the screen with the top left at coordinates 'x', 'y'. 
+Sprites will only collide with other sprites on the same layer, layer zero, or with the screen edge. 
+If a sprite is already displayed on the screen, then the SPRITE SHOW command acts to move the sprite to the new location. 
+The display background is stored as part of the command and will be replaced when the sprite is hidden or moved further. 
+The parameter 'options' is optional and can be set as follows:
+<CGRE>
+bit 0 set - mirrored left to right
+bit 1 set - mirrored top to bottom
+bit 2 set - black pixels not treated as transparent default is 0
+<CGRE>

@@ -1,0 +1,35 @@
+ALL VERSIONS
+[>22] CONFIGURING THE KEYBOARD,USING A MOUSE,USB GAMEPAD
+By default the keyboard configuration will be assumed to be the standard US layout. However the OPTION KEYBOARD command can be used to configure layouts for other countries.
+The syntax of the command is:
+OPTION KEYBOARD language
+Where 'language' is a two-character code such as US for the standard keyboard used in the USA, Australia and New Zealand. 
+Other keyboard layouts are United Kingdom (UK), French (FR), German (GR), Belgium (BE),Italian (IT), Brazilian (BR) or Spanish (ES).
+Note that the non US layouts map some of the special keys present on these keyboards but the corresponding special character will not display as they are not part the standard PicoMite fonts. 
+
+Instead a standard ASCII character will be used.
+When a USB keyboard is connected it will be immediately recognised (no configuration required) and MMBasic will allocate it to channel 1 by default- there is nothing extra required.
+USING A MOUSE
+
+The mouse is especially useful in the MMBasic program editor where it can replicate much of the functionality found in GUI editors such as Notepad in Windows (see the heading Full Screen Editor above in this manual).
+This includes positioning the insert point and copy and paste using the clipboard. A mouse can also be used in a program where its position can be queried by using the DEVICE() function. 
+As an example, the following program will report any mouse movement. 
+Note that the mouse is always allocated to channel 2
+' continuous loop to print on the console any movement
+Do
+mx=DEVICE(MOUSE 2, x)
+my=DEVICE(MOUSE 2, y)
+If mx <> tx Or my <> ty Then Print mx, my
+tx = mx : ty = my
+Loop
+When a USB mouse is connected it will be immediately recognised (no configuration required) and MMBasic will allocate it to channel 2 by default- there is nothing extra required.
+PS2 Mouse
+
+The I/O pins used for a PS2 mouse must be configured using the commands OPTION MOUSE (at the command prompt) or MOUSE OPEN (within a program).
+A PS2 mouse is powered via 5V so on a Raspberry Pi Pico (RP2040) a level shifter will be required for the mouse clock and data pins - 
+this can be the same as the above circuit for a PS2 keyboard. On a Raspberry Pi Pico 2 (RP2350) a level shifter is not required so the mouse can be directly connected.
+USB GAMEPAD 
+
+One or more PS3 or PS4 controllers or gamepad such as a Super Nintendo SNES Controller with a USB interface can be connected via USB (illustrated on the right).
+By default the first gamepad will be allocated to channel 3 and a second gamepad channel 4. Within a program the data from the gamepad can be read using the DEVICE(GAMEPAD) function.
+

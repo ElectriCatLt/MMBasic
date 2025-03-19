@@ -1,0 +1,8 @@
+ALL VERSIONS
+[>259] DO WHILE expression <statements> LOOP 
+<CODE>
+DO WHILE expression 
+<statements> 
+LOOP 
+</CODE>
+Loops while 'expression' is true (this is equivalent to the older WHILEWEND loop). If, at the start, the expression is false the statements in the loop will not be executed, not even once. 

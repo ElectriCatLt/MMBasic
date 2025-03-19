@@ -1,0 +1,5 @@
+ALL VERSIONS
+[>651] DATE$ 
+Returns the current date based on MMBasic's internal clock as a string in the form "DD-MM-YYYY". 
+For example, "28-07-2012". The internal clock/calendar will keep track of the time and date including leap years. 
+To set the date use the command DATE$ =. 

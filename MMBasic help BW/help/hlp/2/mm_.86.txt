@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>87] MM.INFO(VPOS) 
+The current vertical position (in pixels) following the last graphics or print command.

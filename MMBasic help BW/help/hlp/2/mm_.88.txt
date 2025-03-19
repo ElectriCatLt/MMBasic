@@ -1,0 +1,3 @@
+WEBMITE ONLY
+[>89] MM.INFO$(IP ADDRESS) 
+Returns the IP address of the WebMite

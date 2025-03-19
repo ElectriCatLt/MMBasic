@@ -1,0 +1,3 @@
+VGA AND HDMI VERSIONS ONLY
+[>767] SPRITE(L, [#]n)   <- VGA AND HDMI VERSIONS ONLY
+Returns the layer number of active sprites number n

@@ -1,0 +1,56 @@
+ALL VERSIONS
+[>352] IR dev, key , int or IR CLOSE 
+Decodes NEC or Sony infrared remote control signals.  An IR Receiver Module is used to sense the IR light and demodulate the  signal. 
+It can be connected to any pin however this pin must be configured in advanced using the command: SETPIN n, IR  
+The IR signal decode is done in the background and the program will continue after this command without interruption. 
+'dev' and 'key' should be numeric variables and their values will be updated whenever a new signal is received 
+('dev' is the device code transmitted by the remote and 'key' is the key pressed). 
+'int' is a user defined subroutine that will be called when a new key press is received or when the existing key is held down for auto repeat. 
+In the interrupt subroutine the program can examine the variables 'dev' and 'key' and take appropriate action. 
+The IR CLOSE command will terminate the IR decoder. 
+Note that for the NEC protocol the bits in 'dev' and 'key' are reversed. 
+
+For example, in 'key' bit 0 should be bit 7, bit 1 should be bit 6, etc. 
+This does not affect normal use but if you are looking for a specific numerical code provided by a manufacturer you should reverse the bits. 
+This describes how to do it: http://www.thebackshed.com/forum/forum_posts.asp?TID=8367 
+INFRARED REMOTE CONTROL DECODER
+
+You can easily add a remote control to your project using the IR command. When enabled this function will run in the background and interrupt the running program whenever a key is pressed on the IR remote control.
+It will work with any NEC or Sony compatible remote controls including ones that generate extended messages. 
+Most cheap programmable remote controls will generate either protocol and using one of these you can add a sophisticated flair to your Pico based project.
+The NEC protocol is also used by many other manufacturers including Apple, Pioneer, Sanyo, Akai and Toshiba so their branded remotes can be used.
+To detect the IR signal you need an IR receiver. NEC remotes use a 38kHz modulation of the IR signal and suitable receivers tuned to this frequency include the Vishay TSOP4838, Jaycar ZD1952 and Altronics Z1611A. 
+Note that the I/O pins on the Raspberry Pi Pico are only 3.3V tolerant and so the receiver must be powered by a maximum of 3.3V. The Raspberry Pi Pico 2 is different and can withstand 5V.
+
+Sony remotes use a 40 kHz modulation but receivers for this frequency can be hard to find. Generally 38 kHz receivers will work but maximum sensitivity will be achieved with a 40 kHz receiver.
+The IR receiver can be connected to any pin on the Raspberry Pi Pico. This pin must be configured by the program using the command:
+SETPIN n, IR
+where n is the I/O pin to use for this function.
+To setup the decoder you use the command:
+IR dev, key, interrupt
+Where dev is a variable that will be updated with the device code and key is the variable to be updated with the key code. Interrupt is the interrupt subroutine to call when a new key press has been detected. 
+The IR decoding is done in the background and the program will continue after this command without interruption.This is an example of using the IR decoder connected to the GP6 pin:
+SETPIN GP6, IR ' define the pin to be used
+DIM INTEGER DevCode, KeyCode ' variables used by the decoder
+IR DevCode, KeyCode, IRInt ' start the IR decoder
+DO
+' < body of the program >
+LOOP
+SUB IRInt ' a key press has been detected
+PRINT "Received device = " DevCode " key = " KeyCode
+END SUB
+IR remote controls can address many different devices (VCR, TV, etc) so the program would normally examine the device code first to determine if the signal was intended for the program and, if it was, then take action based on the key pressed.
+There are many different devices and key codes so the best method of determining what codes your remote generates is to use the above program to discover the codes.
+
+INFRARED REMOTE CONTROL TRANSMITTER
+
+Using the IR SEND command you can transmit a 12 bit Sony infrared remote control signal. 
+This is intended for Raspberry Pi Pico to Raspberry Pi Pico or Micromite communications but it will also work with Sony equipment that uses 12 bit codes.
+Note that all Sony products require that the message be sent three times with a 26 ms delay between each message.
+
+The circuit on the right illustrates what is required. The transistor is used to drive the infrared LED because the output capability of the Raspberry Pi Pico is limited. 
+This circuit provides about 50 mA to the LED.
+To send a signal you use the command:
+IR SEND pin, dev, key
+Where pin is the I/O pin used, dev is the device code to send and key is the key code. Any I/O pin on the Raspberry Pi Pico can be used and you do not have to set it up beforehand (IR SEND will automatically do that).
+The modulation frequency used is 38 kHz and this matches the common IR receivers (described in the previous page) for maximum sensitivity when communicating between two Raspberry Pi Picos or with a Micromite.

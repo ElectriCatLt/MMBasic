@@ -1,0 +1,3 @@
+NOT VGA OR HDMI VERSIONS
+[>154] OPTION LCDPANEL /* 
+Configures an LCD panel on versions that accept a connected LCD.

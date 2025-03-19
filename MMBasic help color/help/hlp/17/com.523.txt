@@ -1,0 +1,4 @@
+ALL VERSIONS
+[>524] PRINT #nbr, expression [[,; ]expression] ... etc
+Same as above except that the output is directed to a serial communications port or a file opened for OUTPUT or APPEND with a file number of 'nbr'. 
+See the OPEN command.

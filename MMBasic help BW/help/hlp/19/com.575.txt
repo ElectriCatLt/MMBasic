@@ -1,0 +1,4 @@
+VGA AND HDMI VERSIONS ONLY 
+[>576] SPRITE HIDE ALL (VGA AND HDMI VERSIONS ONLY)
+Hides all the sprites allowing the background to be manipulated. The following commands cannot be used when all sprites are hidden:
+SPRITE SHOW (SAFE) ,  SPRITE HIDE (SAFE, ALL) ,  SPRITE SWAP , SPRITE MOVE , SPRITE SCROLLR , SPRITE SCROLL

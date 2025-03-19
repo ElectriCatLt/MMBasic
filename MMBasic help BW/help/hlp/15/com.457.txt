@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>458] MOUSE SET channel, y- coord, y-coord [, wheel-count]
+Sets the current position that will be returned by the mouse x, y and optionally wheel positions

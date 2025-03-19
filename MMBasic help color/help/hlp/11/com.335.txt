@@ -1,0 +1,8 @@
+NOT VGA AND HDMI VERSIONS
+[>336] GUI CALIBRATE or  GUI CALIBRATE a,b,c,d,d 
+This command is used to calibrate the touch feature on an LCD panel. It will display a series of targets on the screen and wait for each one to be precisely touched.  
+The command can also be used with five arguments which specify the calibration values and in this case the calibration will be done without displaying any targets or requiring an input from the user. 
+To discover the values use the OPTION LIST after calibrating the display normally. 
+<CGRE>
+Note that these values are specific to that display and can vary considerably.
+</CGRE>

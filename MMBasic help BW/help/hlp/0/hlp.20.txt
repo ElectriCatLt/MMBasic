@@ -1,0 +1,49 @@
+VGA VERSIONS
+[>21] HDMI Video
+For versions of the firmware that support HDMI video the following table lists the connections to the standard HDMI Type A socket. 
+The HDMI output is automatically enabled at startup - there are no options that need to be set.
+To generate the DVI/HDMI signal the firmware needs to overclock the RP2350 to as high as 372MHz and most Raspberry Pi Pico 2 modules will not have any trouble at these speeds. 
+However, this cannot be guaranteed, especially with third party modules. 
+An example is the Pimoroni Pico Plus 2 which cannot be overclocked to the required speeds and therefore cannot be used with the HDMI versions of the PicoMite firmware.
+Similar to how VGA is generated, the output of MMBasic is written to a framebuffer which, using the second CPU and DMA, is fed to the HSTX peripheral which in turn generates the parallel video data. 
+The video signal produced is actually DVI (HDMI supports DVI) so this means that audio is not supported on the HDMI output and sophisticated HDMI features 
+such as High Definition Content Protection (HDCP) and Ethernet are also not supported.
+HDMI video supports a number of resolutions. To set these you use the following command:
+OPTION RESOLUTION nn
+Where 'nn' is 640x480 or 640 or 1280x720 or 1280 or 1024x768 or 1024.
+Each HDMI resolution can operate in a number of modes which are set using the MODE command. 
+Note that many modes reduce the displayed resolution to save memory for other features, 
+this reduction is done by doubling or quadrupling each pixel, however the monitor will always see the resolution (ie, pixel density) set by the OPTION RESOLUTION command:
+OPTION RESOLUTION 640x480
+MODE 1
+Displayed image 640x480 in monochrome RGB555 tiles (use the TILE command)
+MODE 2
+Displayed image 320x240 in 16 colours with colour mapping to an RGB555 palette Two optional layers
+MODE 3
+Displayed image 640x480 in 16 colours with colour mapping to an RGB555 palette One optional layer
+MODE 4
+Displayed image 320x240 in 32,768 colours. One optional layer 
+MODE 5
+Displayed image 320x240 in 256 colours with colour mapping to an RGB555 palette Two optional layers
+
+OPTION RESOLUTION 1280x720
+MODE 1
+Displayed image 1280x720 in monochrome RGB332 tiles (use the TILE command)
+MODE 2
+Displayed image 320x180 in 16 colours with colour mapping to an RGB332 palette Two optional layers
+MODE 3
+Displayed image 640x360 in 16 colours with colour mapping to an RGB332 palette One optional layer
+MODE 5
+Displayed image 320x180 in 256 colours with colour mapping to an RGB332 palette Two optional layers
+
+OPTION RESOLUTION 1024x768
+MODE 1
+Displayed image 1024x768 in monochrome RGB332 tiles (use the TILE command)
+MODE 2
+Displayed image 256x192 in 16 colours with colour mapping to an RGB332 palette Two optional layers
+MODE 3
+Displayed image 512x384 in 16 colours with colour mapping to an RGB332 palette One optional layer
+MODE 5
+Displayed image 256x192 in 256 colours with colour mapping to an RGB332 palette Two optional layers
+
+The default is RESOLUTION 640x480 and MODE 1

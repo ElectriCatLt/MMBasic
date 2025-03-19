@@ -1,0 +1,3 @@
+VGA AND HDMI VERSIONS ONLY
+[>764] SPRITE(D ,[#]s1, [#]s2)   <- VGA AND HDMI VERSIONS ONLY
+Returns the distance between the centres of sprites 's1' and 's2' (returns -1 if either sprite is not active)

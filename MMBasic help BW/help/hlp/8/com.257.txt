@@ -1,0 +1,6 @@
+ALL VERSIONS
+[>258] DO <statements> LOOP 
+DO 
+<statements> 
+LOOP 
+This structure will loop forever; the EXIT DO command can be used to terminate the loop or control must be explicitly transferred outside of the loop by commands like GOTO or EXIT SUB (if in a subroutine). 

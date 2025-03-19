@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>640] ATN( number ) 
+Returns the arctangent of the argument 'number' in radians. 

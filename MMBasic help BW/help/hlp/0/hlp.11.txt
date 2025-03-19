@@ -1,0 +1,15 @@
+ALL VERSIONS
+[>12] MM.STARTUP
+There may be a need to execute some code on initial power up, perhaps to initialise some hardware, set some options or print a custom start-up banner. 
+This can be accomplished by creating a subroutine with the name MM.STARTUP. 
+When the PicoMite firmware is first powered up or reset it will search for this subroutine and, if found, it will be run once.
+For example, if the Raspberry Pi Pico has a real time clock attached, the program could contain the following code:
+SUB MM.STARTUP
+RTC GETTIME
+END SUB
+This would cause the internal clock within MMBasic to be set to the current time on every power up or reset.
+After the code in MM.STARTUP has been run MMBasic will continue with running the rest of the program in program memory. 
+If there is no other code MMBasic will return to the command prompt. 
+Note that you should not use MM.STARTUP for general setup of MMBasic (like dimensioning arrays, opening communication channels, etc) before running a program. 
+
+The reason is that when you use the RUN command MMBasic will first clear the interpreter's state ready for a fresh start.

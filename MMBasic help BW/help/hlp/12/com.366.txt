@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>367] LIST COMMANDS or LIST FUNCTIONS 
+Lists all valid commands or functions 

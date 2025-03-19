@@ -1,0 +1,3 @@
+ALL VERSIONS
+[>637] ACOS( number ) 
+Returns the inverse cosine of the argument 'number' in radians. 
