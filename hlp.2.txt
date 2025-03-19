@@ -1,7 +1,0 @@
-ALL VERSIONS
-[>3] I/O Pin Limits
-The maximum voltage that can be applied to any I/O pin on the Raspberry Pi Pico using the RP2040 processor is 3.6V. 
-The Raspberry Pi Pico 2 using the RP2350 processor can accept 5V while the chip is powered up. 
-As outputs all I/O pins can individually source or sink up to 8mA. At this load the output voltage will sag to about 2.3V. 
-A more practical load is 5mA where the output voltage would typically be 3V. To drive a red LED at 5mA the recommended resistor is 220Ω. 
-Other colours may require a different value. The maximum total I/O current load for the entire chip is 100mA.

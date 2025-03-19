@@ -1,6 +1,0 @@
-ALL VERSIONS
-[>1] Predefined Read Only Variables 
-These variables are set by MMBasic and cannot be changed by the running program. 
-MM.VER  The version number of the firmware as a floating point number in the form aa.bbcc where aa is the major version number, bb is the minor version number and cc is the revision number. 
-For example version 6.03.00 will return 6.03 and version 6.03.01 will return 6.0301. 
-Converted to MM.INFO(VERSION). 

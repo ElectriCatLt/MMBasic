@@ -1,5 +1,0 @@
-ALL VERSIONS
-[>7] Power Consumption
-The power consumption is dependent on the clock speed, however at the default clock speed (133MHz for the RP2040 and 150MHz for the RP2350), 
-the typical power consumption is 20mA. This does not include any current sourced or sunk by the I/O pins or the 3V3 pin:
-The power consumption for the WebMite version for the Raspberry Pi Pico W is the same at 20mA with the WiFi disabled but, when the WiFi is enabled, the power consumption will rise to 40 to 70mA.
